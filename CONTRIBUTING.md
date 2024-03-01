@@ -1,22 +1,32 @@
-# Contributing to Zatsit Blog
+# Contributing to **zatsit** Blog
 
 First off, thanks for taking the time to contribute! ❤️
 
 All types of contributions are encouraged and valued.
 
+* Write blog posts, for this refers to [**zatsit** Code of Posting](./POSTING.md).
+* Report bugs, suggest enhancements, and contribute to the existing articles.
 
-* Contribute to the technical stack.
-* Write blog posts, for this refers to [Zatsit Code of Posting](./POSTING.md).
+See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. 
+Please make sure to read the relevant section before making your contribution. 
+It will make it a lot easier for us maintainers and smooth out the experience for all involved. 
+The community looks forward to your contributions. 🎉
 
-See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved. The community looks forward to your contributions. 🎉
-
-> And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
+> And if you like the project, but just don't have time to contribute, that's fine. 
+> There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
 > - Talk to your friends and colleagues about the posts.
 > - Support the new posts on social networks.
-> - Propose to be reviewer mailing [DT](mailto:dirtech@zatsit.fr).
+> - Propose to be reviewer mailing `dirtech at zatsit dot fr`.
 
 ## Table of Contents
 
+- [Your First Code Contribution](#your-first-code-contribution)
+- [Styleguide](#styleguide)
+  - [Branches conventions](#branches-conventions)
+  - [Pull Request conventions](#pull-request-conventions)
+  - [Commit Messages](#commit-messages)
+    - [Commit types](#commit-types)
+    - [Scope](#scope)
 - [Code of Conduct](#code-of-conduct)
 - [I Have a Question](#i-have-a-question)
 - [I Want To Contribute](#i-want-to-contribute)
@@ -24,17 +34,102 @@ See the [Table of Contents](#table-of-contents) for different ways to help and d
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Your First Code Contribution](#your-first-code-contribution)
   - [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
-  - [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
 
+
+## Your First Code Contribution
+
+- Follow the [POSTING.md](./POSTING.md) instructions to create your first post.
+- Open a pull request with your post content.
+- The project team will review your pull request and provide feedback.
+  - Be sure that all the PRs checks are green.
+  - If your post is accepted, it will be merged and published.
+
+## Styleguide
+
+## Branches conventions
+
+For temporary branches related to issues, or new content, the naming should be:
+
+    <type>/<issue_number>-<issue_title>
+
+OK : feat/1290-asyncapi-v4-summary
+OK : fix/1290-asyncapi-v4-summary
+KO : feat/issue10
+KO : fix/current-price-calculation...
+
+> Use only tokens listed in [commit message format section](#commit-message-format).
+
+### Pull Request conventions
+
+The title of your PR should be equal to the first line of your commit message:
+
+    <type>(<scope>): <subject>
+
+### Commit Messages
+
+We are using the conventional commits way, so you have to follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to create your commit.
+
+Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+format that includes a **type**, a **scope** and a **subject**:
+
+    <type>(<scope>): <subject>
+
+    <body>
+
+    <footer>
+
+The **header** is mandatory and the **scope** of the header is optional.
+
+Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
+to read on GitHub as well as in various git tools.
+
+The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+
+Samples: (even more [samples](https://www.conventionalcommits.org/en/v1.0.0/#examples))
+
+    doc(changelog): update changelog to beta.5
+
+    fix(release): need to depend on latest rxjs and zone.js
+
+    The version in our package.json gets copied to the one we publish, and users need the latest of these.
+
+    Closes #123
+
+
+#### Commit types
+
+Must be one of the following:
+
+-   **ci**: Changes to our CI configuration files and scripts
+-   **docs**: Documentation only changes
+-   **feat**: A new blog post
+-   **fix**: A blog post fix
+-   **refactor**: A code change that neither fixes a bug nor adds a feature
+
+#### Scope
+
+The scope should be one of the blog categories.
+
+Here is a list of accepted scopes :
+-   **ai**: Artificial Intelligence topic blog post
+-   **architecture**: Architecture topic blog post
+-   **general**: General  topic blog post
+-   **cloud**: Cloud topic blog post
+-   **data**: Data topic blog post
+-   **dev**: Development topic blog post
+-   **green**: Green IT topic blog post
+-   **mobile**: Mobile topic blog post
+-   **ops**: OPS topic blog post
+-   **web**: Web topic blog post
+
+> Don't set scope if the commit is not related to a specific category or if you are not sure.
 
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Zatsit Blog Code of Conduct](./CODE_OF_CONDUCT.md).
+[**zatsit** Blog Code of Conduct](./CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report problems
-to [DT](mailto:dirtech@zatsit.fr).
+to `dirtech at zatsit dot fr`.
 
 
 ## I Have a Question
@@ -42,11 +137,12 @@ to [DT](mailto:dirtech@zatsit.fr).
 > If you want to ask a question, we assume that you have read the available
 > [Documentation](https://docusaurus.io/docs/docs-introduction) [README](./README.md) and [POSTING](./POSTING.md).
 
-Before you ask a question, it is best to search for existing [Issues](https://TODO/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue.
+Before you ask a question, it is best to search for existing [Issues](https://github.com/zatsit-oss/zats-blog-content/issues) that might help you. 
+In case you have found a suitable issue and still need clarification, you can write your question in this issue.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](https://TODO/issues/new).
+- Open an [Issue](https://github.com/zatsit-oss/zats-blog-content/issues/new).
 - Provide as much context as you can about what you're running into.
 - Provide project and platform versions (os, nodejs, npm, etc), depending on what seems relevant.
 
@@ -107,37 +203,15 @@ This section guides you through submitting an enhancement suggestion for Zatsit 
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
-Enhancement suggestions are tracked as [GitHub issues](https://TODO/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/zatsit-oss/zats-blog-content/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
 - You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux. <!-- this should only be included if the project has a GUI -->
-- **Explain why this enhancement would be useful** to most Zatsit Blog users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
+- **Explain why this enhancement would be useful** to most **zatsit** Blog users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
-### Your First Code Contribution
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
-
--->
-
-### Improving The Documentation
-<!-- TODO
-Updating, improving and correcting the documentation
-
--->
-
-## Styleguides
-### Commit Messages
-<!-- TODO
-
--->
-
-## Join The Project Team
-<!-- TODO -->
-
-<!-- omit in toc -->
 ## Attribution
 This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!

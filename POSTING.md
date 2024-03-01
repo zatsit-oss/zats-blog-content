@@ -1,8 +1,9 @@
-# Posting in Zatsit Blog
+# Posting in **zatsit** Blog
 
 > Remember that the official documentation of docusaurus is the reference.
 
-Docusaurus proposes file conventions to make blog posts, but we added a top level folder hierarchy to categorize posts (and change the way we name file blog post) :
+Docusaurus proposes file conventions to make blog posts, but we added a top level folder hierarchy to categorize posts
+(and change the way we name file blog post) :
 
 - [ai](blog%2Fai)
 - [architecture](blog%2Farchitecture)
@@ -22,19 +23,25 @@ Docusaurus proposes file conventions to make blog posts, but we added a top leve
 
 ## Create a post for the first time
 
-First of all, pull the project repository and create a branch like "category-YYYYMMDD-SLUG"
+First of all, pull the project repository and create a branch like "feat/category-YYYYMMDD-SLUG"
 > SLUG will be your future URI
 
 ```sh
 git clone xxxxx
-git branch category-YYYYMMDD-MyTitle
-git checkout category-YYYYMMDD-MyTitle
+git branch -c feat/category-YYYYMMDD-MyTitle
 ```
+
+> We are using the conventional commits way, so you have to follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to name your branch.
+
 You are ready to write !
 
-Below the 'blog' folder we will find [authors.yml](./authors.yml), you will have to create your author's information bloc : 
+> For further information about the available Markdown functionalities, please read the [official documentation](https://docusaurus.io/fr/docs/next/markdown-features).
 
-The first entry follow the same convention in all other Zatsit software usage : 
+### Add your author information
+
+In the root, we will find [authors.yml](blog/authors.yml), you will have to create your author's information bloc : 
+
+The first entry follow the same convention in all other **zatsit** software usage : 
 - everything in lowercase
 - first letter of your first name
 - your name
@@ -44,13 +51,13 @@ This value will be used in your post metadata.
 ```yml
 jdoe:
   name: John Doe
-  title: Site Reliability Engineer  @ Zatsit
+  title: Site Reliability Engineer  @ **zatsit**
   url: Github account or Linkedin account
   image_url: /img/authors/your_picture.webp
 ```
 
-Then in your category folder create a folder like : YYYYMMDD-SLUG, where SLUG will be use by 
-Docusaurus router (in fact, it the 'slug' property in your post that router will use, 
+Then in your category folder (under [the blog folder](./blog)) create a folder like : `YYYY-MM-DD-SLUG`, where SLUG 
+will be used by the Docusaurus router (in fact, it the 'slug' property in your post that router will use, 
 but by convention we use it in the folder naming).
 
 
@@ -61,7 +68,7 @@ mkdir YYYYMMDD-SLUG
 touch index.md
 vim index.md (it is a joke)
 ```
-Then with your favourite IDE, you can edit your index.md file following this example
+Then with your favourite IDE, you can edit your `index.md` file following this example
 
 ```md
 ---
@@ -85,9 +92,11 @@ Présentation de RedPanda, au travers du premier cours dédié aux développeurs
 <!-- truncate -->
 ```
 will result like this : 
-![Screenshot of the sumup in page list](./readme/posting-post-sumup.png "Screenshot of the sumup in page list")
+![Screenshot of the sumup in page list](./assets/posting-post-sumup.png "Screenshot of the sumup in page list")
 
 Then you can follow [this guide](https://www.markdownguide.org/basic-syntax/) to format your post if you are not markdown fluent.
+
+### Using pictures
 
 All your pictures for your post have to be stored in your post folder, feel free to create subfolders if you want.
 
@@ -95,21 +104,21 @@ All your pictures for your post have to be stored in your post folder, feel free
 
 > Do not forget to credit your pictures according to the licence of the picture.
 
-## Add social media link
+> Ideally, you should use the `webp` or `avif` format for your pictures, but if you have to use another format, please use the smallest size possible.
 
-In this version, the minimalist solution found to add link to share on X and Linkedin is to copy/paste this two lines, customizing the query attribute, for example : 
+### Add social media link
+
+In this version, the minimalist solution found to add link to share on `X` and `LinkedIn` is to copy/paste this two lines, customizing the query attribute, for example : 
 ```
 [![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fredpanda-introduction%2F)
 [![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Pr%C3%A9sentation%20de%20RedPanda%2C%20au%20travers%20du%20premier%20cours%20d%C3%A9di%C3%A9%20aux%20d%C3%A9veloppeurs%20de%20la%20%22RedPanda%20University%22%20que%20j%27ai%20suivi%2C%0Aje%20vous%20pr%C3%A9sente%20les%20grands%20principes%20et%20les%20premiers%20pas%20dans%20cet%20%C3%A9cosyst%C3%A8me&url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fredpanda-introduction%2F)
 
 ```
 Take care of the relative path of the two social icons, regarding the folders in the category.
-- For Likedin and Twitter (X) : the url of your post use the root of the blog and your slug. You have to encode your url (you can use [URL Encoder](https://www.urlencoder.org/)
-- For Twitter (X) only : encode the description of your post too.
+- For `LinkedIn` and `X` : the url of your post use the root of the blog and your slug. You have to encode your url (you can use [URL Encoder](https://www.urlencoder.org/)
+- For `X` only : encode the description of your post too.
 
-Linkedin 
-
-## Add a video link in your post
+### Add a video link in your post
 
 We don't want to use the iframe way to add a video in our post, because it is not performant (and so, not green). So the idea is to link the video with a picture, and the picture will be the link to the video.
 
@@ -125,60 +134,10 @@ Example:
 [![Regarder la video sur Youtube](./v3livemigration.jpeg 'Go to v3 migration live')](https://www.youtube.com/watch?v=WCK9_ZDv6K4)
 ```
 
-## Visualise the blog
+## Visualise the blog post by submitting a pull request
 
-In edit mode, you should start Docusaurus server like this : 
+You can have a first preview like any markdown preview from your favorite IDE. The preview will be very similar to the final result.
 
-```sh
-npm start
-
-> zats-blog@0.0.0 start
-> docusaurus start
-
-[INFO] Starting the development server...
-[SUCCESS] Docusaurus website is running at: http://localhost:3000/
-
-✔ Client
-  Compiled successfully in 852.07ms
-
-client (webpack 5.89.0) compiled successfully
-```
-
-By default, the blog is accessible to http://localhost:3000/ , the hot reload will refresh pages after each edition.
-
-## Build the blog
-
-Simply execute a **npm run build**
-
-```sh 
-npm run build
-
-> zats-blog@0.0.0 build
-> docusaurus build
-
-[INFO] [fr] Creating an optimized production build...
-
-✔ Client
-
-✔ Server
-  Compiled successfully in 2.78s
-
-✔ Client
-
-● Server █████████████████████████ cache (99%) shutdown IdleFileCachePlugin
- stored
-
-[SUCCESS] Generated static files in "build".
-[INFO] Use `npm run serve` command to test your build locally.
-```
-
-The static resources are located in the build directory.
-
-## Publish the blog in dev mode
-
-You can use the zatsit blog firebase project and execute a : 
-
-```sh
-firebase deploy
-```
+When you are ready to submit your post, you can create a pull request. A Github Actions workflow will generate
+a previous URL for you in order to visualize your post in an ephemeral blog instance.
 
