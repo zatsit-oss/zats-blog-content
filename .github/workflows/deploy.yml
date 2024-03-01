@@ -15,30 +15,31 @@ jobs:
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
           path: .
 
-#      - name: ls content
-#        run: ls -la docusaurus
-#        shell: bash
-
-      - name: Checkout content repository
+      - name: Checkout blog contents
         uses: actions/checkout@v4
         with:
-#          repository: zatsit-oss/zats-blog-content
-#          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
           path: blog
-#          ref: main
+          sparse-checkout: 'blog'
 
       - name: ls content
-        run: ls -la
+        run: ls -la blog
         shell: bash
 
-#      - name: cp content
-#        run: cp -r blog/* docusaurus
-#        shell: bash
+      - name: Checkout docs contents
+        uses: actions/checkout@v4
+        with:
+          path: docs
+          sparse-checkout: 'docs'
+
+      - name: ls content
+        run: ls -la docs
+        shell: bash
 
       - name: node-setup
         uses: actions/setup-node@v2
         with:
           node-version: '18'
+          cache: 'npm'
 
       - run:  npm ci
       - run:  npm run docusaurus build
