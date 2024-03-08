@@ -4,6 +4,9 @@
 name: Deploy to Firebase Hosting on PR
 on:
   pull_request:
+    paths:
+      - "blog/**"
+      - "docs/**"
 
 concurrency:
   group: ${{ github.ref || github.run_id }}
