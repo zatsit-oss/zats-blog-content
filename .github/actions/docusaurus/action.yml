@@ -28,11 +28,7 @@ runs:
         sparse-checkout: |
           blog
           docs
-
-    - run: |
-        ls -la
-        ls -la blog-contents
-      shell: bash
+          authors
 
     - name: move blog-content blog dir to blog dir
       run: cp -R blog-contents/blog/* blog
@@ -40,6 +36,14 @@ runs:
 
     - name: move blog-content docs dir to docs dir
       run: cp -R blog-contents/docs/* docs
+      shell: bash
+
+    - name: move authors.yml into blog folder
+      run: cp blog-contents/authors/authors.yml blog
+      shell: bash
+
+    - name: move authors imgs into blog/img/authors
+      run: cp -R blog-contents/authors/img/* static/img/authors
       shell: bash
 
     - name: remove blog-content dir
