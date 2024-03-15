@@ -39,12 +39,13 @@ You are ready to write !
 
 ### Add your author information
 
-In the root, we will find [authors.yml](blog/authors.yml), you will have to create your author's information bloc : 
+Go to the [authors.yml file](authors/authors.yml), you will have to create your author's information bloc : 
 
 The first entry follow the same convention in all other **zatsit** software usage : 
 - everything in lowercase
 - first letter of your first name
 - your name
+- add your profil picture (in the `.webp` format) into the `authors/img` folder
 
 This value will be used in your post metadata.
 
