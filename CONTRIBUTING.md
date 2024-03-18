@@ -7,12 +7,12 @@ All types of contributions are encouraged and valued.
 * Write blog posts, for this refers to [**zatsit** Code of Posting](./POSTING.md).
 * Report bugs, suggest enhancements, and contribute to the existing articles.
 
-See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them. 
-Please make sure to read the relevant section before making your contribution. 
-It will make it a lot easier for us maintainers and smooth out the experience for all involved. 
+See the [Table of Contents](#table-of-contents) for different ways to help and details about how this project handles them.
+Please make sure to read the relevant section before making your contribution.
+It will make it a lot easier for us maintainers and smooth out the experience for all involved.
 The community looks forward to your contributions. 🎉
 
-> And if you like the project, but just don't have time to contribute, that's fine. 
+> And if you like the project, but just don't have time to contribute, that's fine.
 > There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
 > - Talk to your friends and colleagues about the posts.
 > - Support the new posts on social networks.
@@ -137,7 +137,7 @@ to `dirtech at zatsit dot fr`.
 > If you want to ask a question, we assume that you have read the available
 > [Documentation](https://docusaurus.io/docs/docs-introduction) [README](./README.md) and [POSTING](./POSTING.md).
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/zatsit-oss/zats-blog-content/issues) that might help you. 
+Before you ask a question, it is best to search for existing [Issues](https://github.com/zatsit-oss/zats-blog-content/issues) that might help you.
 In case you have found a suitable issue and still need clarification, you can write your question in this issue.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
