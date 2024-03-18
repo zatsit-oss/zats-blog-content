@@ -13,14 +13,14 @@ Cette version 3.0.0 apporte son lot de nouveautés, mais aussi des amélioration
 
 <!-- truncate -->
 
-Pour y découvrir les principaux changements, 
+Pour y découvrir les principaux changements,
 
 👉 Vous pouvez consulter le [changelog](https://www.asyncapi.com/blog/release-notes-3.0.0) de cette version.
 
-👉 Si vous utilisiez déjà la version 2, vous allez devoir migrer vos specifications en V3 et 
+👉 Si vous utilisiez déjà la version 2, vous allez devoir migrer vos specifications en V3 et
 AsyncAPI a pensé à vous en vous proposant un [guide de migration](https://www.asyncapi.com/docs/migration/migrating-to-v3).
 
-👉 J'ai moi-même contribué à l'effort en prenant part à une migration [du use-case Adeo](https://www.asyncapi.com/casestudies/adeogroup) durant un live avec [@lbroudoux](https://twitter.com/lbroudoux) de chez [Microcks.io](https://microcks.io/) : 
+👉 J'ai moi-même contribué à l'effort en prenant part à une migration [du use-case Adeo](https://www.asyncapi.com/casestudies/adeogroup) durant un live avec [@lbroudoux](https://twitter.com/lbroudoux) de chez [Microcks.io](https://microcks.io/) :
 
 [![Regarder la video sur Youtube](./v3livemigration.jpeg 'Go to v3 migration live')](https://www.youtube.com/watch?v=WCK9_ZDv6K4)
 

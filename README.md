@@ -1,6 +1,6 @@
 # **zatsit** blog contents repository
 
-This repository holds the contents of the **zatsit** blog. 
+This repository holds the contents of the **zatsit** blog.
 Under the hood, it is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 Feel free to contribute to the blog by creating a pull request.
@@ -29,6 +29,6 @@ git config --global commit.gpgsign true
 
 Please follow the [posting guidelines](./POSTING.md) to write a new post.
 
-Opening your Pull Request will trigger a CI/CD pipeline that will generate 
+Opening your Pull Request will trigger a CI/CD pipeline that will generate
 a preview on your article based on [zatsit blog](https://zatsit.github.io/blog/).
 Wait few seconds and check the preview link in the PR checks.
