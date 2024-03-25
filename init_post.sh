@@ -14,7 +14,7 @@ remove_last_char() {
 
 # User adapter
 ## Change sed behavior if Mac OS users
-export SED=sed
+export SED=sed -i
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export SED=sed -i ''
 fi
@@ -140,10 +140,10 @@ echo "  Blog post directory: ${post_directory}"
 echo "  Blog post file: ${post_file}"
 mkdir -p ./${post_directory}
 cp ./templates/blog/blog-post.md ./${post_file}
-sed -i "s/^title: .*/title: \"${post_title}\"/" ./${post_file}
-sed -i "s/^slug: .*/slug: \"${post_slug}\"/" ./${post_file}
-sed -i "s/^authors: .*/authors: [${post_author}]/" ./${post_file}
-sed -i "s/^tags: .*/tags: []/" ./${post_file}
+$SED "s/^title: .*/title: \"${post_title}\"/" ./${post_file}
+$SED "s/^slug: .*/slug: \"${post_slug}\"/" ./${post_file}
+$SED "s/^authors: .*/authors: [${post_author}]/" ./${post_file}
+$SED "s/^tags: .*/tags: []/" ./${post_file}
 
 echo ""
 echo "Blog post initialized successfully"
