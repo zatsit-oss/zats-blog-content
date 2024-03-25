@@ -39,10 +39,10 @@ read post_author
 echo ""
 echo "  Selected author: ${post_author}"
 
-# Check if author exists in the blog/authors.yml file
-author_exists=$(grep "^${post_author}:" blog/authors.yml)
+# Check if author exists in the authors/authors.yml file
+author_exists=$(grep "^${post_author}:" authors/authors.yml)
 if [[ $author_exists -eq 0 ]]; then
-    echo "Error: Author does not exist in the blog/authors.yml file"
+    echo "Error: Author does not exist in the authors/authors.yml file"
     exit 1
 fi
 

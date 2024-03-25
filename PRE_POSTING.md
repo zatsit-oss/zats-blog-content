@@ -11,7 +11,7 @@
 
 ### (required) Add your author information
 
-Create your author information in the [authors.yml](blog/authors.yml) file.
+Create your author information in the [authors.yml](authors/authors.yml) file.
 
 Your author information block must follow the following structure :
 
