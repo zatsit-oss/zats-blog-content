@@ -29,7 +29,7 @@ This documentation explain the process to write a new blog post.
 
 Before writting a post, ensure you respect the following:
 
-* Author information is added in the [authors.yml](blog/authors.yml) file
+* Author information is added in the [authors.yml](authors/authors.yml) file
 
 > All prerequisites are explained in the [PRE_POSTING.md](./PRE_POSTING.md) file.
 
