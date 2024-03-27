@@ -1,4 +1,3 @@
----
 eperu:
   name: Emmanuel Peru
   title: CTO & DSI zatsit
@@ -17,8 +16,4 @@ mslimani:
   url: https://github.com/mslimani
   image_url: /img/authors/mslimani.webp
 
-glefebvre:
-  name: Germain Lefebvre
-  title: Head of OSS
-  url: https://github.com/germainlefebvre4
-  image_url: /img/authors/glefebvre.webp
+
