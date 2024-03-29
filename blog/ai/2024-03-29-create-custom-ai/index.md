@@ -5,6 +5,10 @@ authors: [mslimani]
 tags: [ai]
 ---
 
+Créer son propre model AI avec Mistral
+
+<!-- truncate -->
+
 # Créer son propre model AI avec Mistral
 
 
