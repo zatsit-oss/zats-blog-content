@@ -12,7 +12,6 @@ Feel free to contribute to the blog by creating a pull request.
 
 Committing on this repository requires to do signed commits.
 To enable signed commits,
-
 - register your SSH public key in your GitHub account as **Signing key** `Key type
 - configure your Git CLI **globally** to sign commits by default.
 
