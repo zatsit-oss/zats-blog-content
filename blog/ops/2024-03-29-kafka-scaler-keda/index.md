@@ -35,6 +35,6 @@ spec:
         lagThreshold: "50"
         offsetResetPolicy: latest
 ```
-*Cette exemple est valable si votre cluster Kafka n'a pas d'authentification SASL/TLS.*
+*Cet exemple est valable si votre cluster Kafka n'a pas d'authentification SASL/TLS.*
 
 📖 Documentation en ligne: https://keda.sh/docs/2.13/scalers/apache-kafka/
