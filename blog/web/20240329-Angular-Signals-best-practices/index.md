@@ -7,6 +7,10 @@ tags:
   - "web"
 ---
 
+Les bonnes pratique sur Angular Signal
+
+<!-- truncate -->
+
 I still don’t want to encourage you to use effect(), but I’ll give you advice on how to use it as safely as possible:
 
 The function you provide to effect() should be as small as possible. This way it will be easier to read and spot erroneous behavior.
