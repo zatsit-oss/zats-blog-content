@@ -5,45 +5,33 @@ authors: [eperu]
 tags: [general]
 ---
 
-Bienvenue sur le site, on se présente !
+Bienvenue sur le blog, on se présente !
 
 <!-- truncate -->
 
-## Bienvenue sur le blog de Zatsit !
+## Bienvenue sur le blog de **zatsit** !
 
 ![Zatsit banner](./objectives.png)
 
-## Là où Compétences Techniques et Engagement Écologique et sociétal se Rencontrent
+## Là où compétences techniques et engagement écologique et sociétal se rencontrent
 
-Bienvenue sur le blog Zatsit, votre espace dédié à la découverte des talents exceptionnels qui font de notre entreprise un leader dans le secteur des services numériques. Chez nous, la croissance professionnelle et technologique s'harmonise parfaitement avec un engagement fort envers l'environnement et le bien-être de notre communauté.
+Bienvenue sur le blog **zatsit**, votre espace dédié à la découverte de sujets techniques, mais pas que, rédigés par les collaborateurs. Chez nous, la croissance professionnelle et technologique s'harmonise parfaitement avec un engagement fort envers l'environnement et le bien-être de notre communauté. Nous vous en parlerons au fil des semaines, des mois, des années !
 
-## Découvrez Nos Arbres de Compétences
+## Découvrez des articles
 
-Chaque collaborateur chez Zatsit est comme un arbre, enraciné dans la technologie et s'épanouissant avec des compétences techniques exceptionnelles. Explorez nos arbres pour découvrir :
+Au fil de la veille de chacun, des articles viendront fleurir ici. Que ce soit pour une nouvelle solution technique, un retour d'expérience sur un projet ou une passion, les collaborateurs zatsit prendront la plume pour vous chatouiller les neurones ! 
 
-- 🌳 Le Chêne de l'Ancienneté : Nos vétérans, symboles de stabilité et d'expérience.
-- 🎋 Le Bambou de la Montée en Compétence Rapide : Ceux qui grandissent rapidement, embrassant de nouvelles technologies avec agilité.
-- 🌿 Le Saule de la Souplesse et de l'Adaptabilité : Des esprits flexibles prêts à s'adapter aux défis du monde numérique.
-Expertises Techniques à la Pointe
+Les catégories s'étofferont donc pour parler : 
+- écoconception
+- développement mobile, web
+- architecture technique
+- intelligence artificielle (et moins énergivore on l'espère)
+- observabilité et mesure d'empreinte
+- ... et bien d'autres encore
 
-Découvrez comment nos collaborateurs, forts de leur expérience et de leur formation continue, repoussent sans cesse les limites de l'innovation. Nous sommes fiers de notre équipe qui excelle dans des domaines tels que :
-
-- 🚀 Intelligence Artificielle : Des esprits créatifs qui transforment des données en solutions intelligentes.
-- 💻 Développement Full Stack : Des développeurs polyvalents capables de concevoir des expériences utilisateur exceptionnelles.
-- 🌐 Cybersécurité : Des gardiens vigilants qui protègent nos clients des menaces numériques.
-
-## Initiatives RSE et Impact Écologique
-
-Chez Zatsit, notre engagement envers la Responsabilité Sociale des Entreprises (RSE) ne se limite pas à l'informatique. Explorez nos initiatives qui façonnent un avenir durable :
-
-- 🌍 Projets RSE Innovants : Découvrez comment nous utilisons la technologie pour créer un impact positif dans nos communautés locales et au-delà.
-- ♻️ Pratiques Écologiques au Quotidien : De la réduction de notre empreinte carbone à l'utilisation de technologies vertes, nous œuvrons pour un avenir plus durable.
-- 🌱 Formation Écologique Continue : Nos collaborateurs sont constamment informés des meilleures pratiques pour minimiser notre impact sur la planète.
 
 ## Laissez-vous Inspirer par Nos Collaborateurs
 
-Parcourez nos articles de blog pour entendre les voix de nos collaborateurs, découvrir leurs passions, leurs projets personnels et la manière dont ils contribuent à notre mission commune. Chez Zatsit, nous croyons que chaque talent contribue à une forêt prospère.
+Parcourez nos articles de blog pour entendre les voix de nos collaborateurs, découvrir leurs passions, leurs projets personnels et la manière dont ils contribuent à notre mission commune. Chez **zatsit**, nous croyons que chaque talent contribue à la prospérité de l'entreprise et de notre écosystème, c'est pourquoi chaque voix compte.
 
-Rejoignez-nous dans cette aventure passionnante où compétences techniques et engagement écologique s'entrelacent pour créer un monde numérique plus intelligent et plus durable. Explorez, apprenez, inspirez-vous !
-
-Bienvenue chez Zatsit, où la croissance professionnelle rencontre la responsabilité environnementale.
+Bonne lecture !
