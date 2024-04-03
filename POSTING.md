@@ -79,7 +79,18 @@ git checkout -b feat/general-20231221-my-first-blog-post
 
 Blog posts are stored in categories. You have to choose the category of your post.
 
-You can find all the available categories in the file [config.json](config.json).
+You can find all the available categories in the file [config.json](config.json):
+
+* ai
+* architecture
+* cloud
+* data
+* dev
+* general
+* green
+* mobile
+* ops
+* web
 
 > If you think you need a new category, please contact [DT](mailto:dirtech@zatsit.fr).
 
