@@ -55,6 +55,7 @@ echo ""
 
 
 echo "3/ Title of the blog post"
+echo "  Example: Mon titre d'article qui support les accents et la ponctuation"
 echo ""
 
 
