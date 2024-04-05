@@ -26,8 +26,8 @@ do
   fi
 
   # Check if authors exist in authors.yml
-  post_header_authors=$(sed '/---/,/---/!d' $post | grep "^authors:" | cut -d ':' -f2 | tr -d ' []')  
-  authors_list=$(cat ./blog/authors.yml | grep -e '^[a-z]*:' | cut -d ':' -f1)
+  post_header_authors=$(sed '/---/,/---/!d' $post | grep "^authors:" | cut -d ':' -f2 | tr -d ' []')
+  authors_list=$(cat ./authors/authors.yml | grep -e '^[a-z]*:' | cut -d ':' -f1)
   echo $authors_list | tr " " '\n' | grep -F -q -x $post_header_authors
   if [[ $? -eq 1 ]]; then
     flag_exit=1
