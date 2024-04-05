@@ -1,6 +1,7 @@
 #!/bin/bash
 
-categories_list=("ai" "architecture" "cloud" "data" "dev" "general" "green" "mobile" "ops" "web")
+## Read categories from config.json file
+categories=(`cat config.json | jq -cr '.categories[]' | tr '\n' ' '`)
 
 flag_exit=0
 
