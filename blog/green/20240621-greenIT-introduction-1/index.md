@@ -4,11 +4,10 @@ title: "Le greenIT episode 1 : Au fond du trou ?"
 authors: [eperu]
 tags: 
   - "green"
-  - "web"
-  - "dev"
+  - "tech"
 ---
 
-C'est la fin du printemps 2024 et nous voyons clairement que nous commençons à manquer de prénoms pour les tempêtes,
+Le printemps 2024 est erminé (si vous l'avez vu passé) et nous voyons clairement que nous commençons à manquer de prénoms pour les tempêtes,
 que les normales de saisons ne sont plus vraiment normales, que la sécheresse ou à l'inverse 
 les innondations sont importantes et plus seulement au bout du monde, mais au plus près de nous.
 L'empreinte de l'industrialisation est avérée dans l'augmentation, des gaz à effet de serre, mais l'empreinte liée aux matières 
