@@ -41,7 +41,7 @@ Il y a quelque temps j'ai eu la chance d'assister à deux évènements plein de 
 Plus nous avançons dans le temps et plus nous trouvons des propriétés intéressantes à des métaux et autres éléments et des applications à échelle industrielle. A tel point que nos smartphones en sont truffés, je vous invite à visiter cette [démo en ligne de Systext de composition en métaux d'un smartphone](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1) qui donne le résultat ci-dessous, avec pas moins de 60 éléments : 
 
 ![illustration de la composition en métaux d'un smartphone](smartphone-composition.webp)
-*Source https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1*
+*Source : [Systext](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1) *
 
 Et oui, avec des composants comme l'Arsenic et l'Antimoine, certes en quantité minime et stabilisé dans votre smartphone, mais qu'en est-il de leur exploitation ?
 
@@ -58,7 +58,7 @@ Cette infographie nous explique que pour chaque élément trouvé (au centre), o
 Pour extraire des métaux de la roche, il y a des procédés mécaniques, thermiques, chimiques pour par exemple partir de la roche et obtenir des catodes de cuivre. Tout celà avec une consommation d'eau et d'énergie phénoménale. Dans les exemples de cet article, nous sommes loin de l'image du mineur avec sa pioche sur l'épaule ou du prospecteur américain qui filtre du sable au bord de la rivière. On parle plutôt de machines gigantesques, d'explosifs et d'échelle difficilement imaginable.
 
 ![Exemple extraction issu de https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-1_Nov2021_maj.pdf](exemple-cuivre.webp)
-*Source : https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-1_Nov2021_maj.pdf*
+*Source : [Systext](https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-1_Nov2021_maj.pdf)*
 
 ## Il faut creuser un gros trou ?
 
@@ -128,7 +128,7 @@ Soyez curieux à votre tour, chercher de l'information dans les sources citées 
 - [USI 2022 "Ruée minière au XXIè siècle : jusqu'où les limites seront-elles repoussées ?"](https://www.youtube.com/watch?v=i8RMX8ODWQs)
 - [Compléments de sources d'entretien ](https://www.systext.org/sites/default/files/RP_SystExt_Thinkerview-2-Sources-Complements_Mai2023.pdf)
 - [Rapport Tome 2 · Meilleures pratiques et mine « responsable »](https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-2_Tome-2.pdf)
-- [Reesources mnières en France](https://www.mineralinfo.fr/fr/ressources-minerales-france-gestion/mines-france)
+- [Ressources minières en France](https://www.mineralinfo.fr/fr/ressources-minerales-france-gestion/mines-france)
 - [By-product metals are technologically essential but have problematic supply](https://www.science.org/doi/10.1126/sciadv.1400180)
 
 [![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fgreen-exploitation-miniere%2F)
