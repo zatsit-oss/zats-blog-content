@@ -36,7 +36,7 @@ Il y a quelque temps j'ai eu la chance d'assister à deux évènements plein de 
 À travers les différentes époques, la demande en métaux n'a jamais cessé de croître : il y a pu avoir des ralentissements dûs à des évènements gépolotiques ou sanitaires (guerres, épidémies...), mais la demande est toujours croissante.
 
 ![graphique d'évolution production metaux sur les cinquantes dernières années](evolution-production-metaux.webp)
-*Source Systext*
+*Source : https://www.systext.org/node/2058*
 
 Plus nous avançons dans le temps et plus nous trouvons des propriétés intéressantes à des métaux et autres éléments et des applications à échelle industrielle. A tel point que nos smartphones en sont truffés, je vous invite à visiter cette [démo en ligne de Systext de composition en métaux d'un smartphone](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1) qui donne le résultat ci-dessous, avec pas moins de 60 éléments : 
 
