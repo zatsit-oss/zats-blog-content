@@ -1,6 +1,6 @@
 ---
 slug: onboarding
-title: Mon onboarding
+title: Mon onboarding chez zatsit
 authors: [jvasseur]
 tags: [general]
 ---
@@ -11,30 +11,63 @@ Mon arrivée dans une nouvelle aventure !
 
 ![Gourde  et sweat](gourde_sweat_banniere.webp)
 
-Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien et Océane. Un bureau m'attend avec quelques goodies estampillés au couleur de l'entreprise, gourde, sweat, sticker et un petit mot d'accueil qui me font très plaisir. 
+Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de mission RH de choc). Un bureau m'attend avec quelques goodies estampillés au couleur de l'entreprise : gourde, sweat, sticker et un petit mot d'accueil qui me font très plaisir. 
 
-On commence par gérer tout ce que tout le monde « adore »… la partie administrative et tous les divers documents à fournir et quelques validations d’identité habituelles. On active mes accès à [Ekip](https://www.ekip.app/) ainsi je découvre les tickets restaurants écoresponsables. Puis avec Océane on passe en revue les accès aux outils qui permettent le suivi pour mes futures missions.
+la matinée commence par la partie administrative (ce que tout le monde « adore », n'est ce pas)
+- les divers documents à fournir et quelques validations d’identité habituelles.
+- On active mes accès à [Ekip](https://www.ekip.app/). Je découvre ainsi les tickets restaurants **écoresponsables**.
+- Puis avec Océane on passe en revue les accès aux outils qui permettent le suivi pour mes futures missions. D'ailleurs, **zatsit** a mis en place une plateforme dédiée pour l'onboarding des consultants, permettant de mettre en avant les quelques « formations » a dérouler pour être opérationnel. 
 
-On reparle avec tous le monde de ce l’on veut construire à l’avenir et des impacts que veut avoir [Zatsit](https://zatsit.fr/) sur les aspects sociétal et environnemental ce qui m’amène à vous parler d’un choix sur le matériel qu’a fait la société...  
+On reparle avec tous le monde de ce l’on veut construire à l’avenir et des impacts que veut avoir **[zatsit](https://zatsit.fr/)** sur les aspects sociétal et environnemental ; Ce qui m’amène à vous parler du choix sur le matériel qu’a fait la société...  
 
 
-## Maintenant le plus cool : mon poste de travail...
+## Mon meilleur moment de la journée : la découverte de mon outil de travail...
 
-Peu de temps avant mon arrivée, j’ai reçu un message qui me demandait de faire le choix de mon futur poste de travail, ainsi j’ai découvert le concept de [Framework](https://frame.work/fr/fr) ce qui permet à Zatsit pour être cohérent dans sa politique environnementale et avoir un impact le plus restreint possible sur la planête. J’ai donc choisi les différents éléments de ma machine 13 pouces avec coque en aluminium : processeur, ram, disque, extensions… Et pour le fun en DIY (Do It Yourself).
+Peu de temps avant mon arrivée, j’ai reçu un message qui me demandait de choisir la configuration de mon futur poste de travail [Framework](https://frame.work/fr/fr)
 
-![Assemblage framework](framework_assembling.webp)
+J’ai ainsi découvert leur concept : proposer du matériel réparable et évolutif. Ce choix permet à **zatsit** de rester cohérent dans sa politique environnementale et avoir un impact le plus restreint possible sur la planête.
 
-Donc tout était là, un carton contenant les diverses parties de mon ordinateur, quand on l’habitude de monter des configurations et comme tout est suffisamment indiqué sur la carte mère, on installe le disque SSD, la mémoire on referme avec le couvercle qui est le clavier, on serre quelque vis avec l’outil qui est fournit, quelques minutes suffises. Le petit truc sympa, le contour de l’écran est amovible et il existe plusieurs couleurs, moi j’ai choisi orange.
+J’ai donc choisi les différents éléments de ma machine : un 13 pouces avec coque en aluminium, le processeur, la ram, le disque, les extensions… Et pour le fun, le montage à faire par mes soins pour prendre en main l'assemblage du hardware.
 
-![Extensions](extensions.webp)
+![Etapes de l'assembalge](framework_assembling.webp)
 
-Pour pouvoir alimenter la machine et la connecter à divers équipements extérieurs, il y a 4 emplacements qui peuvent recevoir des modules d’extension en tous genres : USB type A ou C, HDMI, Ethernet et autres que l'on peut interchangé à chaud. Et la aussi on peut y ajouter un peu de couleur.
+Donc tout était là, dans un carton contenant les diverses parties de mon ordinateur. Quand on a l’habitude de monter des configurations et comme tout est suffisamment indiqué sur la carte mère, l'assemblage se fait plutôt facilement et en quelques minutes : on installe le disque SSD et la mémoire, on referme avec le couvercle, qui est le clavier, on serre quelque vis avec l’outil qui est fournit, et **zatsit** !
 
-![Setup](setup.webp)
+Le petit plus sympa : le contour de l’écran est amovible et il existe plusieurs couleurs, moi j’ai choisi le orange.
 
-Une fois tout en place, j’ai installé une distribution Linux (Ubuntu 24.04) à partir d’une clé USB que j’avais préparé en avance en suivant les indications fournies sur le site du fabriquant. Et tout était fonctionnel au premier démarrage ! J’ai commencé à travailler sur ce poste après avoir configuré un environnent de développement. Je suis enthousiaste à l’idée d'utiliser ma machine lors de mes missions.
+![les extensions et leurs emplacements](extensions.webp)
 
-En parcourant le site de Framework [Framework](https://frame.work/fr/fr) on y découvre que beaucoup de matériaux constituant les postes de travail sont en bonne partie recyclé. Qu’il est aussi possible de commander tous les composants séparément ce qui permet de réparer ou de faire évoluer sa configuration facilement. Idée que je trouve intéressante quand on à déjà ouvert un ordinateur portable et de constater que l’on ne pourra pas faire grand chose pour se dépanner.
+Pour pouvoir alimenter la machine et la connecter à des périphériques, il y a 4 emplacements qui peuvent recevoir des modules d’extension en tous genres : USB type A ou C, HDMI, Ethernet et autres que l'on peut interchanger, et à chaud.
 
-Il reste juste à voir dans le temps comment tout cela va évoluer et peut-être partager mon expérience dans quelques temps sur ce genre de machine. 
+Et pour certaines extensions, on peut également y ajouter un peu de couleur.
 
+![La machine une fois assemblée](setup.webp)
+
+Une fois tout en place, j’ai installé une distribution Linux (Ubuntu 24.04) à partir d’une clé USB que j’avais préparé en avance en suivant les [indications fournies sur le site du fabriquant](https://guides.frame.work/Guide/Ubuntu+22.04+LTS+Installation+on+the+Framework+Laptop+13/109).
+
+Et tout était fonctionnel au premier démarrage !
+
+J’ai commencé à travailler sur ce poste après avoir configuré un environnent de développement. Je suis enthousiaste à l’idée d'utiliser ma machine lors de mes missions.
+
+Parcourir le site de Framework [Framework](https://frame.work/fr/fr) est intéressant : 
+- on y découvre que beaucoup de matériaux constituant les postes de travail sont en bonne partie recyclé.
+- Qu’il est aussi possible de commander tous les composants séparément (cela va jusqu'au kit de visserie) ce qui permet de réparer ou de faire évoluer sa configuration facilement au fil des années (Idée que je trouve intéressante quand on à déjà ouvert un ordinateur portable et de constaté que l’on ne pourra pas faire grand chose pour se dépanner)
+- Pour chaque composant proposé sur la marketplace, il existe un tutoriel de remplacement avec la difficulté, les étapes et le temps nécessaire à l'opération. Ce qui permet d'effectuer facilement la maintenance de son poste de travail par ses propres moyens.
+
+![Exemple d'un guide de réparation](reparation.webp)
+
+## En attendant de trouver la mission de mes rêves...
+
+Avant d'avoir une nouvelle affectation chez un client, durant quelques semaines, j'ai commencé les classroom élaborées par des membres de **zatsit**. Les premiers ateliers m’ont permis de découvrir l’éco-conception, d’étudier et de comprendre les solutions de monitoring pour l’empreinte carbone de projets cloud. La société veut sensibiliser ses collaborateurs aux impacts environnementaux de nos divers métiers. 
+
+Des sujets très intéressants et que j’avais un peu survoler jusqu’à aujourd’hui. Cela va impacter ma façon de concevoir mes futurs projets en tant que développeur. Ces classroom permettent aussi les échanges parmi mes collègues.
+
+## Mon avenir chez zatsit...
+
+Je pense que les mois à venir vont être enrichissants et vont encore me faire grandir.
+
+D’une part, l’équipe **zatsit** est à l’écoute de mes souhaits sur le périmètre de mes futures missions et de mes envies de découvrir d’autres écosystèmes chez nos clients, de me donner l’opportunité de faire mes preuves en tant que tech lead.
+
+D’autres part, je vais pouvoir prendre part à des projets en interne toujours en lien avec les convictions de la société qui vont favoriser les échanges au sein d’un collectif de passionnés.
+Pour donner un exemple, on se prépare à participer à l’Hacktoberfest, événement qui encourage les développeurs à contribuer à des projets open source.
+Et il se peut que l’on se croise lors d’un BBL ou d’un Meetup sur des sujets passionnants organisé par **zatsit**
