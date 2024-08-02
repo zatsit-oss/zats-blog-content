@@ -33,7 +33,7 @@ Il y a quelque temps j'ai eu la chance d'assister à deux évènements plein de 
 
 ### L'exploitation minière, toujours plus
 
-À travers les différentes époques, la demande en métaux n'a jamais cessé de croître : il y a pu avoir des ralentissements dûs à des évènements gépolotiques ou sanitaires (guerres, épidémies...), mais la demande est toujours croissante.
+À travers les différentes époques, la demande en métaux n'a jamais cessé de croître : il y a pu avoir des ralentissements dûs à des évènements géopolitiques ou sanitaires (guerres, épidémies...), mais la demande est toujours croissante.
 
 ![graphique d'évolution production metaux sur les cinquantes dernières années](evolution-production-metaux.webp)
 *Source : https://www.systext.org/node/2058*
@@ -62,7 +62,7 @@ Pour extraire des métaux de la roche, il y a des procédés mécaniques, thermi
 
 ## Il faut creuser un gros trou ?
 
-Vous avez peut-être déjà vu les [photographies de Dillon Marsh](https://dillonmarsh.com/fwiw.html) qui montre "à l'échelle" la taille des mines en elle même, leur emprise sur les espaces autour, en regard de ce qui en est extrait comme produit fini.
+Vous avez peut-être déjà vu les [photographies de Dillon Marsh](https://dillonmarsh.com/fwiw.html) qui montre "à l'échelle" la taille des mines en elle-même, leur emprise sur les espaces autour, en regard de ce qui en est extrait comme produit fini.
 
 Ci-dessous, on peut se rendre compte, avec la représentation de la tour Eiffel, de la taille d'un site (extraction + exploitation + emprise en surface des déchets) pour la **mine de cuivre** de Palabora
 ![palabora-Afrique-Sud_Dillon-Marsh.jpg Illustration de la mine de Palabora avec taille du métal extrait au global versus taille de l'exploitation minière](palabora-Afrique-Sud_Dillon-Marsh.webp)
@@ -87,11 +87,12 @@ Elles sont nombreuses : la pollution de l'air, des sols et de l'eau autour des s
 - [Toujours sur l'ARIA](https://www.aria.developpement-durable.gouv.fr/fiche_detaillee/12831/) on trouve une catastrophe survenue en Espagne suite à la rupture d'une digue d'un bassin de stockage de déchets de pyrite. Des millions de tonnes d'eaux acides et de boues sont déversées dans la rivière Rio Agrio puis le Guadimar.
 - [un dernier exemple en Russie](https://sg.finance.yahoo.com/news/russian-river-of-blood-leaves-locals-fearing-092205453.html) où on peut voir une rivière "sanglante" résultat de fuites de minerai. L'article expose que 210 000 personnes travaillent dans les environs pour cette industrie qui représente un cinquième du nickel mondial... 
 
-Des procès sont régulièrement intentés contre les exploitants, cependant ça ne permet pas de réparer les dommages occasionnés. au delà des accidents, la fin d'une exploitation d'un site minier ne signifie pas la fin de sa pollution, au contraire. 
+Des procès sont régulièrement intentés contre les exploitants, cependant ça ne permet pas de réparer les dommages occasionnés. Au-delà des accidents, la fin d'une exploitation d'un site minier ne signifie pas la fin de sa pollution, au contraire. 
 
 On ne dépollue pas un site minier, tout simplement parce que ce serait trop long, trop couteux, voire impossible. Chaque exploitation a donc un effet irréversible sur son environnement.
 
 ### Conséquences politiques et sociales ### 
+
 L'extraction minière est aussi source de conflits politiques et sociales. Les ressources ne sont pas également réparties sur le globe et dans certains pays les conditions de travail des adultes et aussi des enfants sont assez "souples", dirons-nous, à l'égard de la filière.
 
 Lors du meetup Techrocks du 8 février 2024, j'ai pu apprendre les démarches entreprises, par exemple, par Fairphone qui tente sur le long terme d'améliorer les conditions sociales autour des sites où elle source ses matériaux.
@@ -107,7 +108,7 @@ Alors à l'échelle du numérique, que pouvons-nous faire ?
 
 Se poser les bonnes questions sur les usages toujours plus gourmands en ressources : concevoir mieux pour utiliser plus longtemps ! Celà passe par une meilleure analyse des besoins, de faire des compromis sur les données dont on a réellement besoin, de la richesse des fonctionnalités qui induit souvent plus de complexité et donc un besoin de performance.
 
-[Tristant Nitot](https://www.youtube.com/watch?v=LzBv5H24OxY), lors du dernier DevFest Lille, nous expliquait clairement que l'amélioration de la puissance de calcul (illustrée par laLoi de Moore) a sans cesse été partiellement annulée par la baisse de la performance et la complexité croissante des softwares. 
+[Tristant Nitot](https://www.youtube.com/watch?v=LzBv5H24OxY), lors du dernier DevFest Lille, nous expliquait clairement que l'amélioration de la puissance de calcul (illustrée par la loi de Moore) a sans cesse été partiellement annulée par la baisse de la performance et la complexité croissante des softwares. 
 
 Nous aurons chez **zatsit** l'occasion de vous reparler des thèmes, des outils et des méthodologies autour de l'éco-conception.
 
@@ -121,10 +122,11 @@ En France aussi, la loi [AGEC](https://www.ecologie.gouv.fr/loi-anti-gaspillage-
 
 On associe souvent l'empreinte écologique du numérique à la consommation d'énergie, sur laquelle nous ferons un prochain focus, mais cet article souhaitait mettre l'accent sur l'envers du décor des équipements numérique et leurs conséquences. 
 
-Soyez curieux à votre tour, chercher de l'information dans les sources citées (et d'autres) pour vous faire votre propre opinion et peut-être changer quelques habitudes.
+Soyez curieux à votre tour, cherchez de l'information dans les sources citées (et d'autres) pour vous faire votre propre opinion et peut-être changer quelques habitudes.
 
 
 ### Ressources : 
+
 - [USI 2022 "Ruée minière au XXIè siècle : jusqu'où les limites seront-elles repoussées ?"](https://www.youtube.com/watch?v=i8RMX8ODWQs)
 - [Compléments de sources d'entretien ](https://www.systext.org/sites/default/files/RP_SystExt_Thinkerview-2-Sources-Complements_Mai2023.pdf)
 - [Rapport Tome 2 · Meilleures pratiques et mine « responsable »](https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-2_Tome-2.pdf)
