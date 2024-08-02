@@ -25,7 +25,7 @@ Ce qui m’amène à vous parler du choix sur le matériel qu’a fait la socié
 
 ## Mon meilleur moment de la journée : la découverte de mon outil de travail
 
-Peu de temps avant mon arrivée, j’ai reçu un message qui me demandait de choisir la configuration de mon futur poste de travail [Framework](https://frame.work/fr/fr)
+Peu de temps avant mon arrivée, j’ai reçu un message qui me demandait de choisir la configuration de mon futur poste de travail [Framework](https://frame.work/fr/fr).
 
 J’ai ainsi découvert leur concept : proposer du matériel réparable et évolutif. Ce choix permet à **zatsit** de rester cohérent dans sa politique environnementale et avoir un impact le plus restreint possible sur la planête.
 
@@ -33,9 +33,9 @@ J’ai donc choisi les différents éléments de ma machine : un 13 pouces avec
 
 ![Etapes de l'assembalge](framework_assembling.webp)
 
-Donc tout était là, dans un carton contenant les diverses parties de mon ordinateur. Quand on a l’habitude de monter des configurations et comme tout est suffisamment indiqué sur la carte mère, l'assemblage se fait plutôt facilement et en quelques minutes : on installe le disque SSD et la mémoire, on referme avec le couvercle, qui est le clavier, on serre quelque vis avec l’outil qui est fournit, et **zatsit** !
+Donc tout était là, dans un carton contenant les diverses parties de mon ordinateur. Quand on a l’habitude de monter des configurations, et comme tout est suffisamment indiqué sur la carte mère, l'assemblage se fait plutôt facilement et en quelques minutes : on installe le disque SSD et la mémoire, on referme avec le couvercle, qui est le clavier, on serre quelque vis avec l’outil qui est fournit, et **zatsit** !
 
-Le petit plus sympa : le contour de l’écran est amovible et il existe plusieurs couleurs, moi j’ai choisi le orange.
+Le petit plus sympa : le contour de l’écran est amovible et il existe plusieurs couleurs. Moi, j’ai choisi le orange.
 
 ![les extensions et leurs emplacements](extensions.webp)
 
@@ -60,16 +60,23 @@ Parcourir le site de Framework [Framework](https://frame.work/fr/fr) est intére
 
 ## En attendant de trouver la mission de mes rêves...
 
-Avant d'avoir une nouvelle affectation chez un client, durant quelques semaines, j'ai commencé les classroom élaborées par des membres de **zatsit**. Les premiers ateliers m’ont permis de découvrir l’éco-conception, d’étudier et de comprendre les solutions de monitoring pour l’empreinte carbone de projets cloud. La société veut sensibiliser ses collaborateurs aux impacts environnementaux de nos divers métiers. 
+En attendant mon démarrage chez un client, j'en ai profité pour commencer les *Classrooms* élaborées par **zatsit**.
 
-Des sujets très intéressants et que j’avais un peu survoler jusqu’à aujourd’hui. Cela va impacter ma façon de concevoir mes futurs projets en tant que développeur. Ces classroom permettent aussi les échanges parmi mes collègues.
+Les premiers ateliers m’ont permis de découvrir les principes de l’éco-conception ou d’étudier et de comprendre les solutions de monitoring pour l’empreinte carbone de projets cloud. 
 
-## Mon avenir chez zatsit...
+La société veut sensibiliser ses collaborateurs aux impacts environnementaux de nos métiers. 
 
-Je pense que les mois à venir vont être enrichissants et vont encore me faire grandir.
+Des sujets très intéressants et que j’avais un peu survolé jusqu’à aujourd’hui. Cela va **impacter** ma façon de concevoir mes futurs projets en tant que technical leader.
 
-D’une part, l’équipe **zatsit** est à l’écoute de mes souhaits sur le périmètre de mes futures missions et de mes envies de découvrir d’autres écosystèmes chez nos clients, de me donner l’opportunité de faire mes preuves en tant que tech lead.
+## Mon avenir chez zatsit ?
+
+Je suis persuadé que les mois à venir vont être enrichissants et vont me faire grandir.
+
+D’une part, l’équipe **zatsit** est à l’écoute quant à mes souhaits sur le périmètre de mes futures missions, mes envies de découvrir d’autres écosystèmes chez nos clients, et de me donner l’opportunité de faire mes preuves en tant que tech lead.
 
 D’autres part, je vais pouvoir prendre part à des projets en interne toujours en lien avec les convictions de la société qui vont favoriser les échanges au sein d’un collectif de passionnés.
-Pour donner un exemple, on se prépare à participer à l’Hacktoberfest, événement qui encourage les développeurs à contribuer à des projets open source.
-Et il se peut que l’on se croise lors d’un BBL ou d’un Meetup sur des sujets passionnants organisé par **zatsit**
+
+Pour donner un exemple, on se prépare à participer à l’Hacktoberfest, événement qui encourage les développeurs à contribuer sur des projets open source.
+Il se peut d'ailleurs que l’on se croise lors d’un BBL, ou d’un Meetup sur des sujets passionnants organisé par **zatsit**
+
+Alors, prêt à rejoindre l'aventure **zatsit** ?
