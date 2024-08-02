@@ -23,7 +23,7 @@ On reparle avec tous le monde de ce l’on veut construire à l’avenir et des 
 Ce qui m’amène à vous parler du choix sur le matériel qu’a fait la société.
 
 
-## Mon meilleur moment de la journée : la découverte de mon outil de travail...
+## Mon meilleur moment de la journée : la découverte de mon outil de travail
 
 Peu de temps avant mon arrivée, j’ai reçu un message qui me demandait de choisir la configuration de mon futur poste de travail [Framework](https://frame.work/fr/fr)
 
