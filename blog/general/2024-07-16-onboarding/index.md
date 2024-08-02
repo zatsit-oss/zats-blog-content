@@ -11,14 +11,16 @@ Mon arrivée dans une nouvelle aventure !
 
 ![Gourde  et sweat](gourde_sweat_banniere.webp)
 
-Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de mission RH de choc). Un bureau m'attend avec quelques goodies estampillés au couleur de l'entreprise : gourde, sweat, sticker et un petit mot d'accueil qui me font très plaisir. 
+Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de mission RH de choc). Un bureau m'attend avec quelques goodies estampillés aux couleurs de l'entreprise : gourde, sweat, sticker et un petit mot d'accueil qui me font très plaisir. 
 
-la matinée commence par la partie administrative (ce que tout le monde « adore », n'est ce pas)
+La matinée commence par la partie administrative (ce que tout le monde « adore », n'est ce pas ?)
 - les divers documents à fournir et quelques validations d’identité habituelles.
 - On active mes accès à [Ekip](https://www.ekip.app/). Je découvre ainsi les tickets restaurants **écoresponsables**.
 - Puis avec Océane on passe en revue les accès aux outils qui permettent le suivi pour mes futures missions. D'ailleurs, **zatsit** a mis en place une plateforme dédiée pour l'onboarding des consultants, permettant de mettre en avant les quelques « formations » a dérouler pour être opérationnel. 
 
-On reparle avec tous le monde de ce l’on veut construire à l’avenir et des impacts que veut avoir **[zatsit](https://zatsit.fr/)** sur les aspects sociétal et environnemental ; Ce qui m’amène à vous parler du choix sur le matériel qu’a fait la société...  
+On reparle avec tous le monde de ce l’on veut construire à l’avenir et des impacts que veut avoir **[zatsit](https://zatsit.fr/)** sur les aspects sociétal et environnemental.
+
+Ce qui m’amène à vous parler du choix sur le matériel qu’a fait la société.
 
 
 ## Mon meilleur moment de la journée : la découverte de mon outil de travail...
