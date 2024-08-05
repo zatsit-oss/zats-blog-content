@@ -3,6 +3,7 @@ slug: onboarding
 title: Mon onboarding chez zatsit
 authors: [jvasseur]
 tags: [general]
+date: 2024-08-10T00:00
 ---
 
 Mon arrivée dans une nouvelle aventure ! Découvrez les valeurs que j'aime chez **zatsit** et comment se passe l'onboarding.
@@ -11,7 +12,7 @@ Mon arrivée dans une nouvelle aventure ! Découvrez les valeurs que j'aime chez
 
 ![Gourde  et sweat](gourde_sweat_banniere.webp)
 
-Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de missions RH de choc). Un bureau m'attend avec quelques goodies estampillés aux couleurs de l'entreprise : gourde en métal recyclé, sweat (dont le fabricant et membre de fairwear.org), sticker et un petit mot d'accueil qui me font très plaisir. 
+Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de missions RH de choc). Un bureau m'attend avec quelques goodies estampillés aux couleurs de l'entreprise : gourde en métal recyclé, sweat (dont le fabricant et membre de [fairwear.org](https://www.fairwear.org)), sticker et un petit mot d'accueil qui me font très plaisir. 
 
 La matinée commence par la partie administrative (ce que tout le monde « adore », n'est ce pas ?)
 - les divers documents à fournir et quelques validations d’identité habituelles.
