@@ -5,13 +5,13 @@ authors: [jvasseur]
 tags: [general]
 ---
 
-Mon arrivée dans une nouvelle aventure !
+Mon arrivée dans une nouvelle aventure ! Découvrez les valeurs que j'aime chez **zatsit** et comment se passe l'onboarding.
 
 <!-- truncate -->
 
 ![Gourde  et sweat](gourde_sweat_banniere.webp)
 
-Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de mission RH de choc). Un bureau m'attend avec quelques goodies estampillés aux couleurs de l'entreprise : gourde, sweat, sticker et un petit mot d'accueil qui me font très plaisir. 
+Lundi ! Arrivée dans les locaux, je suis accueilli par Flavien (un des co-fondateurs) et Océane (notre chargée de missions RH de choc). Un bureau m'attend avec quelques goodies estampillés aux couleurs de l'entreprise : gourde en métal recyclé, sweat (dont le fabricant et membre de fairwear.org), sticker et un petit mot d'accueil qui me font très plaisir. 
 
 La matinée commence par la partie administrative (ce que tout le monde « adore », n'est ce pas ?)
 - les divers documents à fournir et quelques validations d’identité habituelles.
@@ -52,13 +52,13 @@ Et tout était fonctionnel au premier démarrage !
 J’ai commencé à travailler sur ce poste après avoir configuré un environnent de développement. Je suis enthousiaste à l’idée d'utiliser ma machine lors de mes missions.
 
 Parcourir le site de Framework [Framework](https://frame.work/fr/fr) est intéressant : 
-- on y découvre que beaucoup de matériaux constituant les postes de travail sont en bonne partie recyclé.
+- On y découvre que beaucoup de matériaux constituant les postes de travail sont en bonne partie recyclés.
 - Qu’il est aussi possible de commander tous les composants séparément (cela va jusqu'au kit de visserie) ce qui permet de réparer ou de faire évoluer sa configuration facilement au fil des années (Idée que je trouve intéressante quand on à déjà ouvert un ordinateur portable et de constaté que l’on ne pourra pas faire grand chose pour se dépanner)
 - Pour chaque composant proposé sur la marketplace, il existe un tutoriel de remplacement avec la difficulté, les étapes et le temps nécessaire à l'opération. Ce qui permet d'effectuer facilement la maintenance de son poste de travail par ses propres moyens.
 
 ![Exemple d'un guide de réparation](reparation.webp)
 
-## En attendant de trouver la mission de mes rêves...
+## En attendant de démarrer mon nouveau projet client...
 
 En attendant mon démarrage chez un client, j'en ai profité pour commencer les *Classrooms* élaborées par **zatsit**.
 
@@ -68,13 +68,14 @@ La société veut sensibiliser ses collaborateurs aux impacts environnementaux d
 
 Des sujets très intéressants et que j’avais un peu survolé jusqu’à aujourd’hui. Cela va **impacter** ma façon de concevoir mes futurs projets en tant que technical leader.
 
+J'ai pu collaborer à un premier projet, qui m'a fait découvrir certaines solutions de Firebase et Google Cloud Platform, auquel mes collègues pourront contribuer dans les semaines qui arrivent.
 ## Mon avenir chez zatsit ?
 
 Je suis persuadé que les mois à venir vont être enrichissants et vont me faire grandir.
 
 D’une part, l’équipe **zatsit** est à l’écoute quant à mes souhaits sur le périmètre de mes futures missions, mes envies de découvrir d’autres écosystèmes chez nos clients, et de me donner l’opportunité de faire mes preuves en tant que tech lead.
 
-D’autres part, je vais pouvoir prendre part à des projets en interne toujours en lien avec les convictions de la société qui vont favoriser les échanges au sein d’un collectif de passionnés.
+D’autre part, je vais pouvoir participer à des projets internes toujours en lien avec les convictions de la société qui vont favoriser les échanges au sein d’un collectif de passionnés.
 
 Pour donner un exemple, on se prépare à participer à l’Hacktoberfest, événement qui encourage les développeurs à contribuer sur des projets open source.
 Il se peut d'ailleurs que l’on se croise lors d’un BBL, ou d’un Meetup sur des sujets passionnants organisé par **zatsit**
