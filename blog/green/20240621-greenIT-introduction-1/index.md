@@ -41,9 +41,9 @@ Il y a quelque temps j'ai eu la chance d'assister à deux évènements plein de 
 Plus nous avançons dans le temps et plus nous trouvons des propriétés intéressantes à des métaux et autres éléments et des applications à échelle industrielle. A tel point que nos smartphones en sont truffés, je vous invite à visiter cette [démo en ligne de Systext de composition en métaux d'un smartphone](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1) qui donne le résultat ci-dessous, avec pas moins de 60 éléments : 
 
 ![illustration de la composition en métaux d'un smartphone](smartphone-composition.webp)
-*Source : [Systext](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1) *
+*Source : [Systext](https://www.systext.org/sites/all/animationreveal/mtxsmp/#/1)*
 
-Et oui, avec des composants comme l'Arsenic et l'Antimoine, certes en quantité minime et stabilisé dans votre smartphone, mais qu'en est-il de leur exploitation ?
+Et oui, avec des composants comme l'[Arsenic](https://fr.m.wikipedia.org/wiki/Arsenic) et l'[Antimoine](https://fr.m.wikipedia.org/wiki/Antimoine), certes en quantité minime et stabilisé dans votre smartphone, mais qu'en est-il de leur exploitation ?
 
 Le problème c'est que les métaux sont inégalement présents dans les sols et quand on trouve plus facilement du fer et de l'aluminium, il faudra dans le meilleur des cas extraire 1 tonne de minerai pour obtenir 1g d'or.
 
@@ -95,7 +95,7 @@ On ne dépollue pas un site minier, tout simplement parce que ce serait trop lon
 
 L'extraction minière est aussi source de conflits politiques et sociales. Les ressources ne sont pas également réparties sur le globe et dans certains pays les conditions de travail des adultes et aussi des enfants sont assez "souples", dirons-nous, à l'égard de la filière.
 
-Lors du meetup Techrocks du 8 février 2024, j'ai pu apprendre les démarches entreprises, par exemple, par Fairphone qui tente sur le long terme d'améliorer les conditions sociales autour des sites où elle source ses matériaux.
+Lors du [meetup Techrocks du 8 février 2024](https://youtu.be/pfSUGj5pmag), j'ai pu apprendre les démarches entreprises, par exemple, par Fairphone qui tente sur le long terme d'améliorer les conditions sociales autour des sites où elle source ses matériaux.
 [Description de la stratégie disponible en ligne](https://www.fairphone.com/wp-content/uploads/2021/03/Fairphone_Fair-Material-Sourcing-Roadmap.pdf). 
 
 Fairphone s'est donc déjà confrontée à la réalité du travail des enfants qui sont employés sur certaines exploitations. Une stratégie de rémunération directe des "mineurs" permet d'éliminer des intermédiaires et d'améliorer les conditions sociales des familles. Un travail qui leur a, par exemple, pris 6 ans pour le cobalt.
