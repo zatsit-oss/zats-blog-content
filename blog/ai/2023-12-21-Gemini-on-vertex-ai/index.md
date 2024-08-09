@@ -43,5 +43,5 @@ L'API Gemini est maintenant disponible. Gemini Pro est également disponible sur
 
 
 
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fgemini-vertex-ai%2F)
-[![Partage Linkedin](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Google%20annonce%20la%20disponibilit%C3%A9%20publique%20de%20Gemini%20Pro%20sur%20Vertex%20AI%2C%20disponible%20en%20trois%20tailles%20%3A%20Ultra%2C%20Pro%20et%20Nano&url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fgemini-vertex-ai%2F)
+[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fgemini-vertex-ai%2F)
+[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Google%20annonce%20la%20disponibilit%C3%A9%20publique%20de%20Gemini%20Pro%20sur%20Vertex%20AI%2C%20disponible%20en%20trois%20tailles%20%3A%20Ultra%2C%20Pro%20et%20Nano&url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fgemini-vertex-ai%2F)
