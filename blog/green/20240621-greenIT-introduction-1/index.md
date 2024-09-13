@@ -2,6 +2,7 @@
 slug: green-exploitation-miniere
 title: "Le Green IT, épisode 1 : Au fond du trou ?"
 authors: [eperu]
+date: 2024-06-21
 tags: 
   - "green"
   - "tech"
