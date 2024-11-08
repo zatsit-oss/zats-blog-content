@@ -5,8 +5,8 @@ authors: [lperreau]
 tags: [architecture, dev]
 ---
 
-`Hello, world!` Et voilà ! Je sais comment développer avec `Vue | Java | Rust | GoLang` ! 🤓
-Comment ça, ce n'est pas suffisant ? Si seulement il y avait un exemple d'application qui couvre tous les aspects d'une application moderne...
+`Hello, world!` Et voilà ! Je sais comment développer avec `Vue | Java | Rust | GoLang` ! 🤓
+Faire de la veille sur un projet technologique nécessite de trouver des cas d'implémentation, ce qui n'est jamais vraiment simple à trouver, non ? 
 
 Ca tombe bien, on a la solution pour vous : _Realworld_ !
 
@@ -20,4 +20,9 @@ _Comment ?_ me direz-vous. Très simple, il suffit de suivre les [spécification
 
 L'avantage de cette approche est que le site permet de mixer le frontend et le backend de votre choix parmi plus de [100 implémentations de l'API](https://codebase.show/projects/realworld) le tout se reposant sur cette même API définie.
 
-Alors n'hésitez pas à chercher votre bonheur là-dedans, et si vous ne trouvez pas, pourquoi ne pas contribuer en [ajoutant votre propre implémentation](https://codebase.show/projects/realworld/implementations/submit) ?
+C'est un excellent moyen de partager vos connaissances, pourquoi ne pas contribuer en [ajoutant votre propre implémentation](https://codebase.show/projects/realworld/implementations/submit) ?
+
+N'hésitez pas à partager ce projet à vos connaissances, c'est une excellente ressource pour apprendre de nouvelles technologies !
+
+[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Frealworld-app%2F)
+[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/post?text=Pr%C3%A9sentation%20de%20Realworld%2C%20un%20projet%20pour%20faire%20une%20application%20d%C3%A9mo%20selon%20vos%20envies.&url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Frealworld-app%2F%20)
