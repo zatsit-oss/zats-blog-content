@@ -1,6 +1,6 @@
 ---
 slug: realworld-app
-title: "Realworld ou la mère des applications démo"
+title: "Realworld, ou la mère des applications démo"
 authors: [lperreau]
 tags: [architecture, dev]
 ---
