@@ -8,7 +8,7 @@ tags: [architecture, dev]
 `Hello, world!` Et voilà ! Je sais comment développer avec `Vue | Java | Rust | GoLang` ! 🤓
 Comment ça, ce n'est pas suffisant ? Si seulement il y avait un exemple d'application qui couvre tous les aspects d'une application moderne...
 
-Oh mais attendez, j'ai entendu parler de _Realworld_ !
+Ca tombe bien, on a la solution pour vous : _Realworld_ !
 
 <!-- truncate -->
 
