@@ -5,23 +5,23 @@ authors: [glefebvre]
 tags: ["hacktoberfest", "open-source"]
 ---
 
-Le mois d'octobre est LE mois de l'année pour tous les amoureux de l'Open Source, c'est le mois du **Hacktoberfest** ! La communauté Open Source a besoin d'idées, de compétences, de temps. C'est pourquoi chez *zatsit*, nous avons décidé de participer activement à cet événement en contribuant à des projets qui nous tiennent à coeur.
+Le mois d'octobre est LE mois de l'année pour tous les amoureux de l'open source, c'est le mois du [**Hacktoberfest**](https://hacktoberfest.com/) ! La communauté open source a besoin d'idées, de compétences, de temps. C'est pourquoi chez *zatsit*, nous avons décidé de participer activement à cet événement en contribuant à des projets qui nous tiennent à coeur.
 
 <!-- truncate -->
 
-## Qu'est-ce que l'Open Source ?
+## Qu'est-ce que l'open source ?
 
-L'Open Source est un modèle de développement qui repose sur la collaboration et le partage. Les projets Open Source sont accessibles à tous, permettant à chacun de consulter, modifier et partager le code.
+L'open source est un modèle de développement qui repose sur la collaboration et le partage. Les projets open source sont accessibles à tous, permettant à chacun de consulter, modifier et partager le code.
 
 Le mouvement open source est animée par une communauté mondiale de développeurs (mais pas que...) qui donnent de leur temps pour contribuer sur les projets. Le code est hébergé sur une multitude de plateformes, dont les plus connues sont GitHub et GitLab.
 
 ## Qu'est-ce que le Hacktoberfest ?
 
-Le Hacktoberfest est un événement annuel qui se déroule tout au long du mois d'octobre. Il a pour objectif d'encourager les contributions à des projets open source en récompensant les participants qui réalisent des pull requests sur des repos GitHub publics.
+Le [**Hacktoberfest**](https://hacktoberfest.com/) est un événement annuel qui se déroule tout au long du mois d'octobre. Il a pour objectif d'encourager les contributions à des projets open source en récompensant les participants qui réalisent des pull requests sur des repos GitHub publics.
 
 Cet événement est organisé par DigitalOcean en partenariat avec GitHub et GitLab. L'année 2024 sonne la 11ème édition du Hacktoberfest, et l'engouement pour cet événement ne cesse de croître. C'est l'occasion pour des milliers de développeurs, étudiants, passionnés et curieux de participer à la communauté open source, d'apprendre, de partager et de s'amuser.
 
-### Nos contributions au Hacktoberfest 2024 
+### Nos contributions au Hacktoberfest 2024
 
 Tout au long du mois, les collaborateurs ont contribué à des projets :
 
@@ -30,7 +30,7 @@ Tout au long du mois, les collaborateurs ont contribué à des projets :
 * Projet : [Consul Democracy](https://github.com/consuldemocracy/consuldemocracy)
 * Description : Consul Democracy est une plateforme de participation citoyenne. (*Consul Democracy - Open Government and E-Participation Web Software*)
 * Contributeur : [Nicolas FOURRE](https://github.com/nfourre)
-* Pull Request: [Fill in space in social buttons when options are turned off](https://github.com/consuldemocracy/consuldemocracy/pull/5757)
+* Pull Request : [Fill in space in social buttons when options are turned off](https://github.com/consuldemocracy/consuldemocracy/pull/5757)
 
 #### Impact Framework - Amélioration de la documentation
 
@@ -46,17 +46,17 @@ Tout au long du mois, les collaborateurs ont contribué à des projets :
 * Contributeur : [Guillaume GAYOT](https://github.com/GuillaumeGayot)
 * Pull Request : [fix(migrating-to-v3): fix mark down to ensure correct highlighting](https://github.com/asyncapi/website/pull/3268)
 
-#### Cocogitto- Gestion des identifiants utilisateur dans la Github Action
+#### Cocogitto - Gestion des identifiants utilisateur dans la Github Action
 
 * Projet : [Cocogitto - Github Action](https://github.com/cocogitto/cocogitto-action)
-* Description : Github Action pour vérifier la compliance au conventional commit. ( (*A github action to ensure your current gitlog respect the conventional commit specification*))
+* Description : Github Action pour vérifier la compliance au conventional commit. (*A github action to ensure your current gitlog respect the conventional commit specification*)
 * Contributeur : [Guillaume GAYOT](https://github.com/sergejomon)
 * Pull Request : [Feat/add input for profile](https://github.com/cocogitto/cocogitto-action/pull/31)
 
 #### Crossplane Assistant - Création de la documentation du projet
 
 * Projet : [Crossplane Assistant - Documentation](https://github.com/crossplane-assistant/readthedocs)
-* Description : Documentation du Crossplane Assistant (*Crossplane Assistant documentation website*)
+* Description : Documentation du projet Crossplane Assistant (*Crossplane Assistant documentation website*)
 * Contributeur : [Germain LEFEBVRE](https://github.com/germainlefebvre4)
 * Pull Request : [feat: First structure](https://github.com/crossplane-assistant/readthedocs/pull/1)
 
@@ -81,7 +81,14 @@ Nous remercions tous les contributeurs de *zatsit*. Ce mois d'octobre a permis d
 
 Le Hacktoberfest est une aventure collective ouverte à tous, des débutants aux experts. Si vous souhaitez vous lancer ou approfondir vos compétences, rejoignez-nous ! Chaque contribution, même minime, aide à faire avancer la technologie. Ensemble, continuons à construire des outils meilleurs, plus justes et plus accessibles.
 
+## Liens utiles
+
+* [Hacktoberfest](https://hacktoberfest.com)
+* [Hacktoberfest - Organisation Team](https://www.digitalocean.com/open-source/hacktoberfest)
+* [Digital Ocean](https://www.digitalocean.com)
+* [GitHub](https://github.com)
+
 <!-- blog post end -->
 
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=xxxxxxxxxxxxxxxxxxxxxxxxxx)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=xxxxxxxxxxxxxxxxxxxxxxxxxx)
+[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https://blog.zatsit.fr/blog/hacktoberfest-2024-zatsit-engage-open-source)
+[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=https://blog.zatsit.fr/blog/hacktoberfest-2024-zatsit-engage-open-source)
