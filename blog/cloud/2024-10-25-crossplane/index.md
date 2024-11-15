@@ -11,7 +11,7 @@ Crossplane est une extension open-source à Kubernetes qui permet aux équipes p
 
 <img src="./logo-crossplane.svg" style="width: 100px" />
 
-Crossplane se définit comme annoncé sur leur baseline...
+Crossplane se définit comme annoncé sur leur baseline :
 
 > Build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run, and a highly configurable frontend that lets you define the declarative API it offers.
 
