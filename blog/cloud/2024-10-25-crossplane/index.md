@@ -21,7 +21,7 @@ Crossplane se définit comme annoncé sur leur baseline :
 
 Crossplane permet de définir des ressources de manière déclarative, et de les provisionner sur des clouds publics (AWS, Azure, GCP, etc.) ou privés (VMware, OpenStack, etc.).
 
-Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, ce qui en fait un projet prometteur.
+Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, dans la catégorie "Scheduling & Orchestration" ce qui en fait un projet prometteur, puisque synonyme de stabilité et d'utilisation en production.
 Membre du programme *Incubation* de la CNCF depuis 2021, Crossplane est considéré comme un projet sérieux, prometteur et ambitieux par les SIG/TOC de la CNCF.
 
 <img src="./cncf-incubating.svg" style="width: 100px" />
