@@ -260,7 +260,7 @@ spec:
 
 La Composite Resource Claim (XRC) est l'objet qui est manipulé par l'utilisateur. Il a pour objectif d'être simmple et d'abstraire toute complexité liée à l'architecture en dessous.
 
-Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valuers sensibles dans le Secret Manager. Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
+Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valeurs sensibles dans le Secret Manager. Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
 
 <img src="./corssplane-claim.png" style="max-height: 300px" />
 
