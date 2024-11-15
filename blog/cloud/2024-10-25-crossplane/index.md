@@ -90,7 +90,7 @@ spec:
 
 L'ensemble des Providers publiques sont disponibles sur la [Upbound Marketplace](https://marketplace.upbound.io/).
 
-Pour les Providers complexes, on retoruve le découpage par ressource sous la forme de Provider Family.
+Pour les Providers complexes, on retrouve le découpage par ressource sous la forme de Provider Family.
 
 On retrouve donc des Providers pour les ressources EC2, S3, RDS, etc. pour AWS, et de manière similaire pour les autres Cloud Providers. Tous ces Providers sont regroupés dans une Provider Familiy qui contrôle la configuration des Providers du Cloud Provider.
 
