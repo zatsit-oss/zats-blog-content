@@ -5,7 +5,7 @@ authors: [glefebvre]
 tags: ["cloud"]
 ---
 
-Crossplane est une extension open-source à Kubernete qui permet aux équipes plateforme d'assembler l'infrastructure provenant de plusieurs cloud providers, et d'exposer des APIs de plus haut niveau pour que les équipes d'applicatives puissent les consommer.
+Crossplane est une extension open-source à Kubernetes qui permet aux équipes plateforme d'assembler l'infrastructure provenant de plusieurs cloud providers, et d'exposer des APIs de plus haut niveau pour que les équipes d'applicatives puissent les consommer.
 
 <!-- truncate -->
 
