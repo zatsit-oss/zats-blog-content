@@ -212,7 +212,7 @@ La Composite Resource Definition (XRD) est un objet plus haut niveau qui a pour 
 
 La XRD est un objet complexe en apparence qui est juste très structuré. Il comporte de façon très pragmatique 2 grandes sections :
 
-* `claim` et `spec` : qui définit la dénomination et la structure du Claim sous forme d'une CRD
+* `claim` et `spec` : qui définissent la dénomination et la structure du Claim sous forme d'une CRD
 * `status` : qui définit la structure du XR lors de son instanciation
 
 <img src="./crossplane-xrd-generation.png" style="max-height: 300px" />
