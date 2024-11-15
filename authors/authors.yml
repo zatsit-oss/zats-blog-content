@@ -10,6 +10,10 @@ ldussart:
   title: Deputy CTO & Developer Advocate
   url: https://github.com/M3lkior
   image_url: /img/authors/ldussart.webp
+  socials:
+    x: ldussart
+    github: m3lkior
+    linkedin: ludovic-dussart-846a8063
 
 mslimani:
   name: Mehdi Slimani
