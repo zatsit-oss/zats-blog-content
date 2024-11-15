@@ -217,7 +217,7 @@ La XRD est un objet complexe en apparence qui est juste très structuré. Il com
 
 <img src="./crossplane-xrd-generation.png" style="max-height: 300px" />
 
-La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés. La XR n'a de sens que si les valeurs manipulées sont bien définit par les paramètres utilisateur.
+La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés. La XR n'a de sens que si les valeurs manipulées sont bien définies par les paramètres utilisateur.
 
 En résumé, notre XRD est une CRD qui définit 2 autres CRDs : la XRC et la XR.
 
