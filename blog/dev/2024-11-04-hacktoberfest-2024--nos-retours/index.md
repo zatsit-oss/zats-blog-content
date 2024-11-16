@@ -66,7 +66,7 @@ Nous avons mis le collectif à contribution sur tout le mois d'octobre, pendant 
 * Projet : [Crossplane Assistant - Documentation](https://github.com/crossplane-assistant/readthedocs)
 * Description : Documentation du projet Crossplane Assistant (*Crossplane Assistant documentation website*)
 * Contributeur : [Germain LEFEBVRE](https://github.com/germainlefebvre4)
-* Pull Request : [feat: First structure](https://github.com/crossplane-assistant/readthedocs/pull/1)
+* Pull Request : [feat: Full website documentation](https://github.com/crossplane-assistant/readthedocs/pull/1)
 
 ### Mocked API - Ajout d'une nouvelle fonctionnalité
 
