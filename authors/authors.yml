@@ -26,6 +26,10 @@ glefebvre:
   title: OSS Ambassador
   url: https://github.com/germainlefebvre4
   image_url: /img/authors/glefebvre.webp
+  socials:
+    x: germainlefebvr4
+    github: germainlefebvre4
+    linkedin: germainlefebvre4
 
 nfourre:
   name: Nicolas Fourré
