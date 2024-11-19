@@ -24,7 +24,7 @@ Crossplane permet de définir des ressources de manière déclarative, et de les
 
 Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, dans la catégorie "Scheduling & Orchestration" ce qui en fait un projet prometteur, puisque synonyme de stabilité et d'utilisation en production.
 
-![CNCF Incubating](./cncf-incubating.svg)
+![CNCF Incubating](./cncf-incubating.png)
 
 Crossplane se rapproche du mode de fonctionnement de Terraform et apporte des fonctionnalités supplémentaires qui le font se démarquer :
 
