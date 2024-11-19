@@ -31,7 +31,7 @@ Crossplane se rapproche du mode de fonctionnement de Terraform et apporte des fo
 * Définition de ressources de manière déclarative
 * Réconciliation sur base du pattern des Kubernetes Operators
 
-Crossplane est un projet open-source, disponible sur [GitHub](https://github.com/crossplane/crossplane) sous licence Apache 2.0 et majoritairement développé par la société [Upbound](https://upbound.io/).
+Crossplane est un projet open source, disponible sur [GitHub](https://github.com/crossplane/crossplane) sous licence Apache 2.0 et majoritairement développé par la société [Upbound](https://upbound.io/).
 
 ## Intérêt
 
