@@ -22,7 +22,6 @@ Crossplane se définit comme annoncé sur leur baseline :
 Crossplane permet de définir des ressources de manière déclarative, et de les provisionner sur des clouds publics (AWS, Azure, GCP, etc.) ou privés (VMware, OpenStack, etc.).
 
 Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, dans la catégorie "Scheduling & Orchestration" ce qui en fait un projet prometteur, puisque synonyme de stabilité et d'utilisation en production.
-Membre du programme *Incubation* de la CNCF depuis 2021, Crossplane est considéré comme un projet sérieux, prometteur et ambitieux par les SIG/TOC de la CNCF.
 
 <img src="./cncf-incubating.svg" style="width: 100px" />
 
@@ -35,7 +34,7 @@ Crossplane est un projet open source, disponible sur [GitHub](https://github.com
 
 ## Intérêt
 
-Crossplane se démarque de ses concurrents par sa capacité à gérer des ressources et appliquer les modifications en temps réel. Le pattern de réconciliation lui permet d'être réactif et d'appliquer les changements sur les ressources distantes en temps réel, qui est une vue de l'esprit étant donné que la réconciliation est une boucle qui s'exécute à intervalles réguliers.
+Crossplane se démarque de ses concurrents par sa capacité à gérer des ressources et appliquer les modifications en live. Le pattern de réconciliation lui permet d'être réactif et d'appliquer les changements sur les ressources distantes en temps réel, qui est une vue de l'esprit étant donné que la réconciliation est une boucle qui s'exécute à intervalles réguliers.
 
 ## Architecture
 
@@ -57,6 +56,8 @@ Le Provider est le composant en charge de la gestion des ressources Cloud. Il es
 Les providers sont labelisés **Official** (développés par Upbound) ou **Community** (développés par la communauté).
 
 Chaque Provider s'installe avec des CRDs spécifiques qui définissent les ressources gérées par le Provider. Ces CRDs permettent de décrire l'objet distant à créer, mettre à jour ou supprimer.
+
+[Lien vers la documentation des CRDs dans Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
 
 Exemple avec le Provider Google Cloud Pub/Sub.
 
