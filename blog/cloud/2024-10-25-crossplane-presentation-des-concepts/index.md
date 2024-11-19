@@ -10,7 +10,7 @@ Crossplane est une extension open-source à Kubernetes qui permet aux équipes p
 
 <!-- truncate -->
 
-<img src="./logo-crossplane.svg" style="width: 100px" />
+<img src="./logo-crossplane.svg" alt="Crossplane Logo" style={{width: 100px}} />
 
 Crossplane se définit comme annoncé sur leur baseline :
 
@@ -24,7 +24,7 @@ Crossplane permet de définir des ressources de manière déclarative, et de les
 
 Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, dans la catégorie "Scheduling & Orchestration" ce qui en fait un projet prometteur, puisque synonyme de stabilité et d'utilisation en production.
 
-<img src="./cncf-incubating.svg" style="width: 100px" />
+<img src="./cncf-incubating.svg" alt="CNCF Incubating" style={{width: 100px}} />
 
 Crossplane se rapproche du mode de fonctionnement de Terraform et apporte des fonctionnalités supplémentaires qui le font se démarquer :
 
@@ -52,7 +52,7 @@ Crossplane s'architecture autour de plusieurs concepts :
 
 Le Provider est le composant en charge de la gestion des ressources Cloud. Il est responsable de la communication avec l'API du Cloud Provider, de la gestion du cycle de vie des ressources.
 
-<img src="./crossplane-providers.webp" style="max-height: 300px" />
+<img src="./crossplane-providers.webp" alt="Crossplane Providers" style={{max-height: 300px}} />
 
 Les providers sont labelisés **Official** (développés par Upbound) ou **Community** (développés par la communauté).
 
@@ -132,7 +132,7 @@ On distingue deux types de Managed Resources :
 * Les Managed Resources de type Crossplane : gérés par les providers du Cloud Provider.
 * Les Managed Resources de type Kubernetes : gérés par un autre contrôleur Kubernetes, externe à Crossplane.
 
-<img src="./crossplane-managed-resources.png" style="max-height: 300px" />
+<img src="./crossplane-managed-resources.png" alt="Crossplane Managed Resources" style={{max-height: 300px}} />
 
 Les deux types de Managed Resources possèdent leur avantages et inconvénients. On détaillera cela dans un prochain article.
 
@@ -147,7 +147,7 @@ Exemple avec une Composition qui crée les éléments suivants :
 * Un Topic dans Google Cloud Pub/Sub
 * Un Job dans Cloud Scheduler
 
-<img src="./crossplane-compositions-JobNotif.png" style="max-height: 300px" />
+<img src="./crossplane-compositions-JobNotif.png" alt="Crossplane Compositions" style={{max-height: 300px}} />
 
 ```yaml
 ---
@@ -210,14 +210,14 @@ La Composite Resource Definition (XRD) est un objet plus haut niveau qui a pour 
 * La Composite Resource (XR) : l'objet instancié qui définira le cycle de vie de notre objet complexe
 * Le Composite Resource Claim (XRC) : l'objet qui sera manipulé par l'utilisateur final et qui se veut simple
 
-<img src="./crossplane-xrd.png" style="max-height: 300px" />
+<img src="./crossplane-xrd.png" alt="Crossplane Composite Resource Definition" style={{max-height: 300px}} />
 
 La XRD est un objet complexe en apparence qui est juste très structuré. Il comporte de façon très pragmatique 2 grandes sections :
 
 * `claim` et `spec` : qui définissent la dénomination et la structure du Claim sous forme d'une CRD
 * `status` : qui définit la structure du XR lors de son instanciation
 
-<img src="./crossplane-xrd-generation.png" style="max-height: 300px" />
+<img src="./crossplane-xrd-generation.png" alt="Crossplane XRD Generation" style={'max-height: 300px}} />
 
 La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés. La XR n'a de sens que si les valeurs manipulées sont bien définies par les paramètres utilisateur.
 
@@ -264,7 +264,7 @@ La Composite Resource Claim (XRC) est l'objet qui est manipulé par l'utilisateu
 
 Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valeurs sensibles dans le Secret Manager. Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
 
-<img src="./corssplane-claim.png" style="max-height: 300px" />
+<img src="./corssplane-claim.png" alt="Crossplane Claim" style={{max-height: 300px}} />
 
 Voici un exemple de XRC pour notre Composition `JobNotif` :
 
@@ -279,7 +279,7 @@ spec:
 
 ### Composite Resource (XR)
 
-<img src="./crossplane-xr-status.png" style="max-height: 300px" />
+<img src="./crossplane-xr-status.png" alt="Crossplane Composite Resource Status" style={{max-height: 300px}} />
 
 ## Approche Plateforme
 
@@ -293,7 +293,7 @@ Toute la complexité réside dans la définition du contrat de service entre les
 
 Une fois le contrat clair, le développeur écrit le manifest (XRC) qui décrit le besoin fondamental.
 
-<img src="./crossplane-approche-plateforme.png" style="max-height: 300px" />
+<img src="./crossplane-approche-plateforme.png" alt="Crossplane Approche Plateforme" style={{max-height: 300px}} />
 
 ## Conclusion
 
