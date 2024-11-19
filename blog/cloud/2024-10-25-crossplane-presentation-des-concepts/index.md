@@ -8,9 +8,9 @@ tags:
 
 Crossplane est une extension open-source à Kubernetes qui permet aux équipes plateforme d'assembler l'infrastructure provenant de plusieurs cloud providers, et d'exposer des APIs de plus haut niveau pour que les équipes d'applicatives puissent les consommer.
 
-<!-- truncate -->
+![Crossplane Logo](./cncf-incubating.png)
 
-![Crossplane Logo](./logo-crossplane.svg)
+<!-- truncate -->
 
 Crossplane se définit comme annoncé sur leur baseline :
 
@@ -23,8 +23,6 @@ Crossplane se définit comme annoncé sur leur baseline :
 Crossplane permet de définir des ressources de manière déclarative, et de les provisionner sur des clouds publics (AWS, Azure, GCP, etc.) ou privés (VMware, OpenStack, etc.).
 
 Membre de la CNCF depuis 2020, ils ont rejoint le programme d'incubation (incubating) en 2021, dans la catégorie "Scheduling & Orchestration" ce qui en fait un projet prometteur, puisque synonyme de stabilité et d'utilisation en production.
-
-![CNCF Incubating](./cncf-incubating.png)
 
 Crossplane se rapproche du mode de fonctionnement de Terraform et apporte des fonctionnalités supplémentaires qui le font se démarquer :
 
