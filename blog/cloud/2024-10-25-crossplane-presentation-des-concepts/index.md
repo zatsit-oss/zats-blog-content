@@ -147,8 +147,6 @@ Exemple avec une Composition qui crée les éléments suivants :
 * Un Topic dans Google Cloud Pub/Sub
 * Un Job dans Cloud Scheduler
 
-![Crossplane Compositions](./crossplane-compositions-JobNotif.png)
-
 ```yaml
 ---
 apiVersion: apiextensions.crossplane.io/v1
