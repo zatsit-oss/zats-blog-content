@@ -1,8 +1,9 @@
 ---
-title: "Crossplane - Présentation des concepts"
-slug: "crossplane-presentation-des-concepts"
+title: Crossplane - Présentation des concepts
+slug: crossplane-presentation-des-concepts
 authors: [glefebvre]
-tags: ["cloud"]
+tags:
+  - "cloud"
 ---
 
 Crossplane est une extension open-source à Kubernetes qui permet aux équipes plateforme d'assembler l'infrastructure provenant de plusieurs cloud providers, et d'exposer des APIs de plus haut niveau pour que les équipes d'applicatives puissent les consommer.
