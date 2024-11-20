@@ -73,14 +73,26 @@ Then with your favourite IDE, you can edit your `index.md` file following this e
 
 ```md
 ---
-slug: zatsit-blog
-title: Zatsit blog introduction
-authors: [jdoe]
-tags: 
+slug: zatsit-blog (your future uri)
+title: Zatsit blog introduction (Title of the post)
+authors: [jdoe] (all your posts will be indexed with the key)
+date: 2024-06-21 (the publication date)
+tags: (to be categorized)
   - "architecture"
   - "web"
 ---
 ```
+
+The attributes definition : 
+
+| Key        | Value                           |
+|------------|-----------------------------------|
+| slug       | Your future uri                  |
+| title      | Title of the post |
+| authors    | All your posts will be indexed with your author name, refers to the key in the authors.yml file |
+| date       | The publication date (take care of the value during PR reviewing) |
+| tags       | To be categorized              |
+
 
 After this section you have few lines to sum up your post, it will be used in list page.
 For example : 
