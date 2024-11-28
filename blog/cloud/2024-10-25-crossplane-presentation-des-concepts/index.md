@@ -14,7 +14,8 @@ Crossplane est une extension open-source à Kubernetes qui permet aux équipes p
 
 Crossplane se définit comme annoncé sur leur baseline :
 
-> Build control planes without needing to write code. Crossplane has a highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run, and a highly configurable frontend that lets you define the declarative API it offers.
+> Build control planes without needing to write code.
+Crossplane has a highly extensible backend that enables you to orchestrate applications and infrastructure no matter where they run, and a highly configurable frontend that lets you define the declarative API it offers.
 
 ...comme un orchestrateur de ressources multi-cloud.
 
@@ -33,7 +34,8 @@ Crossplane est un projet open source, disponible sur [GitHub](https://github.com
 
 ## Intérêt
 
-Crossplane se démarque de ses concurrents par sa capacité à gérer des ressources et appliquer les modifications en live. Le pattern de réconciliation lui permet d'être réactif et d'appliquer les changements sur les ressources distantes en temps réel, qui est une vue de l'esprit étant donné que la réconciliation est une boucle qui s'exécute à intervalles réguliers.
+Crossplane se démarque de ses concurrents par sa capacité à gérer des ressources et appliquer les modifications en live.
+Le pattern de réconciliation lui permet d'être réactif et d'appliquer les changements sur les ressources distantes en temps réel, qui est une vue de l'esprit étant donné que la réconciliation est une boucle qui s'exécute à intervalles réguliers.
 
 ## Architecture
 
@@ -48,13 +50,15 @@ Crossplane s'architecture autour de plusieurs concepts :
 
 ### Provider
 
-Le Provider est le composant en charge de la gestion des ressources Cloud. Il est responsable de la communication avec l'API du Cloud Provider, de la gestion du cycle de vie des ressources.
+Le Provider est le composant en charge de la gestion des ressources Cloud.
+Il est responsable de la communication avec l'API du Cloud Provider, de la gestion du cycle de vie des ressources.
 
 ![Crossplane Providers](./crossplane-providers.webp)
 
 Les providers sont labelisés **Official** (développés par Upbound) ou **Community** (développés par la communauté).
 
-Chaque Provider s'installe avec des CRDs spécifiques qui définissent les ressources gérées par le Provider. Ces CRDs permettent de décrire l'objet distant à créer, mettre à jour ou supprimer.
+Chaque Provider s'installe avec des CRDs spécifiques qui définissent les ressources gérées par le Provider.
+Ces CRDs permettent de décrire l'objet distant à créer, mettre à jour ou supprimer.
 
 [Lien vers la documentation des CRDs dans Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
 
@@ -92,7 +96,8 @@ L'ensemble des Providers publiques sont disponibles sur la [Upbound Marketplace]
 
 Pour les Providers complexes, on retrouve le découpage par ressource sous la forme de Provider Family.
 
-On retrouve donc des Providers pour les ressources EC2, S3, RDS, etc. pour AWS, et de manière similaire pour les autres Cloud Providers. Tous ces Providers sont regroupés dans une Provider Familiy qui contrôle la configuration des Providers du Cloud Provider.
+On retrouve donc des Providers pour les ressources EC2, S3, RDS, etc pour AWS, et de manière similaire pour les autres Cloud Providers.
+Tous ces Providers sont regroupés dans une Provider Familiy qui contrôle la configuration des Providers du Cloud Provider.
 
 Prenons exemple du provider [Google Cloud](https://marketplace.upbound.io/providers/upbound/provider-family-gcp/v1.8.3), on retrouve la hiérarchie suivante :
 
@@ -100,11 +105,13 @@ Prenons exemple du provider [Google Cloud](https://marketplace.upbound.io/provid
 * Provider Config `ProviderConfig` lié à au Provider Family
 * Providers: `provider-gcp-compute`, `provider-gcp-container`, `provider-gcp-appengine`, etc
 
-> Dans l'histoire de Crossplane, les Providers historiques de AWS, Google Cloud et Azure étaient composés d'un seul agent responsable de la gestion de toutes les ressources du Cloud Provider. Face à l'installation d'un nombre massif de CRDs dans le cluster Kubernetes, les développeurs ont décidé de découper les Providers en plusieurs sous-Providers, un par ressource, ce qui réduit drastiquement le nombre de CRDs installés et améliore le ratio CRD-utilisés / CRDs-installés.
+> Dans l'histoire de Crossplane, les Providers historiques de AWS, Google Cloud et Azure étaient composés d'un seul agent responsable de la gestion de toutes les ressources du Cloud Provider.
+Face à l'installation d'un nombre massif de CRDs dans le cluster Kubernetes, les développeurs ont décidé de découper les Providers en plusieurs sous-Providers, un par ressource, ce qui réduit drastiquement le nombre de CRDs installés et améliore le ratio CRD-utilisés / CRDs-installés.
 
 ### Managed Resource (MR)
 
-Le Managed Resource est l'objet qui représente la ressource distante à gérer. Il est défini par le Provider et est utilisé pour décrire la ressource à créer, mettre à jour ou supprimer.
+Le Managed Resource est l'objet qui représente la ressource distante à gérer.
+Il est défini par le Provider et est utilisé pour décrire la ressource à créer, mettre à jour ou supprimer.
 
 Ce sont des objets Kubernetes qui sont créés dans le cluster Kubernetes et qui sont gérés par le Provider.
 
@@ -132,13 +139,15 @@ On distingue deux types de Managed Resources :
 
 ![Crossplane Managed Resources](./crossplane-managed-resources.png)
 
-Les deux types de Managed Resources possèdent leur avantages et inconvénients. On détaillera cela dans un prochain article.
+Les deux types de Managed Resources possèdent leur avantages et inconvénients.
+On détaillera cela dans un prochain article.
 
 ### Composition
 
 La Composition est un objet qui permet de définir un ensemble d'objets qui cohabitent ensemble dans le but de créer une architecture complexe.
 
-La Composition est un objet Kubernetes qui est géré par Crossplane et qui est responsable de la création, mise à jour et suppression des objets qui le composent. Il est la pierre angulaire car c'est l'élément qui donne toute sa puissance en orchestrant les ressources.
+La Composition est un objet Kubernetes qui est géré par Crossplane et qui est responsable de la création, mise à jour et suppression des objets qui le composent.
+Il est la pierre angulaire car c'est l'élément qui donne toute sa puissance en orchestrant les ressources.
 
 Exemple avec une Composition qui crée les éléments suivants :
 
@@ -208,14 +217,16 @@ La Composite Resource Definition (XRD) est un objet plus haut niveau qui a pour 
 
 ![Crossplane Composite Resource Definition](./crossplane-xrd.png)
 
-La XRD est un objet complexe en apparence qui est juste très structuré. Il comporte de façon très pragmatique 2 grandes sections :
+La XRD est un objet complexe en apparence qui est juste très structuré.
+Il comporte de façon très pragmatique 2 grandes sections :
 
 * `claim` et `spec` : qui définissent la dénomination et la structure du Claim sous forme d'une CRD
 * `status` : qui définit la structure du XR lors de son instanciation
 
 ![Crossplane XRD Generation](./crossplane-xrd-generation.png)
 
-La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés. La XR n'a de sens que si les valeurs manipulées sont bien définies par les paramètres utilisateur.
+La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés.
+La XR n'a de sens que si les valeurs manipulées sont bien définies par les paramètres utilisateur.
 
 En résumé, notre XRD est une CRD qui définit 2 autres CRDs : la XRC et la XR.
 
@@ -256,9 +267,11 @@ spec:
 
 ### Composite Resource Claim (XRC)
 
-La Composite Resource Claim (XRC) est l'objet qui est manipulé par l'utilisateur. Il a pour objectif d'être simmple et d'abstraire toute complexité liée à l'architecture en dessous.
+La Composite Resource Claim (XRC) est l'objet qui est manipulé par l'utilisateur.
+Il a pour objectif d'être simmple et d'abstraire toute complexité liée à l'architecture en dessous.
 
-Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valeurs sensibles dans le Secret Manager. Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
+Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valeurs sensibles dans le Secret Manager.
+Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
 
 ![Crossplane Claim](./corssplane-claim.png)
 
@@ -279,7 +292,8 @@ La Composite Resource (XR) est l'objet qui est créé par Crossplane lors de l'i
 
 ![Crossplane Composite Resource Status](./crossplane-xr-status.png)
 
-Il est responsable de la gestion des ressources sous-jacentes et de leur cycle de vie. On trouve les sous-objets managés dans la structure `spec.resourceRefs`.
+Il est responsable de la gestion des ressources sous-jacentes et de leur cycle de vie.
+On trouve les sous-objets managés dans la structure `spec.resourceRefs`.
 
 ```yaml
 # Extrait du yaml de l'objet XR
@@ -360,9 +374,11 @@ Cette approche amène des avantages intéressants qui en font un outil pertinent
 
 Crossplane est un outil qui permet d'abstraire la complexité des ressources Cloud et de les manipuler de manière déclarative.
 
-Cette rapide introduction à Crossplane vous permet de comprendre les concepts de base et les forces de la solution. Dans un prochain article, nous entrerons plus en détail sur l'utilisation de Crossplane avec des objets plus complexes et des cas d'utilisation plus avancés.
+Cette rapide introduction à Crossplane vous permet de comprendre les concepts de base et les forces de la solution.
+Dans un prochain article, nous entrerons plus en détail sur l'utilisation de Crossplane avec des objets plus complexes et des cas d'utilisation plus avancés.
 
-Il est important de noter que Crossplane est un outil qui s'adresse à des équipes plateforme qui ont une bonne connaissance de Kubernetes et des ressources Cloud. Cet outil n'est pas à mettre sur tous vos projets, car il apporte une complexité supplémentaire qui n'est pas toujours nécessaire et qui peut engendrer des coûts (sous toutes formes possibles) supplémentaires.
+Il est important de noter que Crossplane est un outil qui s'adresse à des équipes plateforme qui ont une bonne connaissance de Kubernetes et des ressources Cloud.
+Cet outil n'est pas à mettre sur tous vos projets, car il apporte une complexité supplémentaire qui n'est pas toujours nécessaire et qui peut engendrer des coûts (sous toutes formes possibles) supplémentaires.
 
 Vous trouverez dans un prochain article un exemple concret d'utilisation de Crossplane pour provisionner une architecture qui manipule des objets non-predictifs.
 
