@@ -275,7 +275,67 @@ spec:
 
 ### Composite Resource (XR)
 
+La Composite Resource (XR) est l'objet qui est créé par Crossplane lors de l'instanciation de la XRC.
+
 ![Crossplane Composite Resource Status](./crossplane-xr-status.png)
+
+Il est responsable de la gestion des ressources sous-jacentes et de leur cycle de vie. On trouve les sous-objets managés dans la structure `spec.resourceRefs`.
+
+```yaml
+# Extrait du yaml de l'objet XR
+# kubectl get xjobnotifs/jobnotif-sample-hs772 -o yaml
+apiVersion: blog.zatsit.fr/v1alpha1
+kind: XJobNotif
+metadata:
+  name: jobnotif-sample-hs772
+spec:
+  resourceRefs:
+  - apiVersion: pubsub.gcp.upbound.io/v1beta1
+    kind: Topic
+    name: jobnotif-sample-hs772-5ph7f
+  - apiVersion: cloudscheduler.gcp.upbound.io/v1beta1
+    kind: Job
+    name: jobnotif-sample-hs772-p8vqk
+
+```
+
+La XR expose également l'état de l'objet dans sa globalité dans la structure `status`.
+
+```yaml
+# Extrait du yaml de l'objet XR
+# kubectl get xjobnotifs/jobnotif-sample-hs772 -o yaml
+apiVersion: blog.zatsit.fr/v1alpha1
+kind: XJobNotif
+metadata:
+  name: jobnotif-sample-hs772
+status:
+  conditions:
+  - lastTransitionTime: "2024-11-28T12:00:40Z"
+    reason: ReconcileSuccess
+    status: "True"
+    type: Synced
+  - lastTransitionTime: "2024-11-28T12:01:05Z"
+    reason: Available
+    status: "True"
+    type: Ready
+```
+
+On y trouve enfin les données manipulés et stockées pour les réutiliser dans les autres objets manipulés dans la composition.
+
+```yaml
+# Extrait du yaml de l'objet XR
+# kubectl get xjobnotifs/jobnotif-sample-hs772 -o yaml
+apiVersion: blog.zatsit.fr/v1alpha1
+kind: XJobNotif
+metadata:
+  name: jobnotif-sample-hs772
+status:
+  resources:
+    job:
+      name: jobnotif-sample-hs772-p8vqk
+    topic:
+      name: jobnotif-sample-hs772-5ph7f
+```
 
 ## Approche Plateforme
 
@@ -284,18 +344,27 @@ Crossplane se veut dichotomique en proposant une approche plateforme en distingu
 * Le développeur de la plateforme : qui consomme les ressources mises à disposition
 * L'ingénieur plateforme : qui compose les ressources et les expose aux développeurs
 
-
 Toute la complexité réside dans la définition du contrat de service entre les deux personas ainsi que la gestion des ressources sous-jacentes.
 
 Une fois le contrat clair, le développeur écrit le manifest (XRC) qui décrit le besoin fondamental.
 
 ![Crossplane Approche Plateforme](./crossplane-approche-plateforme.png)
 
+Cette approche amène des avantages intéressants qui en font un outil pertinent pour les équipes plateforme :
+
+* La simplicité et la lisibilité des objets manipulés
+* La réutilisation des objets
+* L'autonomie des développeurs
+
 ## Conclusion
 
 Crossplane est un outil qui permet d'abstraire la complexité des ressources Cloud et de les manipuler de manière déclarative.
 
 Cette rapide introduction à Crossplane vous permet de comprendre les concepts de base et les forces de la solution. Dans un prochain article, nous entrerons plus en détail sur l'utilisation de Crossplane avec des objets plus complexes et des cas d'utilisation plus avancés.
+
+Il est important de noter que Crossplane est un outil qui s'adresse à des équipes plateforme qui ont une bonne connaissance de Kubernetes et des ressources Cloud. Cet outil n'est pas à mettre sur tous vos projets, car il apporte une complexité supplémentaire qui n'est pas toujours nécessaire et qui peut engendrer des coûts (sous toutes formes possibles) supplémentaires.
+
+Vous trouverez dans un prochain article un exemple concret d'utilisation de Crossplane pour provisionner une architecture qui manipule des objets non-predictifs.
 
 ## Liens utiles
 
