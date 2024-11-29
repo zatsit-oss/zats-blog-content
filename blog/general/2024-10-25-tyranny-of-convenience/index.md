@@ -1,3 +1,12 @@
+---
+slug: tyranny-of-convenience
+title: La tyrannie de la commodité
+authors: [ggayot]
+tags: [general]
+---
+
+![Grafiti on a wall saying tyranny is already there](tyranny.webp)
+
 ## La tyrannie de la commodité : ce que nous coûte la facilité
 
 
@@ -103,7 +112,9 @@ ou pire : une manipulation marketing. En cédant à cette facilité, iels limite
 En réalité, la tyrannie de la commodité est une partie d'un problème bien connu dans le milieu du numérique : le "courtermisme". Pris dans des considérations de coût et d'efficacité, le milieu de l'entreprise
 a souvent tendance à aller vers une solution à court terme et à bas coût. En tant que professionnel·les du numérique, nous luttons déjà contre cette tendance, non pas par principe, mais par rationalité : 
 Nous savons apr exemple que prendre 20% de temps supplémentaire pour écrire des tests nous fera gagner du temps et de l'argent à moyen terme. Nous savons qu'il faut faire relire son code par ses pairs, qu'il faut être attentif aux bonnes pratiques, aux bons outils pour garder un code propre et maintenable à long terme.
-Mais nous savons aussi que tout est affaire de compromis et que l'on ne peut pas ignorer les contraintes de temps et de moyen. Il ne faut pas tomber dans une position extrême où tout ce qui est efficace et pratique deviendrait suspect !
+Mais nous savons aussi que tout est affaire de compromis et que l'on ne peut pas ignorer les contraintes de temps et de moyen. 
+
+Il ne faut pas tomber dans une position extrême où tout ce qui est efficace et pratique deviendrait suspect !
 Connaître le concept de tyrannie de la commodité permet de rester vigilant et de reconnaitre plus facilement les situations qui pourraient, plus tard être problématiques. Elle nous rappelle aussi l'importance de
 maintenir une veille professionnelle active, de promouvoir l'open source pour toujours garder ses alternatives ouvertes, et que la commodité ne devienne pas une prison.
 
