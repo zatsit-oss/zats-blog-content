@@ -37,6 +37,3 @@ On retrouve plusieurs informations sur la librairie :
 Petit bonus, “Bundlephobia” propose des alternatives à l’utilisation de la librairie, avec l’impact sur le poids du bundle. Ici, “Bundlephobia” propose “Phin” comme alternative qui est aussi un client HTTP pour Node.js. Ce dernier est 66% plus léger, mais attention, il ne propose peut-être pas toutes les fonctionnalités d’Axios, il vous revient le choix de tester ou non. Vous pouvez également proposer d’autres librairies alternatives à Axios et venir enrichir la base de donnée de “Bundlephobia” et contribuer à son développement.
 
 À vous maintenant, de tester vos package.json pour tenter de réduire la taille de vos applications front-end ou Node.js pour plus de performance et pour améliorer leur empreinte carbone !
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fbundlephobia-reduire-javascript)
-[![Partage Linkedin](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Analysez%20et%20reduisez%20l%27impact%20des%20librairies%20tierces%20avec%20Bundlephobia.%20Rendez%20vos%20appplications%20plus%20rapide%20et%20moins%20energivore.&url=https%3A%2F%2Fblog.zatsit.fr%2Fbundlephobia-reduire-javascript)

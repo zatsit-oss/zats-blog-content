@@ -133,6 +133,3 @@ Soyez curieux à votre tour, cherchez de l'information dans les sources citées 
 - [Rapport Tome 2 · Meilleures pratiques et mine « responsable »](https://www.systext.org/sites/default/files/RP_SystExt_Controverses-Mine_VOLET-2_Tome-2.pdf)
 - [Ressources minières en France](https://www.mineralinfo.fr/fr/ressources-minerales-france-gestion/mines-france)
 - [By-product metals are technologically essential but have problematic supply](https://www.science.org/doi/10.1126/sciadv.1400180)
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fgreen-exploitation-miniere%2F)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Quels%20sont%20les%20impacts%20de%20l%27exploitation%20mini%C3%A8re%20pour%20la%20production%20de%20nos%20appareils%20num%C3%A9riques%20et%20autres&url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fgreen-exploitation-miniere%2F)
