@@ -8,7 +8,7 @@ tags:
 
 Crossplane est une extension open-source à Kubernetes qui permet aux équipes plateforme d'assembler l'infrastructure provenant de plusieurs cloud providers, et d'exposer des APIs de plus haut niveau pour que les équipes d'applicatives puissent les consommer.
 
-![Crossplane Logo](./cncf-incubating.png)
+![Crossplane Logo](./cncf-incubating.webp)
 
 <!-- truncate -->
 
@@ -137,7 +137,7 @@ On distingue deux types de Managed Resources :
 * Les Managed Resources de type Crossplane : gérés par les providers du Cloud Provider.
 * Les Managed Resources de type Kubernetes : gérés par un autre contrôleur Kubernetes, externe à Crossplane.
 
-![Crossplane Managed Resources](./crossplane-managed-resources.png)
+![Crossplane Managed Resources](./crossplane-managed-resources.webp)
 
 Les deux types de Managed Resources possèdent leur avantages et inconvénients.
 On détaillera cela dans un prochain article.
@@ -215,7 +215,7 @@ La Composite Resource Definition (XRD) est un objet plus haut niveau qui a pour 
 * La Composite Resource (XR) : l'objet instancié qui définira le cycle de vie de notre objet complexe
 * Le Composite Resource Claim (XRC) : l'objet qui sera manipulé par l'utilisateur final et qui se veut simple
 
-![Crossplane Composite Resource Definition](./crossplane-xrd.png)
+![Crossplane Composite Resource Definition](./crossplane-xrd.webp)
 
 La XRD est un objet complexe en apparence qui est juste très structuré.
 Il comporte de façon très pragmatique 2 grandes sections :
@@ -223,7 +223,7 @@ Il comporte de façon très pragmatique 2 grandes sections :
 * `claim` et `spec` : qui définissent la dénomination et la structure du Claim sous forme d'une CRD
 * `status` : qui définit la structure du XR lors de son instanciation
 
-![Crossplane XRD Generation](./crossplane-xrd-generation.png)
+![Crossplane XRD Generation](./crossplane-xrd-generation.webp)
 
 La XRD définit à la fois la XRC et la XR afin de garantir une cohérence entre les deux objets manipulés.
 La XR n'a de sens que si les valeurs manipulées sont bien définies par les paramètres utilisateur.
@@ -273,7 +273,7 @@ Il a pour objectif d'être simmple et d'abstraire toute complexité liée à l'a
 Par exemple, pour notre Composition `JobNotif`, l'utilisateur final n'a pas besoin de connaître les sous-ressources créées en dessous, telle que le Service Account (SA) et ses credentials, la gestion des policies liées au SA ainsi que le stockage des valeurs sensibles dans le Secret Manager.
 Toute cette complexité doit être masquée pour ne fournir à l'utilisateur la seule véritable information utile : le nom du Topic.
 
-![Crossplane Claim](./corssplane-claim.png)
+![Crossplane Claim](./corssplane-claim.webp)
 
 Voici un exemple de XRC pour notre Composition `JobNotif` :
 
@@ -290,7 +290,7 @@ spec:
 
 La Composite Resource (XR) est l'objet qui est créé par Crossplane lors de l'instanciation de la XRC.
 
-![Crossplane Composite Resource Status](./crossplane-xr-status.png)
+![Crossplane Composite Resource Status](./crossplane-xr-status.webp)
 
 Il est responsable de la gestion des ressources sous-jacentes et de leur cycle de vie.
 On trouve les sous-objets managés dans la structure `spec.resourceRefs`.
@@ -362,7 +362,7 @@ Toute la complexité réside dans la définition du contrat de service entre les
 
 Une fois le contrat clair, le développeur écrit le manifest (XRC) qui décrit le besoin fondamental.
 
-![Crossplane Approche Plateforme](./crossplane-approche-plateforme.png)
+![Crossplane Approche Plateforme](./crossplane-approche-plateforme.webp)
 
 Cette approche amène des avantages intéressants qui en font un outil pertinent pour les équipes plateforme :
 
