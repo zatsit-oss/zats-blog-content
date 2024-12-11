@@ -2,6 +2,7 @@
 title: Crossplane - Présentation des concepts
 slug: crossplane-presentation-des-concepts
 authors: [glefebvre]
+date: 2024-11-12
 tags:
   - "cloud"
 ---
