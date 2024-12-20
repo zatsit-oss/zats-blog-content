@@ -23,11 +23,13 @@ Avant de commencer, assurez-vous d’avoir NodeJS d’installé en version 18+ e
 
 # Installation de LM Studio
 
-👉 Allez sur le site de [LM Studio] ([https://lmstudio.ai/download](https://lmstudio.ai/download)) et téléchargez la version adaptée à votre matériel.
+👉 Allez sur le site de [LM Studio](https://lmstudio.ai/download) et téléchargez la version adaptée à votre matériel.
 
 👉 Une fois installée, il est temps de choisir le modèle le plus adapté à votre besoin.
-Nous vous proposons de tester le nouveau modèle de Mistral AI : [Codestral](https://mistral.ai/fr/news/codestral/), un modèle qui supporte plus de 80 langages de programmation. 
-Il existe des modèles alternatifs pour des assistants de code comme [Code llama](https://codellama.dev/about) ou [StarCoder](https://github.com/bigcode-project/starcoder) si vous souhaitez comparer.
+
+Nous vous proposons de tester le nouveau modèle de Mistral AI, [Codestral](https://mistral.ai/fr/news/codestral/) : un modèle qui supporte plus de 80 langages de programmation. 
+
+Il existe d'ailleurs des modèles alternatifs pour des assistants de code comme [Code llama](https://codellama.dev/about) ou [StarCoder](https://github.com/bigcode-project/starcoder) si vous souhaitez comparer.
 
 👉 Ouvrez **LM Studio** et sélectionnez la loupe (dans le menu de gauche) afin de rechercher le modèle **Codestral** via la barre de recherche :
 
@@ -44,22 +46,29 @@ Il existe des modèles alternatifs pour des assistants de code comme [Code llama
 ![LM Studio - Créer un serveur local utilisant le modèle téléchargé](lm-studio-3.webp)
 
 👉 Chargez le modèle **Codestral** que vous venez de télécharger. 
-Patienter quelques instants, le modèle se charge en mémoire. Une fois le chargement terminé, il ne vous reste plus qu’à cliquer sur **Start Server** pour commencer à utiliser votre assistant.
+
+Patienter quelques instants, le modèle se charge en mémoire. 
+
+Une fois le chargement terminé, il ne vous reste plus qu’à cliquer sur **Start Server** pour commencer à utiliser votre assistant.
 
 ![LM Studio - Démarrer le serveur local](lm-studio-4.webp)
 
-La configuration de **LM Studio** est maintenant terminée. Voyons comment effectuer son intégration dans **VS Code**.
+La configuration de **LM Studio** est maintenant terminée. 
+
+Voyons comment effectuer son intégration dans **VS Code**.
 
 # Intégration dans Visual Studio Code
 
 👉 La première chose à faire est de télécharger l’extension [CodeGPT](https://docs.codegpt.co/docs/tutorial-basics/installation) qui permet, en s’inscrivant sur leur site, d’accéder aux APIs de différentes IAs comme **ChatGPT** ou encore **ClaudeAI**.
+
+![VSCode - Ajouter l'extension CodeGPT](vscode-1.webp)
+
 Toutefois, ce n’est pas ce que l’on souhaite faire ici.
 
 Nous cherchons à utiliser l'infrastructure de nos machines, plutôt que celles de serveurs distants, souvent alimentés avec une énergie à la provenance inconnue et dans un datacenter sûrement pas tout proche.
 
-Une belle façon d’être un peu plus **green** et de réduire notre empreinte.
+Une belle façon d’être un peu plus **green** et de réduire notre empreinte 🌱.
 
-![VSCode - Ajouter l'extension CodeGPT](vscode-1.webp)
 
 👉 Une fois l’extension installée, cliquez sur l’icône **ChatGPT** dans la *sidebar* de gauche, puis sélectionnez l’assistant à utiliser.
 
@@ -79,11 +88,11 @@ Qui vous a dit qu'il n'était pas possible de faire de l'IA frugale ?
 
 Pour vérifier que l’assistant fonctionne bien, nous allons lui demander de créer un composant *Product Card* en ReactJS avec une image, un nom du produit, une courte description, un prix et un bouton d’ajout au panier, en interagissant directement avec la fenêtre de chat via le prompt suivant :
 
-```
+```sh 
 Create a product card component in react with product image, product name, short description, price and add to cart button
 ```
 
-*Attention, les prompts sont à rédiger en anglais. Votre assistant ne fait pas encore la traduction automatique*
+*Attention, les prompts sont à rédiger en anglais. Votre assistant ne fait pas encore la traduction automatique*.
 
 ![VSCode - Utiliser votre assistant IA directement dans VSCode avec CodeGPT](vscode-4.webp)
 
@@ -101,3 +110,9 @@ Maintenant, c'est à vous de faire le reste :
 - explorer les possibilités que vous offrent cet assistant 
 - tester d’autres modèles d’IA (en local) plus adaptés à vos besoins. 
 - en parler autour de vous, pour favoriser l'adoption de cette technique.
+
+
+**Aidez nous à avoir un impact en partageant cet article sur vos réseaux sociaux :**
+
+[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Flocal-ai-assistant-in-vscode%2F)
+[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=https://blog.zatsit.fr/blog/local-ai-assistant-in-vscode)
