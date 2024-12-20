@@ -36,6 +36,10 @@ nfourre:
   title: Software Engineer
   url: https://github.com/nfourre
   image_url: /img/authors/nfourre.webp
+  socials:
+    x: NFourre
+    github: nfourre
+    linkedin: nicolas-fourré
 
 jvasseur:
   name: Jerome Vasseur
