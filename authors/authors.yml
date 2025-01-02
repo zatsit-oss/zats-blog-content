@@ -4,6 +4,10 @@ eperu:
   title: CTO & DSI zatsit
   url: https://github.com/emmanuelperu
   image_url: /img/authors/eperu.webp
+  socials:
+    x: emmanuelperu
+    github: emmanuelperu
+    linkedin: emmanuel-peru-10111274
 
 ldussart:
   name: Ludovic Dussart
