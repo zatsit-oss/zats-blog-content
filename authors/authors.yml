@@ -62,3 +62,11 @@ lperreau:
     github: mcfloy
     linkedin: lucas-perreau
 
+nlefebvre:
+  name: Nicolas Lefebvre
+  title: Developer
+  url: https://github.com/lef-nicolas
+  image_url: /img/authors/nlefebvre.webp
+  socials:
+    github: lef-nicolas
+    linkedin: nicolas-lefebvre-82965419
