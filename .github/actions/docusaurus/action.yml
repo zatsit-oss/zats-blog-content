@@ -23,6 +23,7 @@ runs:
       uses: actions/checkout@v3
       with:
         ref: ${{ inputs.branch }}
+        fetch-depth: 0
         path: blog-contents
         sparse-checkout-cone-mode: false
         sparse-checkout: |

@@ -10,6 +10,10 @@ ldussart:
   title: Deputy CTO & Developer Advocate
   url: https://github.com/M3lkior
   image_url: /img/authors/ldussart.webp
+  socials:
+    x: ldussart
+    github: m3lkior
+    linkedin: ludovic-dussart-846a8063
 
 mslimani:
   name: Mehdi Slimani
@@ -22,12 +26,20 @@ glefebvre:
   title: OSS Ambassador
   url: https://github.com/germainlefebvre4
   image_url: /img/authors/glefebvre.webp
+  socials:
+    x: germainlefebvr4
+    github: germainlefebvre4
+    linkedin: germainlefebvre4
 
 nfourre:
   name: Nicolas Fourré
   title: Software Engineer
   url: https://github.com/nfourre
   image_url: /img/authors/nfourre.webp
+  socials:
+    x: NFourre
+    github: nfourre
+    linkedin: nicolas-fourré
 
 jvasseur:
   name: Jerome Vasseur
@@ -40,3 +52,13 @@ ggayot:
   title: Software Engineer
   url: https://github.com/sergejomon
   image_url: /img/authors/ggayot.webp
+
+lperreau:
+  name: Lucas Perreau
+  title: Developer
+  url: https://github.com/mcfloy
+  image_url: https://avatars.githubusercontent.com/u/10086193
+  socials:
+    github: mcfloy
+    linkedin: lucas-perreau
+

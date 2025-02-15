@@ -30,7 +30,7 @@ Les catégories s'étofferont donc pour parler :
 - ... et bien d'autres encore
 
 
-## Laissez-vous Inspirer par Nos Collaborateurs
+## Laissez-vous Inspirer par Notre Collectif
 
 Parcourez nos articles de blog pour entendre les voix de nos collaborateurs, découvrir leurs passions, leurs projets personnels et la manière dont ils contribuent à notre mission commune. Chez **zatsit**, nous croyons que chaque talent contribue à la prospérité de l'entreprise et de notre écosystème, c'est pourquoi chaque voix compte.
 
