@@ -47,6 +47,12 @@ jvasseur:
   url: https://github.com/jemarray
   image_url: /img/authors/jvasseur.webp
 
+ggayot:
+  name: Guillaume Gayot
+  title: Software Engineer
+  url: https://github.com/sergejomon
+  image_url: /img/authors/ggayot.webp
+
 lperreau:
   name: Lucas Perreau
   title: Developer
@@ -55,3 +61,4 @@ lperreau:
   socials:
     github: mcfloy
     linkedin: lucas-perreau
+
