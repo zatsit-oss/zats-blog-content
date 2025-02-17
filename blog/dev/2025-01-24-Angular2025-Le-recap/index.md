@@ -11,7 +11,7 @@ tags:
 
 [![angular chill](angular_chill.webp)](https://x.com/DanielGlejzner/status/1862568911482626328/photo/1)
 
-Pour cet article à propos d'Angular, je vais essayer de montrer un aperçu de la dynamique d'évolution du Framework ces derniers temps, et la direction prise par l'équipe de développement.
+Cet article à propos d'Angular, a pour but de donner un aperçu de la dynamique d'évolution du Framework ces derniers temps, et la direction prise par l'équipe de développement.
 <!-- truncate -->
 En effet, avec des avancées majeures dans les dernières versions via le lancement des composants standalone en expérimental en V14, l'arrivée des Signals en V16 ou encore la nouvelle syntaxe de control flow en v17, Angular progresse bien dans ses objectifs d'améliorer les performances, l'expérience des développeurs, la stabilité et la fiabilité (voir la [vidéo "State of Angular" par Minko Gechev, Google Core Team](https://www.youtube.com/live/C9fiw4XoeC0?si=bLB3d0ppm7veu3Lg&t=5320))
 
@@ -21,17 +21,17 @@ En effet, avec des avancées majeures dans les dernières versions via le lancem
 
 ### Standalone component (stable en V15)
 
-L'un des changements les plus anciens maintenant et l'introduction des standalone component, permettant de se passer des ngModule. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
+L'un des changements les plus anciens maintenant est l'introduction des standalone component, permettant de se passer des ngModule. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
 
-Bien sûr l'équipe d'Angular s'efforce de garder la rétrocompatibilité des versions et fonctionnalités, et les ngModules ne sont pas encore prévus d'être dépréciés de sitôt.
+Bien sûr l'équipe d'Angular s'efforce de garder la rétrocompatibilité des versions et fonctionnalités, et il n'est pas prévu que les ngModules soient dépréciés de sitôt.
 
-Depuis la version 19 les composants sont d'ailleurs considérés par défaut comme standalone, et [un warning pour les imports inutilisé a été ajouté](https://angular.dev/extended-diagnostics/NG8113).
+Depuis la version 19 les composants sont d'ailleurs considérés par défaut comme standalone, et [un warning pour les imports inutilisés a été ajouté](https://angular.dev/extended-diagnostics/NG8113).
 
 ### Les signals
 
 #### Le présent
 
-L'autre changement qui a fait beaucoup parlé de lui est l'introduction des Signals (stable en v17), un nouveau type de données, mix entre les variables classiques et des observables. Une erreur souvent commise est de penser que les Signals remplacent les Observables, alors qu'ils viennent en combinaison comme l'illustre ce schéma issu de [ce bon article d'Angular Space "Q14: Signals, Observables, Promises - tell me all about differences and when to use which"](https://www.angularspace.com/18-interview-questions-answered-by-angular-experts-live-post/) : 
+L'autre changement qui a beaucoup fait parler de lui est l'introduction des Signals (stable en v17), un nouveau type de données, mix entre les variables classiques et des observables. Une erreur souvent commise est de penser que les Signals remplacent les Observables, alors qu'ils viennent en combinaison comme l'illustre ce schéma issu de [cet article d'Angular Space "Q14: Signals, Observables, Promises - tell me all about differences and when to use which"](https://www.angularspace.com/18-interview-questions-answered-by-angular-experts-live-post/) : 
 
 ![illustration des différents types de variables](variables_comparison.webp)
 
@@ -50,7 +50,7 @@ Un autre aspect de la réactivité des Signals passe par les opérateurs permett
 Une bonne illustration faite par un membre de l'équipe d'Angular des différents outils liés aux Signals :
 [![image.png](signals_operators.webp)](https://x.com/Jean__Meche/status/1866857244106584575/photo/1)
 
-Un chantier qui débute est celui d'[utiliser les signals au sein des formulaires](https://github.com/angular/angular/tree/prototype/signal-forms/packages/forms/experimental), avec comme objectif, encore une fois, de facilité l'expérience de développeur.
+Un chantier qui débute est celui d'[utiliser les signals au sein des formulaires](https://github.com/angular/angular/tree/prototype/signal-forms/packages/forms/experimental), avec comme objectif, encore une fois, de faciliter l'expérience de développeur.
 
 #### Les signals en dehors d'Angular
 
@@ -77,7 +77,7 @@ En version 19 une nouvelle balise a fait son apparition, le @let permettant de d
 
 ### L'hydratation incrémentale
 
-Un point moins mis en avant et le rendu côté serveur (Server side rendering, SSR), qui permet de générer une partie de la vue sur le serveur, permettant une amélioration des performances pour l'utilisateur, ou encore un meilleur référencement SEO.
+Un point moins mis en avant est le rendu côté serveur (Server side rendering, SSR), qui permet de générer une partie de la vue sur le serveur, permettant une amélioration des performances pour l'utilisateur, ou encore un meilleur référencement SEO.
 
 Pour améliorer les performances au niveau de la réactivité du SSR, l'hydratation permet de réutiliser une partie du code généré côté serveur.
 
@@ -122,7 +122,7 @@ Parmi les derniers changements, les Signals et Control flow sont les 2 améliora
 
 ### Mise à jour de la documentation
 
-Sortie en même temps que la version 17, une nouvelle version de la documentation a été mise à disposition sur [https://angular.dev/](https://angular.dev/).
+Sortie en même temps que la version 17, une nouvelle version de la documentation a été mise à disposition sur [angular.dev](https://angular.dev/).
 
 Dans les apports notables, je trouve que l'intégration d'un bac à sable intégré est très pratique pour suivre le tutoriel, ou simplement pour faire des tests rapides dans le [playground](https://angular.dev/playground) (et c'est toujours possible sur [Stackblitz](https://stackblitz.com/edit/angular)).
 
@@ -151,3 +151,34 @@ Grâce aux efforts combinés de l'équipe et de la communauté, Angular a connu 
 Je trouve d'ailleurs intéressant le [feedback d'Alex Rickabaugh](https://x.com/synalx/status/1882879962547659078) à ce sujet, et j'ai l'impression que les efforts fournis portent leurs fruits 🙂
 
 > Pour être honnête, l'un des plus grands moteurs de la « Renaissance Angular » a été un changement de culture de l'équipe au fil des ans, passant d'une vision des problèmes comme des problèmes de **compétences** à une vision des problèmes comme des problèmes de **conception** [du framework].
+
+## Liens
+
+Voici quelques ressources utiles (en anglais).
+
+- Blogs
+  - [Angular Space](https://www.angularspace.com/)
+  - [Angular Architects](https://www.angulararchitects.io/en/)
+  - [Angular Love](https://angular.love/)
+  - [Angular Experts](https://angularexperts.io/blog)
+- [Angular2 on Reddit](https://www.reddit.com/r/Angular2/)
+- X
+  - [Minko Gechev (Angular product lead)](https://x.com/mgechev) - [Bluesky](https://bsky.app/profile/mgechev.bsky.social)
+  - [Matthieu Riegler (Angular team)](https://x.com/Jean__Meche) - [Bluesky](https://bsky.app/profile/jeanmeche.com)
+  - [Alex Rickabaugh (Angular team)](https://x.com/synalx) - [Bluesky](https://bsky.app/profile/synalx.bsky.social)
+  - [Tomas Trajan (GDE)](https://x.com/tomastrajan) - [Bluesky](https://bsky.app/profile/tomastrajan.bsky.social)
+  - [Deborah Kurata (GDE)](https://x.com/DeborahKurata) - [Youtube](https://www.youtube.com/@deborah_kurata) - [Bluesky](https://bsky.app/profile/deborahkurata.bsky.social)
+  - [Armen Vardanyan (GDE)](https://x.com/Armandotrue) - [Bluesky](https://bsky.app/profile/armandotrue.bsky.social)
+  - [Enea Jahollari(GDE)](https://x.com/Enea_Jahollari) - [Bluesky](https://bsky.app/profile/eneajaho.me)
+  - [Nivek (GDE)](https://x.com/nivekcode)
+  - [Younes Jaaidi [français]\(GDE\)](https://x.com/yjaaidi) - [Bluesky](https://bsky.app/profile/younesjd.dev)
+  - [Evgeniy OZ](https://x.com/eugeniyoz)
+  - [Rainer Hahnekamp](https://x.com/rainerhahnekamp) - [Bluesky](https://bsky.app/profile/rainerhahnekamp.bsky.social)
+  - [Daniel Glejzner](https://x.com/DanielGlejzner) - [Bluesky](https://bsky.app/profile/danielglejzner.bsky.social)
+  - [Gerome Grignon [français]](https://x.com/GeromeDEV) - [Bluesky](https://bsky.app/profile/gerome.dev)
+  - [AngularDevsFr](https://x.com/AngularDevsFr) - [Bluesky](https://bsky.app/profile/angulardevs.fr)
+- Autre
+  - [Ngxtension : Librairie d'utilitaires pour Angular](https://ngxtension.netlify.app/)
+  - Visualisation de diagrammes RxJS
+    - [rxvisualizer.com : Beta de visualisation dynamique](https://rxvisualizer.com/)
+    - [thinkrx.io : Visualisation statique avec des comparaisons d'opérateurs](https://thinkrx.io/rxjs/debounceTime-vs-throttleTime-vs-auditTime-vs-sampleTime/)
