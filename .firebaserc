@@ -1,5 +1,15 @@
 {
   "projects": {
-    "default": "zatsit-blog"
-  }
+    "default": "zatsit-dsi-internalsites-dev"
+  },
+  "targets": {
+    "zatsit-dsi-internalsites-dev": {
+      "hosting": {
+        "zatsit-blog-fde88": [
+          "zatsit-blog-fde88"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
