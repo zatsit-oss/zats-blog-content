@@ -161,7 +161,7 @@ Voici quelques ressources utiles (en anglais).
   - [Angular Architects](https://www.angulararchitects.io/en/)
   - [Angular Love](https://angular.love/)
   - [Angular Experts](https://angularexperts.io/blog)
-- [Angular2 on Reddit](https://www.reddit.com/r/Angular2/)
+- [Angular2 sur Reddit](https://www.reddit.com/r/Angular2/)
 - X
   - [Minko Gechev (Angular product lead)](https://x.com/mgechev) - [Bluesky](https://bsky.app/profile/mgechev.bsky.social)
   - [Matthieu Riegler (Angular team)](https://x.com/Jean__Meche) - [Bluesky](https://bsky.app/profile/jeanmeche.com)
