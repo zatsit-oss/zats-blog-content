@@ -18,15 +18,14 @@ Pourtant, on devrait le savoir, un argument marketing est rarement un argument r
 
 <!-- truncate -->
 
-Nous savons que le fast-food est mauvais pour la santé, qu'il y a plein d'alternatives souvent plus savoureuses et meilleures pour la santé,
-Pourtant, la facilité de passer au kebab semble souvent l’emporter. Et non seulement on a cédé à la facilité sur le coup, mais on crée un précédent qui va nous pousser à recommencer.
+Nous savons que le fast-food est mauvais pour la santé, qu'il y a plein d'alternatives souvent plus savoureuses et meilleures pour la santé, pourtant, la facilité de passer au kebab semble souvent l’emporter. Et non seulement on a cédé à la facilité sur le coup, mais on crée un précédent qui va nous pousser à recommencer.
 
 Lorsqu’une option est bien plus "simple" que les autres, les alternatives paraissent vite irrationnelles. La tyrannie de la commodité,
 ce sont tous ces choix que l'ont fait non pas parce que ce sont les meilleurs, les plus adaptés, les plus rationnels,
 mais parce que sortir de la commodité nous semble impossible, impensable. C'est le moment où la commodité n'est plus un atout, mais une contrainte.
 
 L'IT est particulièrement sensible à cette problématique. Tenu par des objectifs d'efficacité et de rapidité, il est facile d'aller au plus simple et surtout, d'y rester.
-Et ce n'est pas nécessairement une mauvaise chose ! Comme le dit le dicton bien connu dans les métiers du numérique : inutile de réinventer la roue. Il faut s'avoir s'appuyer sur des solutions déjà existantes pour travailler plus efficacement. 
+Et ce n'est pas nécessairement une mauvaise chose ! Comme le dit le dicton bien connu dans les métiers du numérique : inutile de réinventer la roue. Il faut savoir s'appuyer sur des solutions déjà existantes pour travailler plus efficacement. 
 En revanche, il est important de s'interroger sur ce que cela nous coûte : cet écosystème clef en main deviendra-t-il une prison ?
 Quid de la dépendance à un seul outil, à une seule entreprise ? 
 À quel moment devient-on esclave de la commodité ?
@@ -42,7 +41,7 @@ Un exemple dans lequel tout le monde se reconnaitra est le choix du système d'e
 et particulièrement de nos terminaux mobiles.
 iOS ou Android ? Est-ce vraiment la rationalité qui détermine notre choix ? Si c'était le cas, nous n'aurions aucun mal à 
 passer de l'un à l'autre quand une nouvelle fonctionnalité fait son apparition chez la concurrence.
-Pourtant, la plupart des utilisateurs·rices reste "fidèles" à leur système à chaque renouvellement de mobile, sans même 
+Pourtant, la plupart des utilisateurs·rices restent "fidèles" à leur système à chaque renouvellement de mobile, sans même 
 s'interroger sur les alternatives.
 Cette "fidélité" va même parfois jusqu'à nous faire accepter des défauts majeurs (confidentialité, durée de vie de la batterie, obsolescence programmée...) 
 pour ne pas changer nos habitudes.
@@ -111,7 +110,7 @@ ou pire : une manipulation marketing. En cédant à cette facilité, iels limite
 
 En réalité, la tyrannie de la commodité est une partie d'un problème bien connu dans le milieu du numérique : le "courtermisme". Pris dans des considérations de coût et d'efficacité, le milieu de l'entreprise
 a souvent tendance à aller vers une solution à court terme et à bas coût. En tant que professionnel·les du numérique, nous luttons déjà contre cette tendance, non pas par principe, mais par rationalité : 
-Nous savons apr exemple que prendre 20% de temps supplémentaire pour écrire des tests nous fera gagner du temps et de l'argent à moyen terme. Nous savons qu'il faut faire relire son code par ses pairs, qu'il faut être attentif aux bonnes pratiques, aux bons outils pour garder un code propre et maintenable à long terme.
+Nous savons par exemple que prendre 20% de temps supplémentaire pour écrire des tests nous fera gagner du temps et de l'argent à moyen terme. Nous savons qu'il faut faire relire son code par ses pairs, qu'il faut être attentif aux bonnes pratiques, aux bons outils pour garder un code propre et maintenable à long terme.
 Mais nous savons aussi que tout est affaire de compromis et que l'on ne peut pas ignorer les contraintes de temps et de moyen. 
 
 Il ne faut pas tomber dans une position extrême où tout ce qui est efficace et pratique deviendrait suspect !
