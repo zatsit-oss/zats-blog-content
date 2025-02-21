@@ -31,8 +31,11 @@ runs:
     - name: Copy blog-content to blog
       shell: bash
       run: |
-        cp -R blog-contents/blog/* blog
         cp blog-contents/{docusaurus.config.js,firebase.json,.firebaserc} .
+        cp -R blog-contents/blog/* blog
+        cp -R blog-contents/docs/* docs
+        cp blog-contents/authors/authors.yml blog
+        cp -R blog-contents/authors/img/* static/img/authors
         rm -R blog-contents
 
     - name: Install Node.js
@@ -41,13 +44,10 @@ runs:
         node-version: '22'
         cache: 'npm'
 
-    - shell: bash
-      run: ls -la .
-
     - name: Install npm dependencies
       shell: bash
       run: |
-        npm install
+        npm ci
 
     - shell: bash
       run: npm run build
