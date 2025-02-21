@@ -1,5 +1,5 @@
 ---
-name: Fetch and build Docs
+name: Fetch and build Blog
 description: Fetch and build the blog
 inputs:
   token:

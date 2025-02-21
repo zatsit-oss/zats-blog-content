@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch and Build docs content
+      - name: Fetch and Build blog content
         uses: ./.github/actions/docusaurus
         with:
           token: ${{ secrets.GH_PAT }}
@@ -33,7 +33,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZATSIT_BLOG }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZATSIT_BLOG_BIS }}
           projectId: zatsit-dsi-internalsites-dev
           target: zatsit-blog-fde88
           expires: 30d
