@@ -2,7 +2,7 @@
 slug: "angular-2025-le-recap"
 title: "Angular 2025 : Le récap'"
 authors: [nlefebvre]
-date: 2025-02-17
+date: 2025-02-28
 tags:
   - "web"
   - "javascript"
@@ -19,9 +19,9 @@ En effet, avec des avancées majeures dans les dernières versions via le lancem
 
 ## Aperçu des changements majeurs depuis 2022
 
-### Standalone component (stable en V15)
+### Standalone components (stable en V15)
 
-L'un des changements les plus anciens maintenant est l'introduction des standalone component, permettant de se passer des ngModule. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
+L'un des changements les plus anciens maintenant est l'introduction des standalone components, permettant de se passer des ngModule. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
 
 Bien sûr l'équipe d'Angular s'efforce de garder la rétrocompatibilité des versions et fonctionnalités, et il n'est pas prévu que les ngModules soient dépréciés de sitôt.
 
@@ -45,7 +45,8 @@ Pour combiner au mieux les RxJS et les Signals, [le package rxjs-interop](https:
 
 ![comparaison entre observables et signals](observables_vs_signals.webp)
 
-Un autre aspect de la réactivité des Signals passe par les opérateurs permettant de réagir aux changements de valeurs. Ainsi, en plus du computed qui est stable depuis plusieurs versions et [l'Effect](https://angular.dev/api/core/effect) qui est toujours en developer preview, Angular s'attaque maintenant a faciliter le travail pour la gestion de l'asynchronisme via l'opérateur `resource`  (avec son pendant `rxResource`), dont le cas d'usage principal est de permettre des récupérer des données via une API et de les utiliser comme Signals.
+Un autre aspect de la réactivité des Signals passe par les opérateurs permettant de réagir aux changements de valeurs. Ainsi, en plus du `computed` qui est stable depuis plusieurs versions et [l'Effect](https://angular.dev/api/core/effect) qui est toujours en developer preview, Angular s'attaque maintenant a faciliter le travail pour la gestion de l'asynchronisme via l'opérateur `resource`  (et ses dérivés `rxResource` et `httpResource`), dont le cas d'usage principal est de permettre des récupérer des données via une API et de les utiliser comme Signals.
+D'ailleurs [deux demandes de commentaires (RFC) viennent d'être publiées](https://x.com/Jean__Meche/status/1894795310142009543) pour discuter de ce sujet.
 
 Une bonne illustration faite par un membre de l'équipe d'Angular des différents outils liés aux Signals :
 [![image.png](signals_operators.webp)](https://x.com/Jean__Meche/status/1866857244106584575/photo/1)
