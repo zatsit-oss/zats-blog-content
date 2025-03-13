@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        description: 'The environment to deploy to'
+        description: 'Environment (production, staging)'
         required: true
         default: production
 
@@ -38,13 +38,13 @@ jobs:
           map: |
             {
               "production": {
-                "google_project_id": "zatsit-dsi-externalsites-prod",
-                "bucket_name": "zatsit-blog-prod",
+                "google_project_id": "${{ vars.GOOGLE_PROJECT_ID_PROD }}",
+                "bucket_name": "${{ vars.GCS_BUCKET_NAME_PROD }}",
                 "service_account__secret_name": "GOOGLE_STORAGE_SERVICE_ACCOUNT_ZATSIT_BLOG"
               },
               "staging": {
-                "google_project_id": "zatsit-dsi-externalsites-dev",
-                "bucket_name": "zatsit-blog-staging",
+                "google_project_id": "${{ vars.GOOGLE_PROJECT_ID_DEV }}",
+                "bucket_name": "${{ vars.GCS_BUCKET_NAME_STAGING }}",
                 "service_account__secret_name": "GOOGLE_STORAGE_SERVICE_ACCOUNT_ZATSIT_BLOG_STAGING"
               }
             }
