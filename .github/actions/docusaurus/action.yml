@@ -31,7 +31,7 @@ runs:
     - name: Copy blog-content to blog
       shell: bash
       run: |
-        cp blog-contents/{docusaurus.config.js,firebase.json,.firebaserc} .
+        cp blog-contents/{firebase.json,.firebaserc} .
         cp -R blog-contents/blog/* blog
         cp -R blog-contents/docs/* docs
         cp blog-contents/authors/authors.yml blog
