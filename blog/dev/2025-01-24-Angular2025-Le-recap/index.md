@@ -13,7 +13,7 @@ tags:
 
 Cet article à propos d'Angular, a pour but de donner un aperçu de la dynamique d'évolution du Framework ces derniers temps, et la direction prise par l'équipe de développement.
 <!-- truncate -->
-En effet, avec des avancées majeures dans les dernières versions via le lancement des composants standalone en expérimental en V14, l'arrivée des Signals en V16 ou encore la nouvelle syntaxe de control flow en v17, Angular progresse bien dans ses objectifs d'améliorer les performances, l'expérience des développeurs, la stabilité et la fiabilité (voir la [vidéo "State of Angular" par Minko Gechev, Google Core Team](https://www.youtube.com/live/C9fiw4XoeC0?si=bLB3d0ppm7veu3Lg&t=5320))
+En effet, avec des avancées majeures dans les dernières versions via le lancement des composants standalones en expérimental en v14, l'arrivée des Signals en v16 ou encore la nouvelle syntaxe de control flow en v17, Angular progresse bien dans ses objectifs d'améliorer les performances, l'expérience des développeurs, la stabilité et la fiabilité (voir la [vidéo "State of Angular" par Minko Gechev, Google Core Team](https://www.youtube.com/live/C9fiw4XoeC0?si=bLB3d0ppm7veu3Lg&t=5320))
 
 ![frise chronologique des principales évolutions des dernières versions d'Angular](angular_timeline.webp)
 
@@ -21,7 +21,7 @@ En effet, avec des avancées majeures dans les dernières versions via le lancem
 
 ### Standalone components (stable en V15)
 
-L'un des changements les plus anciens maintenant est l'introduction des standalone components, permettant de se passer des ngModule. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
+L'un des changements les plus anciens maintenant est l'introduction des standalone components, permettant de se passer des ngModules. Ce changement permet des améliorations de performance avec une mise en place de chargement à la demande (lazy loading) de composant bien plus facilement. La contrepartie principale au quotidien étant de prendre l'automatisme d'importer dans chaque composant les éléments externes utiles (Pipe, Directives, Composants…).
 
 Bien sûr l'équipe d'Angular s'efforce de garder la rétrocompatibilité des versions et fonctionnalités, et il n'est pas prévu que les ngModules soient dépréciés de sitôt.
 
@@ -45,8 +45,8 @@ Pour combiner au mieux les RxJS et les Signals, [le package rxjs-interop](https:
 
 ![comparaison entre observables et signals](observables_vs_signals.webp)
 
-Un autre aspect de la réactivité des Signals passe par les opérateurs permettant de réagir aux changements de valeurs. Ainsi, en plus du `computed` qui est stable depuis plusieurs versions et [l'Effect](https://angular.dev/api/core/effect) qui est toujours en developer preview, Angular s'attaque maintenant a faciliter le travail pour la gestion de l'asynchronisme via l'opérateur `resource`  (et ses dérivés `rxResource` et `httpResource`), dont le cas d'usage principal est de permettre des récupérer des données via une API et de les utiliser comme Signals.
-D'ailleurs [deux demandes de commentaires (RFC) viennent d'être publiées](https://x.com/Jean__Meche/status/1894795310142009543) pour discuter de ce sujet.
+Un autre aspect de la réactivité des Signals passe par les opérateurs permettant de réagir aux changements de valeurs. Ainsi, en plus du `computed` qui est stable depuis plusieurs versions et [l'Effect](https://angular.dev/api/core/effect) qui est toujours en developer preview, Angular s'attaque maintenant à faciliter le travail pour la gestion de l'asynchronisme via l'opérateur `resource`  (et ses dérivés `rxResource` et `httpResource`), dont le cas d'usage principal est de permettre de récupérer des données via une API et de les utiliser comme Signals.
+D'ailleurs [deux demandes de commentaires (RFC) ont récemment été publiées](https://x.com/Jean__Meche/status/1894795310142009543) pour discuter de ce sujet.
 
 Une bonne illustration faite par un membre de l'équipe d'Angular des différents outils liés aux Signals :
 [![image.png](signals_operators.webp)](https://x.com/Jean__Meche/status/1866857244106584575/photo/1)
@@ -109,7 +109,7 @@ import { Checkbox } from 'component-library';
 export class App {...}
 ```
 
-Les réflexions sont à leurs débuts, Plus d'infos sur ce sujet dans [cette vidéo partagée par Matthieu Riegler](https://x.com/Jean__Meche/status/1849545173920825606?t=W8kwcXGMeJ6yh-I3esjj-g&s=19).
+Les réflexions n'en sont qu'à leurs débuts, plus d'infos sur ce sujet dans [cette vidéo partagée par Matthieu Riegler](https://x.com/Jean__Meche/status/1849545173920825606?t=W8kwcXGMeJ6yh-I3esjj-g&s=19).
 
 Un peu dans la même veine, [une communication récente fait mention de recommandation visant les noms des fichiers](https://github.com/angular/angular/discussions/59522), le guide de style omettra le fait de suffixer les noms avec "component", "directive" ou "service". Et à la place, pour permettre aux différents outils de mieux supporter Angular, de mettre le préfixe "ng" (ng.html, ng.ts…).
 
