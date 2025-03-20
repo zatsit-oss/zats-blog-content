@@ -131,7 +131,7 @@ Dans les apports notables, je trouve que l'intégration d'un bac à sable intég
 
 Vous pouvez bien sûr retrouver ces sujets listés sur la [roadmap officielle d'Angular](https://angular.dev/roadmap). Permettant d'avoir un aperçu de l'ensemble des chantiers passés et en cours.
 
-Mais avec le rythme de sortie de 2 versions majeures par an, avec dans chacune des versions des fonctionnalités en expérimentation ou en avant-première, il est parfois facile d'oublier ce que l'on peut utiliser sereinement pour son application en production. Il est bien sûr possible d'aller directement sur la documentation officielle pour voir si la fonctionnalité est stable, mais un Français porte un projet permettant de visualiser rapidement le statut des principales fonctionnalités sur [Angular.courses/caniuse](https://www.angular.courses/caniuse).
+Mais avec le rythme de sortie de 2 versions majeures par an, avec dans chacune des versions des fonctionnalités en expérimentation ou en avant-première, il est parfois facile d'oublier ce que l'on peut utiliser sereinement pour son application en production. Il est bien sûr possible d'aller directement sur la documentation officielle pour voir si la fonctionnalité est stable, mais le Français [Gerome Grignon](https://www.gerome.dev/) porte un projet permettant de visualiser rapidement le statut des principales fonctionnalités sur [Angular.courses/caniuse](https://www.angular.courses/caniuse).
 
 ![illustration site caniuse](caniuse.webp)
 
