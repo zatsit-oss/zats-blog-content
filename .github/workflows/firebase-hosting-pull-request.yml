@@ -33,7 +33,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZATSIT_BLOG_BIS }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZATSIT_BLOG_STAGING }}
           projectId: zatsit-dsi-externalsites-dev
           target: zatsit-blog-b5294
           expires: 30d

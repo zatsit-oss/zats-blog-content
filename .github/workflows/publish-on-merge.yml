@@ -40,7 +40,7 @@ jobs:
               "production": {
                 "google_project_id": "${{ vars.GOOGLE_PROJECT_ID_PROD }}",
                 "bucket_name": "${{ vars.GCS_BUCKET_NAME_PROD }}",
-                "service_account__secret_name": "GOOGLE_STORAGE_SERVICE_ACCOUNT_ZATSIT_BLOG"
+                "service_account__secret_name": "GOOGLE_STORAGE_SERVICE_ACCOUNT_ZATSIT_BLOG_PROD"
               },
               "staging": {
                 "google_project_id": "${{ vars.GOOGLE_PROJECT_ID_DEV }}",
