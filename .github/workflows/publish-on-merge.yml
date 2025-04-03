@@ -5,10 +5,9 @@ on:
   push:
     branches:
       - main
-      - ci/migrate-firebase-hosting
-    # paths:
-    #   - "blog/**"
-    #   - "docs/**"
+    paths:
+      - "blog/**"
+      - "docs/**"
   workflow_dispatch:
     inputs:
       env:
