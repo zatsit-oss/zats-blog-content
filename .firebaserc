@@ -1,5 +1,15 @@
 {
   "projects": {
-    "default": "zatsit-blog"
-  }
+    "default": "zatsit-dsi-externalsites-dev"
+  },
+  "targets": {
+    "zatsit-dsi-externalsites-dev": {
+      "hosting": {
+        "zatsit-blog-b5294": [
+          "zatsit-blog-b5294"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

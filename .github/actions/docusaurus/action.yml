@@ -1,9 +1,10 @@
+---
 name: Fetch and build Blog
 description: Fetch and build the blog
 inputs:
   token:
-      description: 'The token to use for fetching the repository'
-      required: true
+    description: 'The token to use for fetching the repository'
+    required: true
   branch:
     description: 'The branch to fetch for blog content'
     required: false
@@ -12,54 +13,41 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - name: Checkout zatsit-blog repository
+      uses: actions/checkout@v4
       with:
         repository: 'zatsit-oss/zats-blog'
         token: ${{ inputs.token }}
         path: .
 
-    - name: Checkout blog contents
-      uses: actions/checkout@v3
+    - name: Checkout zatsit-blog-content repository
+      uses: actions/checkout@v4
       with:
         ref: ${{ inputs.branch }}
+        token: ${{ inputs.token }}
         fetch-depth: 0
         path: blog-contents
-        sparse-checkout-cone-mode: false
-        sparse-checkout: |
-          blog
-          docs
-          authors
 
-    - name: move blog-content blog dir to blog dir
-      run: cp -R blog-contents/blog/* blog
+    - name: Copy blog-content to blog
       shell: bash
+      run: |
+        cp blog-contents/{firebase.json,.firebaserc} .
+        cp -R blog-contents/blog/* blog
+        cp -R blog-contents/docs/* docs
+        cp blog-contents/authors/authors.yml blog
+        cp -R blog-contents/authors/img/* static/img/authors
+        rm -R blog-contents
 
-    - name: move blog-content docs dir to docs dir
-      run: cp -R blog-contents/docs/* docs
-      shell: bash
-
-    - name: move authors.yml into blog folder
-      run: cp blog-contents/authors/authors.yml blog
-      shell: bash
-
-    - name: move authors imgs into blog/img/authors
-      run: cp -R blog-contents/authors/img/* static/img/authors
-      shell: bash
-
-    - name: remove blog-content dir
-      run: rm -R blog-contents
-      shell: bash
-
-    - name: node-setup
-      uses: actions/setup-node@v2
+    - name: Install Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: '22'
         cache: 'npm'
 
-    - shell: bash
-      run: npm ci
+    - name: Install npm dependencies
+      shell: bash
+      run: |
+        npm ci
 
     - shell: bash
-      run: npm run docusaurus build
-
+      run: npm run build
