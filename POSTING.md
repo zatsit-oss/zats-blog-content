@@ -119,6 +119,14 @@ All your pictures for your post have to be stored in your post folder, feel free
 
 > Ideally, you should use the `webp` or `avif` format for your pictures, but if you have to use another format, please use the smallest size possible.
 
+### Using admonitions 
+
+Using abmonitions provide a way to set visual take-away for the readers that is pretty cool !
+
+To use this feature in your article, please read the [related docusaurus documentation](https://docusaurus.io/fr/docs/markdown-features/admonitions)
+
+<img width="760" alt="image" src="https://github.com/user-attachments/assets/256db15d-5bd1-466d-bd40-b2afeda5b37b" />
+
 ### Add social media link
 
 In this version, the minimalist solution found to add link to share on `X` and `LinkedIn` is to copy/paste this two lines, customizing the query attribute, for example : 
