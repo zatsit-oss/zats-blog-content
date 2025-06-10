@@ -92,7 +92,7 @@ Une fois cette configuration faite, un simple `mvn rewrite:run` suffit à les ap
 
 Certaines recettes nécessitent des paramètres, comme [cette recette de changement de nom de package](https://docs.openrewrite.org/recipes/java/changepackage) par exemple.
 
-Heureux hasard ! dans notre projet, la classe `demoApplicationTests` comporte une erreur de nom de package !
+Heureux hasard ! dans notre projet, le fichier `SpringdemoApplicationTests.java` comporte une erreur de nom de package !
 
 Il suffit d'ajouter à la racine de notre projet un fichier `rewrite.yml` comme celui-ci :
 
@@ -121,8 +121,10 @@ Là encore, un simple `mvn rewrite:run` et le tour est joué !
 
 ## What else ?
 
-Cet exemple simple vous donne un aperçu de la facilité avec laquelle on peut utiliser, combiner, adapter les recettes OpenRewrite pour correspondre à notre besoin.
+Cet exemple simple vous donne un aperçu de la facilité avec laquelle vous pouvez utiliser, combiner, adapter les recettes OpenRewrite por répondre à vos besoins, souvent spécifiques.
 
 Comme précisé ci-dessus, OpenRewrite s'est d'abord développé autour de l'environnement Java, mais s'est aujourd'hui étoffé de [milliers de recettes](https://docs.openrewrite.org/recipes) pour des technologies, langages et frameworks aussi divers que variés !
 
 Et si jamais vous ne trouvez pas votre bonheur, comme OpenRewrite est open source, vous pouvez tout à fait [écrire votre propre recette](https://docs.openrewrite.org/authoring-recipes), que ce soit pour pouvoir la répliquer facilement sur plusieurs de vos projets, ou pour en faire profiter toute la communauté OpenRewrite !
+
+Alors ? Prêt à effectuer vos montées de versions de manière sereine ?
