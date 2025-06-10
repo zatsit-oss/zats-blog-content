@@ -34,7 +34,7 @@ Citons [la documentation officielle](https://docs.openrewrite.org/) :
 
 On peut donc retenir que :
 1. c'est open source
-2. ça refactorise le code en suivant des "recettes"
+2. ça refactorise le code en suivant des "**recettes**"
 3. on peut utiliser des recettes open source ou écrire les siennes
 
 Développé au départ autour de l'environnement Java, OpenRewrite est compatible avec Maven et Gradle, permettant d'appliquer les recettes en une ligne de commande.
