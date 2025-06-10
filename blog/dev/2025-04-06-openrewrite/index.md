@@ -13,7 +13,7 @@ En tant que développeur·euse·s il n'est pas toujours facile de trouver le tem
 
 Suivre le rythme des releases n'est pas toujours aisé, et on se retrouve souvent dans ce cercle vicieux : les montées de version mineures ne semblent pas suffisamment intéressantes pour que l'on prenne le temps de les faire. Alors on attend les majeures et les LTS...
 
-Sauf qu'elles sont souvent plus coûteuses en temps et donc plus difficile à intégrer dans nos road map (particulièrement quand elles n'apportent pas d'améliorations visibles pour nos clients).
+Sauf qu'elles sont souvent plus coûteuses en temps et donc plus difficile à intégrer dans nos roadmaps (particulièrement quand elles n'apportent pas de plus value pour nos clients).
 
 Alors on attend. Et généralement, on attend jusqu'à ce que l'on soit obligé de faire cette upgrade (à cause d'une faille de sécurité, de la fin de support, etc...)
 
