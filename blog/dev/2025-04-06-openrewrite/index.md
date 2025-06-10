@@ -123,6 +123,6 @@ Là encore, un simple `mvn rewrite:run` et le tour est joué !
 
 Cet exemple simple vous donne un aperçu de la facilité avec laquelle on peut utiliser, combiner, adapter les recettes OpenRewrite pour correspondre à notre besoin.
 
-Comme précisé plus tôt, OpenRewrite s'est d'abord développé autour de l'environnement Java, mais aujourd'hui, on trouve sur leur site officiel des [milliers de recettes](https://docs.openrewrite.org/recipes) pour des technologies, langages et frameworks toujours plus variés !
+Comme précisé ci-dessus, OpenRewrite s'est d'abord développé autour de l'environnement Java, mais s'est aujourd'hui étoffé de [milliers de recettes](https://docs.openrewrite.org/recipes) pour des technologies, langages et frameworks aussi divers que variés !
 
 Et si jamais vous ne trouvez pas votre bonheur, comme OpenRewrite est open source, vous pouvez tout à fait [écrire votre propre recette](https://docs.openrewrite.org/authoring-recipes), que ce soit pour pouvoir la répliquer facilement sur plusieurs de vos projets, ou pour en faire profiter toute la communauté OpenRewrite !
