@@ -26,7 +26,7 @@ Comment limiter le temps et les efforts que nous demandent ces montées de versi
 
 ## OpenRewrite, c'est quoi ?
 
-Reprenons la [doc officielle](https://docs.openrewrite.org/) :
+Citons [la documentation officielle](https://docs.openrewrite.org/) :
 
 > OpenRewrite est une solution open source de refactorisation automatisée, permettant aux développeurs d'éliminer efficacement la dette technique au sein de leurs dépôts.
 > Il se compose d'un moteur de refactorisation automatique qui exécute des recettes de refactorisation préemballées et open source pour les migrations de frameworks courantes, les corrections de sécurité et les tâches de cohérence stylistique – réduisant vos efforts de codage de plusieurs heures ou jours à quelques minutes.
