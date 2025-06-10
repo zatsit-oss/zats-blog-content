@@ -19,7 +19,7 @@ Alors on attend. Et généralement, on attend jusqu'à ce que l'on soit obligé 
 
 Et quand on a attendu bien longtemps, ces montées de version deviennent (parfois) des monstres de complexité, entrainant (parfois) des effets de bords en cascade sur nos dépendances et mobilisant énormément de temps et d'efforts.
 
-Efforts parfois compliqués à expliquer à nos clients :
+Efforts parfois compliqués à justifier face à nos clients :
 > "Oui, j'ai passé tout le sprint sur la montée de version. Non, il n'y a aucune nouvelle fonctionnalité ou amélioration visible sur le produit. Non, je ne me fous pas de vous, pourquoi vous dites ça ?"
 
 Comment limiter le temps et les efforts que nous demandent ces montées de versions ? Avec **OpenRewrite**.
