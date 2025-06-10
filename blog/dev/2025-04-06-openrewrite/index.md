@@ -17,7 +17,7 @@ Sauf qu'elles sont souvent plus coûteuses en temps et donc plus difficile à in
 
 Alors on attend. Et généralement, on attend jusqu'à ce que l'on soit obligé de faire cette upgrade (à cause d'une faille de sécurité, de la fin de support, etc...)
 
-Et quand on a attendu bien longtemps, ces montées de version deviennent des monstres de complexité, entrainant des effets de bords en cascade sur nos dépendances et mobilisant énormément de temps et d'effort.
+Et quand on a attendu bien longtemps, ces montées de version deviennent (parfois) des monstres de complexité, entrainant (parfois) des effets de bords en cascade sur nos dépendances et mobilisant énormément de temps et d'efforts.
 
 Efforts parfois compliqués à expliquer à nos clients :
 > "Oui, j'ai passé tout le sprint sur la montée de version. Non, il n'y a aucune nouvelle fonctionnalité ou amélioration visible sur le produit. Non, je ne me fous pas de vous, pourquoi vous dites ça ?"
