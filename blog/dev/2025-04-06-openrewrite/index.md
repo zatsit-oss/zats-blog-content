@@ -90,7 +90,7 @@ On aurait également pu utiliser le plugin maven pour ajouter nos deux recettes 
 
 Une fois cette configuration faite, un simple `mvn rewrite:run` suffit à les appliquer dans l'ordre !
 
-Certaines recettes nécessitent des paramètres, comme [cette recette de changement de nom de package](https://docs.openrewrite.org/recipes/java/changepackage).
+Certaines recettes nécessitent des paramètres, comme [cette recette de changement de nom de package](https://docs.openrewrite.org/recipes/java/changepackage) par exemple.
 
 Heureux hasard ! dans notre projet, la classe `demoApplicationTests` comporte une erreur de nom de package !
 
