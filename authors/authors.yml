@@ -70,3 +70,12 @@ nlefebvre:
   socials:
     github: lef-nicolas
     linkedin: nicolas-lefebvre-82965419
+
+eferrandi:
+  name: Emilien Ferrandi
+  title: Developer
+  url: https://github.com/EFerrandi
+  image_url: /img/authors/eferrandi.webp
+  socials:
+    github: EFerrandi
+    linkedin: emilien-ferrandi
