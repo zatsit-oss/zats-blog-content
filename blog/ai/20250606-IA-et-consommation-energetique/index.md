@@ -2,7 +2,7 @@
 slug: ia-et-consommation-energetique
 title: IA et consommation énergétique
 authors: [eferrandi]
-date: 
+date: 2024-06-16
 tags: 
   - "ai"
   - "environnement"
