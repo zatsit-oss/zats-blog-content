@@ -9,11 +9,15 @@ tags: [general]
 # Donner du sens au numérique & à l’entreprise
 
 
-Quand nous avons cofondé **zatsit**, nous ne voulions pas créer une énième ESN. Le marché n’en manque pas et il en existe déjà beaucoup. Trop peut-être.  
-Ce que nous voulions, c’était **faire émerger une autre façon d’entreprendre, dans le numérique**. Une façon plus humaine, plus responsable, plus engagée.
+Quand nous avons cofondé **zatsit**, nous ne voulions pas créer une énième ESN. Le marché n’en manque pas et il en existe déjà beaucoup. Trop peut-être.
 
-Nous sommes convaincus que la tech peut – et doit – être un levier d’impact positif. Pour nos clients, pour la société, pour l’environnement.  
-C’est cette conviction qui nous a poussés à faire de **zatsit une entreprise à mission**, et à inscrire noir sur blanc notre raison d’être dans nos statuts.
+Ce que nous voulions, c’était **faire émerger une autre façon d’entreprendre, dans le numérique**. 
+
+Une façon plus humaine, plus responsable, plus engagée.
+
+Nous sommes convaincus que la tech peut – et doit – être un levier d’impact positif. Pour nos clients, pour la société, pour l’environnement.
+
+C’est cette conviction qui nous a poussés à faire de **zatsit, une entreprise à mission**, et à inscrire noir sur blanc notre raison d’être dans nos statuts.
 
 <!-- truncate -->
 
@@ -22,6 +26,7 @@ C’est cette conviction qui nous a poussés à faire de **zatsit une entreprise
 **“Engager notre expertise numérique au service de l’impact des entreprises en créant un écosystème partenarial, durable et positif.”**
 
 Cette phrase, c’est bien plus qu’une ligne dans un document juridique. C’est notre boussole, notre driver !  
+
 Elle nous engage, collectivement, à utiliser notre entreprise et la tech’ pour transformer le monde professionnel de manière **durable**, **inclusive** et **vertueuse**.
 
 # Des engagements statutaires concrets
@@ -50,13 +55,12 @@ Pour que notre mission prenne vie au quotidien, nous avons défini cinq engageme
 
 Chez **zatsit**, nous fédérons une communauté d’entreprises, de clients, de partenaires et de talents qui croient qu’on peut faire de la tech autrement. **Avec exigence, mais sans renoncer à nos valeurs.**
 
----
-
 # Un numérique qui a du sens
 
 Notre métier, c’est le numérique et le service. Mais **notre vocation**, c’est d’en faire **un levier d’impact positif pour la société et la planète**.
 
-Nous pensons qu’il est possible – et nécessaire – de réconcilier performance économique, innovation et engagement social et environnemental.  
+Nous pensons qu’il est possible – et nécessaire – de réconcilier performance économique, innovation et engagement social et environnemental.
+
 **zatsit**, c’est notre réponse à cette nécessité.
 
 # En résumé
