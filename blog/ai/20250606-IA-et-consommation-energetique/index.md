@@ -49,6 +49,8 @@ Pour l'ensemble de ces tests, nous nous baserons sur les informations suivantes 
 - Notre abonnement Netflix est un abonnement Standard à 14,99€/mois
 - Nous baserons le prix du kWh à 0.2016€ TTC
 
+En indicatif, nous ajouterons aussi le temps d'une vidéo en streaming dont la consommation énergétique est équivalente à un prompt.
+
 ### Ecrire un mail (170 output tokens)
 
 Dans cet exemple, nous allons utiliser une demande de génération d'un email simple.
@@ -73,16 +75,16 @@ julien.martin@exemple.com
 ```
 
 Et voici combien de prompts il faudrait effectué afin d'atteindre les objectifs que nous nous sommes fixés :
-| Modèle | Consomation estimée en Wh | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
-|-----|-----|-----|-----|-----|-----|
-| ChatGPT 4o | 14,9 | 50 | 598 | 29 866 | 4 991 |
-| Claude 3 7 Sonnet | 14,9 | 50 | 598 | 29 866 | 4 991 |
-| Google Gemini 2.0 Flash | 1,52 | 6 | 5 856 | 29 2764 | 48 918 |
-| Meta Llama 3.1 8B | 0,641 | 3 | 13 885 | 694 228 | 115 999 |
-| Meta Llama 3.1 70B | 2,13 | 8 | 4 179 | 208 921 | 34 909 |
-| Meta Llama 3.1 405B | 40,5 | 135 | 220 | 10 988 | 1 836 |
-| Mixtral 8x7B v0.1 | 0,757 | 3 | 11 757 | 587 847 | 98 224 |
-| Mixtral 8x22B v0.1 | 2,76 | 10 | 3 225 | 161 232 | 26 941 |
+| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+|-----|-----|-----|-----|-----|-----|-----|
+| ChatGPT 4o | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
+| Claude 3 7 Sonnet | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
+| Google Gemini 2.0 Flash | 1,52 | 52,3 s | 6 | 5 856 | 29 2764 | 48 918 |
+| Meta Llama 3.1 8B | 0,641 | 22,2 s | 3 | 13 885 | 694 228 | 115 999 |
+| Meta Llama 3.1 70B | 2,13 | 1,22 min | 8 | 4 179 | 208 921 | 34 909 |
+| Meta Llama 3.1 405B | 40,5 | 23,1 min | 135 | 220 | 10 988 | 1 836 |
+| Mixtral 8x7B v0.1 | 0,757 | 26,1 s | 3 | 11 757 | 587 847 | 98 224 |
+| Mixtral 8x22B v0.1 | 2,76 | 1,58 min | 10 | 3 225 | 161 232 | 26 941 |
 
 ### Avoir une petite conversation (400 output tokens)
 
@@ -122,16 +124,16 @@ nicolas.petit@exemple.com
 ```
 
 Et ci-dessous les résultats de nos calculs : 
-| Modèle | Consomation estimée en Wh | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
-|-----|-----|-----|-----|-----|-----|
-| ChatGPT 4o | 35,1 | 117 | 254 | 12 679 | 2 119 |
-| Claude 3 7 Sonnet | 35,1 | 117 | 254 | 12 679 | 2 119 |
-| Google Gemini 2.0 Flash | 3,58 | 12 | 2 487 | 124 302 | 20 770 |
-| Meta Llama 3.1 8B | 1,51 | 6 | 5 895 | 294 702 | 49 242 |
-| Meta Llama 3.1 70B | 5,02 | 17 | 1 773 | 88 646 | 14 812 |
-| Meta Llama 3.1 405B | 95,4 | 318 | 94 | 4 665 | 780 |
-| Mixtral 8x7B v0.1 | 1,78 | 6 | 5 000 | 250 000 | 41 773 |
-| Mixtral 8x22B v0.1 | 6,51 | 22 | 1 368 | 68 357 | 11 422 |
+| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+|-----|-----|-----|-----|-----|-----|-----|
+| ChatGPT 4o | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
+| Claude 3 7 Sonnet | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
+| Google Gemini 2.0 Flash | 3,58 | 2,05 min | 12 | 2 487 | 124 302 | 20 770 |
+| Meta Llama 3.1 8B | 1,51 | 52,2 s | 6 | 5 895 | 294 702 | 49 242 |
+| Meta Llama 3.1 70B | 5,02 | 2,87 min | 17 | 1 773 | 88 646 | 14 812 |
+| Meta Llama 3.1 405B | 95,4 | 54,4 min | 318 | 94 | 4 665 | 780 |
+| Mixtral 8x7B v0.1 | 1,78 | 1,03 min | 6 | 5 000 | 250 000 | 41 773 |
+| Mixtral 8x22B v0.1 | 6,51 | 3,73 min | 22 | 1 368 | 68 357 | 11 422 |
 
 ### Ecrire du code (15 000 output tokens)
 
@@ -183,22 +185,22 @@ Souhaites-tu que je commence à générer ce code maintenant par blocs (et te do
 ```
 
 Mais il est tout de même possible de calculer des équivalences :
-| Modèle | Consomation estimée en Wh | Recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
-|-----|-----|-----|-----|-----|-----|
-| ChatGPT 4o | 1320 | 4 400 | 7 | 338 | 57 |
-| Claude 3 7 Sonnet | 1320 | 4 400 | 7 | 338 | 57 |
-| Google Gemini 2.0 Flash | 134 | 447 | 67 | 3 321 | 555 |
-| Meta Llama 3.1 8B | 56,6 | 189 | 158 | 7 863 | 1 314 |
-| Meta Llama 3.1 70B | 188 | 627 | 48 | 2 368 | 396 |
-| Meta Llama 3.1 405B | 3580 | 11 934 | 3 | 125 | 21 |
-| Mixtral 8x7B v0.1 | 66,8 | 223 | 134 | 6 662 | 1 114 |
-| Mixtral 8x22B v0.1 | 244 | 814 | 37 | 1 824 | 305 |
+| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+|-----|-----|-----|-----|-----|-----|-----|
+| ChatGPT 4o | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
+| Claude 3 7 Sonnet | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
+| Google Gemini 2.0 Flash | 134 | 1,28 h | 447 | 67 | 3 321 | 555 |
+| Meta Llama 3.1 8B | 56,6 | 32,6 min | 189 | 158 | 7 863 | 1 314 |
+| Meta Llama 3.1 70B | 188 | 1,79 h | 627 | 48 | 2 368 | 396 |
+| Meta Llama 3.1 405B | 3580 | 34 h | 11 934 | 3 | 125 | 21 |
+| Mixtral 8x7B v0.1 | 66,8 | 38,4 min | 223 | 134 | 6 662 | 1 114 |
+| Mixtral 8x22B v0.1 | 244 | 2,33 h | 814 | 37 | 1 824 | 305 |
 
 ## Conclusion
 
 La consommation d'un modèle dépend de beaucoup de choses comme son nombre de paramètres d'entrée, et plus la sortie est grande, plus l'IA consomme d'énergie. Comme nous l'avons dit en introduction, utiliser l'IA ne fait qu'augmenter cette consommation. N'oublions pas non plus que nous n'avons pas pris en compte la consommation énergétique des appels sur le réseau ou encore de l'entrainement des IA.
 
-L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous faisons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme.
+L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous faisons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme. A l'inverse, si nous devons utiliser une IA, essayons de prendre le modèle le plus pertinant et spécialisé possible. Ainsi, notre consommation énergétique sera réduite au maximum.
 
 Il est aujourd'hui courrant de voir dans son entourage un développeur junior qui pose des questions à l'IA plusieurs fois par jour. Ou encore il y a eu l'apparition du vibe coding où l'IA a une place importante dans l'ensemble du processus de création. 
 
@@ -210,5 +212,6 @@ Si vous souhaitez approfondir le sujet ou mettre en place des solutions de votre
 - [Utiliser votre assistant IA en local](https://blog.zatsit.fr/blog/local-ai-assistant-in-vscode) : un autre article de notre blog afin de vous aider à installer une IA en local et l'intégrer dans un IDE
 - [Impacts de l’intelligence artificielle : risques et opportunités pour l’environnement](https://www.lecese.fr/travaux-publies/impacts-de-lintelligence-artificielle-risques-et-opportunites-pour-lenvironnement) : avis du Conseil Economique Social et Environnemental sur les impacts de l'IA sur l'environnement
 - [Quel est l’impact environnemental d’une IA générative ?](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) : un article plus complet sur l'impact environnemental de l'IA
+- [Comment ChatGPT assoiffe cette population](https://www.youtube.com/watch?v=LNoklk0NRmQ) : une vidéo de 10 min par Léo Duff expliquant l'impact de l'utilisation de l'eau pour les datacenters des IA
 - [compar:IA](https://www.comparia.beta.gouv.fr/) : un site vous permettant d'analyser le comportement de deux IA et de les comparer. Vous pouvez obtenir des informations sur l'impact environnemental de la requête comme présenté ci-dessous
 ![Résultats par compar:IA](./impact_energie_ia.webp)
