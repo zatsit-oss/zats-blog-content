@@ -2,40 +2,41 @@
 slug: ia-et-consommation-energetique
 title: IA et consommation énergétique
 authors: [eferrandi]
-date: 2024-06-16
+date: 2025-06-20
 tags: 
   - "ai"
   - "environnement"
 ---
 
-Depuis plusieurs mois nous entendons parler dans les médias de la consommation énergétique inquiétante de l'Intelligence Artificielle (IA). Cette alerte fait désormais parti de notre quotidien, et j'en suis venu à me poser plusieurs questions : quelle est la consommation d'un prompt ChatGPT ? Combien faut-il de prompts pour obtenir l'équivalent d'un plein d'essence ? Ou encore, combien de prompts faut-il pour consommer l'équivalent en euro d'un abonnement Netflix ? 
+Depuis plusieurs mois nous entendons parler dans les médias de la consommation énergétique inquiétante de l'Intelligence Artificielle (IA). Cette alerte fait désormais partie de notre quotidien, et j'en suis venu à me poser plusieurs questions : quelle est la consommation d'un prompt ChatGPT ? Combien faut-il de prompts pour obtenir l'équivalent d'un plein d'essence ? Ou encore, combien de prompts faut-il pour consommer l'équivalent en euro d'un abonnement Netflix ? 
 
 # IA et consommation énergétique
 
 ## Contexte et introduction
 
-Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis avant les années 2000, comme le montre l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservé à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
+Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis de nombreuses années, comme le montre, par exemple, l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservé à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
 
-C'est cette ouverture au monde qui a poussé une consommation importante de l'IA. Et cette consommation ne s'exprime pas uniquement par le nombre de prompts fait par jour, mais aussi par son aspect énergétique qui se calcule avec l'énergie utilisée par les datacenters, le réseau, les ordinateurs lors des entrainements et bien d'autres paramètres encore. Malheureusement, l'ensemble de ces données sont difficilement trouvables et calculables, bien que nous savons cependant que l'impact est réel comme l'admet Google dans son [rapport environnemental de 2024](https://blog.google/outreach-initiatives/sustainability/2024-environmental-report/) :
+C'est cette ouverture au monde qui a poussé une consommation énergétique importante de l'IA. Et cette consommation ne s'exprime pas uniquement par le nombre de prompts faits par jour, mais aussi par l'énergie utilisée par les datacenters, le réseau, les serveurs lors des entrainements et bien d'autres paramètres encore. Malheureusement, l'ensemble de ces données sont difficilement trouvables et calculables. Pourtant nous savons que l'impact est réel, comme l'admet Google dans son [rapport environnemental de 2024](https://blog.google/outreach-initiatives/sustainability/2024-environmental-report/) :
 > *In 2023, our total GHG emissions were 14.3 million tCO2e, representing a 13% year-over-year increase and a 48% increase compared to our 2019 target base year. <br/>
 > This result was primarily due to increases in data center energy consumption and supply chain emissions. As we further integrate AI into our products, reducing emissions may be challenging due to increasing energy demands from the greater intensity of AI compute, and the emissions associated with the expected increases in our technical infrastructure investment.*
 
-![Infographie sur la consommation des datacenters pour l'IA](./infographie-ia-datacenters-crypto-conso-electrique.jpg)
+![Infographie sur la consommation des datacenters pour l'IA](./infographie-ia-datacenters-crypto-conso-electrique.webp )
+<center><i>Sources : Média Basta! & l'Agence Internationalle de l'énergie</i></center><br/>
 
-Il est compliqué de savoir exactement l'impact total des IA sur l'environnement au travers de sa consommation énergétique. Il y a de nombreux facteurs à prendre en compte et pour cet article, nous avons choisis de nous limiter. Veuillez prendre en compte que les chiffres que nous allons présenter et étudier se base principalement sur la consommation énégétique des prompts. C'est-à-dire sur ce qui est dépensé lorsque nous réalisons une demande à ChatGPT ou une IA similaire. Il vous faudra donc rajouter les dépenses liées à la maintenance des serveurs, les coûts des entrainements des IA et des machines utilisées. 
+Il est compliqué de connaître exactement l'impact total de ces IA sur l'environnement au travers de sa consommation énergétique. Il y a de nombreux facteurs à prendre en compte et pour cet article, nous avons choisi de nous limiter. Veuillez prendre en compte que les chiffres que nous allons présenter et étudier se basent principalement sur la consommation énégétique des prompts. C'est-à-dire, sur ce qui est dépensé lorsque nous réalisons une demande à ChatGPT ou une IA similaire. 
 
 ## Consommation énergétique d'un prompt
 
 La consommation énergétique exacte d'un prompt en IA n'est pas connue. Cependant, selon un [article de ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542435123003653?dgcid=author), une requête ChatGPT consomme environ 2,9 Wh d’électricité, soit presque dix fois plus qu’une simple recherche Google  estimée à 0,3 Wh. Nous pouvons aussi citer la [Délégation Régionale Académique au Numérique Educatif](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) qui nous informe qu'une requête d’environ 400 tokens sur ChatGPT / GPT-4o mini consomme environ 2 Wh d’électricité, soit plus de 6 fois la consommation d’une recherche Google classique.
 
-Un prompt venant remplacer une simple recherche internet consomme donc 6 à 10 fois l'énergie qui aurait été utilisée si nous l'avions fait à la main. 
+Un prompt venant remplacer une simple recherche internet consomme donc 6 à 10 fois l'énergie qui aurait été utilisée si nous l'avions faite à la main sur notre moteur de recherche favori par exemple. 
 
 Mais alors, est-ce que la consomation énergétique de toutes nos actions sont multipliées par 10 lorsque nous utilisons l'IA ? Existe-t-il d'autres comparatifs ?
 
 ## Différentes comparaisons de consommations énergétiques
 
-En prenant le temps de chercher sur le web, il est possible de trouver de nombreuses comparaisons entre la consommation des prompts et d'autres outils ou objets fonctionnant à l'électricité, tout comme le montre l'infographie ci-dessous : 
-![Infographie que l'usage massif de l'IA](./infographie-usage-massif-intelligence-artificielle.jpg)
+En prenant le temps de quelques recherches sur le web (à l'ancienne), il est possible de trouver de nombreuses comparaisons entre la consommation des prompts et d'autres outils ou objets fonctionnant à l'électricité, tout comme le montre l'infographie ci-dessous crée par le [média indépendant Basta!](https://basta.media/) à l'aide des informations regroupées par Hugging Face, l'Université de Carnegie Mallon et Futura sciences: 
+![Infographie que l'usage massif de l'IA](./infographie-usage-massif-intelligence-artificielle.webp)
 
 Ces images sont très intéressantes, mais d'un point de vue personnel, cela ne me parle que peu. C'est pour cela que nous allons vous présentez plusieurs cas différents et les comparer à un plein d'essence ou encore au prix d'un abonnement Netflix.
 
@@ -132,9 +133,9 @@ Et ci-dessous les résultats de nos calculs :
 | Mixtral 8x7B v0.1 | 1,78 | 6 | 5 000 | 250 000 | 41 773 |
 | Mixtral 8x22B v0.1 | 6,51 | 22 | 1 368 | 68 357 | 11 422 |
 
-### Ecrire du code (15000 output tokens)
+### Ecrire du code (15 000 output tokens)
 
-Pour cet exemple, il aurait été souhaitable d'obtenir un code en 15000 tokens, mais en réalisant la demande aurpès de ChatGTP, voici le résultat qui a été obtenu :
+Pour cet exemple, il aurait été souhaitable d'obtenir un code en 15 000 tokens, mais en réalisant la demande aurpès de ChatGTP, voici le résultat qui a été obtenu :
 
 ```markdown
 Créer un **code Java de 15 000 tokens exactement** est possible, mais il demande une approche rigoureuse car cela correspond à un **très long fichier source**, d’environ :
@@ -197,7 +198,7 @@ Mais il est tout de même possible de calculer des équivalences :
 
 La consommation d'un modèle dépend de beaucoup de choses comme son nombre de paramètres d'entrée, et plus la sortie est grande, plus l'IA consomme d'énergie. Comme nous l'avons dit en introduction, utiliser l'IA ne fait qu'augmenter cette consommation. N'oublions pas non plus que nous n'avons pas pris en compte la consommation énergétique des appels sur le réseau ou encore de l'entrainement des IA.
 
-L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous fassons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme.
+L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous faisons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme.
 
 Il est aujourd'hui courrant de voir dans son entourage un développeur junior qui pose des questions à l'IA plusieurs fois par jour. Ou encore il y a eu l'apparition du vibe coding où l'IA a une place importante dans l'ensemble du processus de création. 
 
@@ -210,4 +211,4 @@ Si vous souhaitez approfondir le sujet ou mettre en place des solutions de votre
 - [Impacts de l’intelligence artificielle : risques et opportunités pour l’environnement](https://www.lecese.fr/travaux-publies/impacts-de-lintelligence-artificielle-risques-et-opportunites-pour-lenvironnement) : avis du Conseil Economique Social et Environnemental sur les impacts de l'IA sur l'environnement
 - [Quel est l’impact environnemental d’une IA générative ?](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) : un article plus complet sur l'impact environnemental de l'IA
 - [compar:IA](https://www.comparia.beta.gouv.fr/) : un site vous permettant d'analyser le comportement de deux IA et de les comparer. Vous pouvez obtenir des informations sur l'impact environnemental de la requête comme présenté ci-dessous
-![Résultats par compar:IA](./impact_energie_ia.png)
+![Résultats par compar:IA](./impact_energie_ia.webp)
