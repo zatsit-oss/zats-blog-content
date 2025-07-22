@@ -41,11 +41,15 @@ Développé au départ autour de l'environnement Java, OpenRewrite est compatibl
 
 L'initiative propose également un système de "**meta-recette**" : des recettes composées de plusieurs recettes, comme [celle-ci, pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4) ou encore [celle-là pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21).
 
+:::tip
+
 Le [plugin Maven OpenRewrite](https://docs.openrewrite.org/running-recipes/getting-started) permet également d'ajouter des recettes ou des meta-recettes les unes à la suite des autres.
 
-## III/ Avec un exemple, c'est plus parlant
+:::
 
-Une rapide recherche sur github nous a permis de trouver [ce dépôt public](https://github.com/sohamkamani/spring-demo) d'une application de démo pour Spring Boot.
+## Avec un exemple, c'est plus parlant
+
+Une rapide recherche sur Github nous a permis de trouver [ce dépôt public](https://github.com/sohamkamani/spring-demo) d'une application de démo pour Spring Boot.
 
 Le dernier commit date d'il y a 3 ans, la version de Spring Boot utilisée est la version 2.6.4 et la version de Java est la version 11.
 
@@ -55,11 +59,19 @@ Nous avons donc une majeure à passer sur Spring Boot et dix versions sur Java !
 
 Comme il s'agit d'un framework et d'un langage très populaires, on trouve de nombreux guides de migration. Mais grâce à OpenRewrite, nous n'avons pas besoin de regarder [une vidéo de plus d'une heure](https://www.youtube.com/watch?v=HrRQExD3xow) avant de nous mettre à l'ouvrage !
 
-En effet, en appliquant à la suite les commandes Maven fournies dans [la recette pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4) ainsi que [celle pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21), ces deux opérations s'exécutent en quelques secondes.
+En effet, en appliquant à la suite les commandes Maven fournies dans [la recette pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4-community-edition) ainsi que [celle pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21), ces deux opérations s'exécutent en quelques secondes.
 
-Comme notre application de démo n'utilise aucune dépendance en dehors de Spring Boot, on peut directement vérifier que tout s'est bien passé : les tests passent, l'application se lance et fonctionne comme prévu !
+`mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-spring:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_4 -Drewrite.exportDatatables=true`
+
+`mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.exportDatatables=true`
+
+Comme notre application de démo n'utilise aucune dépendance en dehors de Spring Boot, on peut directement valider que tout s'est bien passé : les tests passent encore, l'application se lance et fonctionne comme prévu !
+
+::: info
 
 On aurait également pu utiliser le plugin maven pour ajouter nos deux recettes l'une à la suite de l'autre :
+
+:::
 
 ```xml
 <plugin>
@@ -87,14 +99,11 @@ On aurait également pu utiliser le plugin maven pour ajouter nos deux recettes 
     </dependencies>
 </plugin>
 ```
-
-Une fois cette configuration faite, un simple `mvn rewrite:run` suffit à les appliquer dans l'ordre !
-
 Certaines recettes nécessitent des paramètres, comme [cette recette de changement de nom de package](https://docs.openrewrite.org/recipes/java/changepackage) par exemple.
 
 Heureux hasard ! dans notre projet, le fichier `SpringdemoApplicationTests.java` comporte une erreur de nom de package !
 
-Il suffit d'ajouter à la racine de notre projet un fichier `rewrite.yml` comme celui-ci :
+Il suffit d'ajouter à la racine de notre projet un fichier de configuration `rewrite.yml` comme celui-ci :
 
 ```yaml
 ---
@@ -125,6 +134,6 @@ Cet exemple simple vous donne un aperçu de la facilité avec laquelle vous pouv
 
 Comme précisé ci-dessus, OpenRewrite s'est d'abord développé autour de l'environnement Java, mais s'est aujourd'hui étoffé de [milliers de recettes](https://docs.openrewrite.org/recipes) pour des technologies, langages et frameworks aussi divers que variés !
 
-Et si jamais vous ne trouvez pas votre bonheur, comme OpenRewrite est open source, vous pouvez tout à fait [écrire votre propre recette](https://docs.openrewrite.org/authoring-recipes), que ce soit pour pouvoir la répliquer facilement sur plusieurs de vos projets, ou pour en faire profiter toute la communauté OpenRewrite !
+Et si jamais vous ne trouvez pas votre bonheur, comme OpenRewrite est open source, vous pouvez tout à fait [écrire votre propre recette](https://docs.openrewrite.org/authoring-recipes), que ce soit pour pouvoir la répliquer facilement sur plusieurs de vos projets, ou pour en faire profiter toute la communauté !
 
 Alors ? Prêt à effectuer vos montées de versions de manière sereine ?
