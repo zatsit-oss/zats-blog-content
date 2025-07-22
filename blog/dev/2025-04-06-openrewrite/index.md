@@ -39,7 +39,7 @@ On peut donc retenir que :
 
 Développé au départ autour de l'environnement Java, OpenRewrite est compatible avec Maven et Gradle, permettant d'appliquer les recettes en une ligne de commande.
 
-OpenRewrite propose également un système de "meta-recette" : des recettes composées de plusieurs recettes, comme [cette recette pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4) ou encore [celle-ci pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21).
+L'initiative propose également un système de "**meta-recette**" : des recettes composées de plusieurs recettes, comme [celle-ci, pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4) ou encore [celle-là pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21).
 
 Le [plugin Maven OpenRewrite](https://docs.openrewrite.org/running-recipes/getting-started) permet également d'ajouter des recettes ou des meta-recettes les unes à la suite des autres.
 
