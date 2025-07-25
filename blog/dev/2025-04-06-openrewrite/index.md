@@ -61,13 +61,17 @@ Comme il s'agit d'un framework et d'un langage très populaires, on trouve de no
 
 En effet, en appliquant à la suite les commandes Maven fournies dans [la recette pour passer à Spring Boot 3.4](https://docs.openrewrite.org/recipes/java/spring/boot3/upgradespringboot_3_4-community-edition) ainsi que [celle pour passer en java 21](https://docs.openrewrite.org/recipes/java/migrate/upgradetojava21), ces deux opérations s'exécutent en quelques secondes.
 
-`mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-spring:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_4 -Drewrite.exportDatatables=true`
+```
+mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-spring:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.spring.boot3.UpgradeSpringBoot_3_4 -Drewrite.exportDatatables=true
+```
 
-`mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.exportDatatables=true`
+```
+mvn -U org.openrewrite.maven:rewrite-maven-plugin:run -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:RELEASE -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.exportDatatables=true
+```
 
 Comme notre application de démo n'utilise aucune dépendance en dehors de Spring Boot, on peut directement valider que tout s'est bien passé : les tests passent encore, l'application se lance et fonctionne comme prévu !
 
-::: info
+:::info
 
 On aurait également pu utiliser le plugin maven pour ajouter nos deux recettes l'une à la suite de l'autre :
 
