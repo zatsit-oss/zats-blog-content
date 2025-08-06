@@ -14,7 +14,7 @@ Depuis plusieurs mois nous entendons parler dans les médias de la consommation 
 
 ## Contexte et introduction
 
-Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis de nombreuses années, comme le montre, par exemple, l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservé à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
+Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis de nombreuses années, comme le montre, par exemple, l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservée à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
 
 C'est cette ouverture au monde qui a poussé une consommation énergétique importante de l'IA. Et cette consommation ne s'exprime pas uniquement par le nombre de prompts faits par jour, mais aussi par l'énergie utilisée par les datacenters, le réseau, les serveurs lors des entrainements et bien d'autres paramètres encore. Malheureusement, l'ensemble de ces données sont difficilement trouvables et calculables. Pourtant nous savons que l'impact est réel, comme l'admet Google dans son [rapport environnemental de 2024](https://blog.google/outreach-initiatives/sustainability/2024-environmental-report/) :
 > *In 2023, our total GHG emissions were 14.3 million tCO2e, representing a 13% year-over-year increase and a 48% increase compared to our 2019 target base year. <br/>
@@ -23,7 +23,7 @@ C'est cette ouverture au monde qui a poussé une consommation énergétique impo
 ![Infographie sur la consommation des datacenters pour l'IA](./infographie-ia-datacenters-crypto-conso-electrique.webp )
 <center><i>Sources : Média Basta! & l'Agence Internationalle de l'énergie</i></center><br/>
 
-Il est compliqué de connaître exactement l'impact total de ces IA sur l'environnement au travers de sa consommation énergétique. Il y a de nombreux facteurs à prendre en compte et pour cet article, nous avons choisi de nous limiter. Veuillez prendre en compte que les chiffres que nous allons présenter et étudier se basent principalement sur la consommation énégétique des prompts. C'est-à-dire, sur ce qui est dépensé lorsque nous réalisons une demande à ChatGPT ou une IA similaire. 
+Il est compliqué de connaître exactement l'impact total de ces IA sur l'environnement au travers de sa consommation énergétique. Il y a de nombreux facteurs à prendre en compte et pour cet article, nous avons choisi de nous limiter. Veuillez prendre en compte que les chiffres que nous allons présenter et étudier se basent principalement sur la consommation énergétique des prompts. C'est-à-dire, sur ce qui est dépensé lorsque nous réalisons une demande à ChatGPT ou une IA similaire. 
 
 ## Consommation énergétique d'un prompt
 
@@ -31,14 +31,14 @@ La consommation énergétique exacte d'un prompt en IA n'est pas connue. Cependa
 
 Un prompt venant remplacer une simple recherche internet consomme donc 6 à 10 fois l'énergie qui aurait été utilisée si nous l'avions faite à la main sur notre moteur de recherche favori par exemple. 
 
-Mais alors, est-ce que la consomation énergétique de toutes nos actions sont multipliées par 10 lorsque nous utilisons l'IA ? Existe-t-il d'autres comparatifs ?
+Mais alors, est-ce que la consommation énergétique de toutes nos actions est multipliée par 10 lorsque nous utilisons l'IA ? Existe-t-il d'autres comparatifs ?
 
 ## Différentes comparaisons de consommations énergétiques
 
 En prenant le temps de quelques recherches sur le web (à l'ancienne), il est possible de trouver de nombreuses comparaisons entre la consommation des prompts et d'autres outils ou objets fonctionnant à l'électricité, tout comme le montre l'infographie ci-dessous crée par le [média indépendant Basta!](https://basta.media/) à l'aide des informations regroupées par Hugging Face, l'Université de Carnegie Mallon et Futura sciences: 
 ![Infographie que l'usage massif de l'IA](./infographie-usage-massif-intelligence-artificielle.webp)
 
-Ces images sont très intéressantes, mais d'un point de vue personnel, cela ne me parle que peu. C'est pour cela que nous allons vous présentez plusieurs cas différents et les comparer à un plein d'essence ou encore au prix d'un abonnement Netflix.
+Ces images sont très intéressantes, mais d'un point de vue personnel, cela ne me parle que peu. C'est pour cela que nous allons vous présenter plusieurs cas différents et les comparer à un plein d'essence ou encore au prix d'un abonnement Netflix.
 
 Pour l'ensemble de ces tests, nous nous baserons sur les informations suivantes :
 - Une recherche Google vaut 0,3 Wh
@@ -51,7 +51,7 @@ Pour l'ensemble de ces tests, nous nous baserons sur les informations suivantes 
 
 En indicatif, nous ajouterons aussi le temps d'une vidéo en streaming dont la consommation énergétique est équivalente à un prompt.
 
-### Ecrire un mail (170 output tokens)
+### Écrire un mail (170 output tokens)
 
 Dans cet exemple, nous allons utiliser une demande de génération d'un email simple.
 
@@ -74,8 +74,8 @@ julien.martin@exemple.com
 +33 6 00 00 00 00
 ```
 
-Et voici combien de prompts il faudrait effectué afin d'atteindre les objectifs que nous nous sommes fixés :
-| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+Et voici combien de prompts il faudrait effectuer afin d'atteindre les objectifs que nous nous sommes fixés :
+| Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
 | Claude 3 7 Sonnet | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
@@ -124,7 +124,7 @@ nicolas.petit@exemple.com
 ```
 
 Et ci-dessous les résultats de nos calculs : 
-| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+| Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
 | Claude 3 7 Sonnet | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
@@ -135,7 +135,7 @@ Et ci-dessous les résultats de nos calculs :
 | Mixtral 8x7B v0.1 | 1,78 | 1,03 min | 6 | 5 000 | 250 000 | 41 773 |
 | Mixtral 8x22B v0.1 | 6,51 | 3,73 min | 22 | 1 368 | 68 357 | 11 422 |
 
-### Ecrire du code (15 000 output tokens)
+### Écrire du code (15 000 output tokens)
 
 Pour cet exemple, il aurait été souhaitable d'obtenir un code en 15 000 tokens, mais en réalisant la demande aurpès de ChatGTP, voici le résultat qui a été obtenu :
 
@@ -185,7 +185,7 @@ Souhaites-tu que je commence à générer ce code maintenant par blocs (et te do
 ```
 
 Mais il est tout de même possible de calculer des équivalences :
-| Modèle | Consomation estimée en Wh | Temps équivalent d'une vidéo en streaming | Recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
+| Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
 | Claude 3 7 Sonnet | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
@@ -200,11 +200,11 @@ Mais il est tout de même possible de calculer des équivalences :
 
 La consommation d'un modèle dépend de beaucoup de choses comme son nombre de paramètres d'entrée, et plus la sortie est grande, plus l'IA consomme d'énergie. Comme nous l'avons dit en introduction, utiliser l'IA ne fait qu'augmenter cette consommation. N'oublions pas non plus que nous n'avons pas pris en compte la consommation énergétique des appels sur le réseau ou encore de l'entrainement des IA.
 
-L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous faisons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme. A l'inverse, si nous devons utiliser une IA, essayons de prendre le modèle le plus pertinant et spécialisé possible. Ainsi, notre consommation énergétique sera réduite au maximum.
+L'objectif de cet article n'est pas de demander à arrêter d'utiliser l'IA, mais à venir nous sensibiliser sur les impacts énergétiques de cette dernière afin que nous puissions l'utiliser plus intelligemment. Arrêtons de tout lui demander dès que nous faisons face à un problème. Si ce dernier peut être résolu avec une simple recherche Google, privilégions là. Servons-nous de l'IA pour les tâches les plus complexes au lieu de nous demander de synthétiser la documentation d'un programme. À l'inverse, si nous devons utiliser une IA, essayons de prendre le modèle le plus pertinent et spécialisé possible. Ainsi, notre consommation énergétique sera réduite au maximum.
 
-Il est aujourd'hui courrant de voir dans son entourage un développeur junior qui pose des questions à l'IA plusieurs fois par jour. Ou encore il y a eu l'apparition du vibe coding où l'IA a une place importante dans l'ensemble du processus de création. 
+Il est aujourd'hui courant de voir dans son entourage un développeur junior qui pose des questions à l'IA plusieurs fois par jour. Ou encore il y a eu l'apparition du vibe coding où l'IA a une place importante dans l'ensemble du processus de création. 
 
-Essayons simplement d'être un peu plus intelligent dans nos utilisations de l'IA et ne laissons pas mourir les forums communautaires comme StackOverflow en posant toujours plus de questions dont la réponse n'existe pas encore !
+Essayons simplement d'être un peu plus intelligents dans nos utilisations de l'IA et ne laissons pas mourir les forums communautaires comme StackOverflow en posant toujours plus de questions dont la réponse n'existe pas encore !
 
 ## Cela peut aussi vous intéresser
 
@@ -213,5 +213,5 @@ Si vous souhaitez approfondir le sujet ou mettre en place des solutions de votre
 - [Impacts de l’intelligence artificielle : risques et opportunités pour l’environnement](https://www.lecese.fr/travaux-publies/impacts-de-lintelligence-artificielle-risques-et-opportunites-pour-lenvironnement) : avis du Conseil Economique Social et Environnemental sur les impacts de l'IA sur l'environnement
 - [Quel est l’impact environnemental d’une IA générative ?](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) : un article plus complet sur l'impact environnemental de l'IA
 - [Comment ChatGPT assoiffe cette population](https://www.youtube.com/watch?v=LNoklk0NRmQ) : une vidéo de 10 min par Léo Duff expliquant l'impact de l'utilisation de l'eau pour les datacenters des IA
-- [compar:IA](https://www.comparia.beta.gouv.fr/) : un site vous permettant d'analyser le comportement de deux IA et de les comparer. Vous pouvez obtenir des informations sur l'impact environnemental de la requête comme présenté ci-dessous
+- [compar:IA](https://www.comparia.beta.gouv.fr/) : un site vous permettant d'analyser le comportement de deux IA et de les comparer. Vous pouvez obtenir des informations sur l'impact environnemental de la requête comme présentée ci-dessous
 ![Résultats par compar:IA](./impact_energie_ia.webp)
