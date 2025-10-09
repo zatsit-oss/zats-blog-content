@@ -1,8 +1,8 @@
----
+ spo---
 slug: green-consommation-energie
-title: "Le Green IT, épisode 2 : Battery Low"
+title: "Le Green IT, épisode 2 : Pas coule !"
 authors: [eperu]
-date: 2025-06-21
+date: 2025-09-21
 tags: 
   - "green"
   - "tech"
