@@ -8,66 +8,87 @@ tags:
   - "tech"
 ---
 
-![Data Center](https://www.hellio.com/actualites/conseils/consommation-energie-data-center)
+IMAGE datacenter
+
+On aimerait tous que ce ne soit qu'une goutte d'eau dans l'océan, malheureusement la réalité se compte en centaines de milliards
+de litres. Je veux biensur parler ici de la consommation d'eau des datacenters, ceux qui calculent pour vous des itinéraires, vous permettent de chiller
+devant la dernière série et qui héberge aussi cette page web...
+ans le premier épisode de cette série, nous avons exploré l'impact environnemental de l'extraction des matières premières nécessaires à nos appareils personnels, mais aussi aux serveurs de nos datacenters....
+Poursuivons notre thématique de l'impact du numérique en nous penchant sur un autre aspect crucial : la consommation d'eau. En termes d'impact
+on pense souvent aux gazs produits, mais nous allons nous attarder sur la consommation d'eau.
+
+<!-- truncate -->
 
 ## Introduction
 
-Dans le premier épisode de cette série, nous avons exploré l'impact environnemental de l'extraction des matières premières nécessaires à nos appareils personnels, mais aussi aux serveurs de nos datacenters.... 
-Poursuivons notre thématique de l'impact du numérique en nous penchant sur un autre aspect crucial : la consommation énergétique.
+C'est bien connu l'eau c'est la vie, elle est majoritaire à la surface de notre "planète bleue", dans nos contrées occidentales nous y avons accès aussi facilement
+qu'en tournant un robinet et pourtant elle est plus que jamais souillée, pompée à tout va et tout simplement gaspillée. Le numérique, comme toutes les secteurs économique
+n'echappe pas à cette consommation déraisonnée. Mais au fait, quand on pense datacenter on pense électricité, et c'est pourquoi on n'aurait pas idée de les arroser d'eau.
+C'est à la fois un peu plus compliqué que ça, mais simple à comprendre. 
 
-## Une consommation énergétique en constante augmentation
+## Du front au moteur, l’eau garde la fraîcheur !
 
-Le secteur du numérique est un consommateur majeur d'énergie à l'échelle mondiale.
-En 2019, il était responsable d'environ 5,5 % de la consommation mondiale d'électricité, soit environ 1 300 TWh par an. :contentReference[oaicite:0]{index=0}
-Cette consommation équivaut à la production électrique annuelle cumulée de pays comme la France, l'Allemagne et la Belgique.
+Dans notre quotidien, on se rend facilement compte de l'intérêt de l'eau. Quelques minutes en plein soleil, ou pendant le sport, on remarque vite les effets de la transpiration.
+De l'eau est "produite" sur notre peau et cette eau en s'évaporant va absorber de l'énergie thermique et donc réduire la température (pour faire simple).
+C'est la même chose pour nos bon vieux moteurs thermiques de voiture, dans lesquels un liquide va circuler, s'échauffer en érécupérant" de la chaleur qu'il va venir dissiper au travers d'un radiateur.
+Là vous commencez bien à visualiser l'intérêt d'utiliser l'eau pour refroidir tout système. Ça coule de source et vous ne m'avez pas attendu pour comprendre ça, mais un petit rappel s'imposait quand même.
 
-La récente étude du collectif green-it nous donne des résultats qui ne sont malheureusement pas dans le bon sens : jugez par vous même après lecture sur leur site ![Site de greenit](https://greenit.eco/) la consommation continue d'augmenter et les récentes avancées sur l'IA générative prévoient encore plus de consommation !
+## Un datacenter ça a soif
+Vous le constatez quand vous faites travailler votre laptop, ça chauffe sous les doigts et parfois le ventilateur se fait entendre, mais cette dissipation par air a ses limites.
+Peut-êter faisiez-vous partis de ces bidouilleur qui faisait du "watercooling" dans des bécanes montées à la main avec amour pour programmer ou jouer.
 
-### Les centres de données : des gouffres énergétiques
+Alors on visualise bien ce que ça peut représenter à l'échelle d'un datacenter. Pour rester opérationnels, ils ont donc besoin de systèmes de refroidissement.
+Et beaucoup de ces systèmes de refroidissement (tours d’évaporation, échangeurs eau/air, [évaporateurs adiabatiques](https://fr.wikipedia.org/wiki/Refroidisseur_par_%C3%A9vaporation)) utilisent ou consomment de l’eau.
 
-Les centres de données, ou data centers, sont au cœur de cette consommation.
-En France, ils consomment en moyenne 5,15 MWh par mètre carré et par an.
-Ainsi, un data center de 10 000 m² présente une consommation équivalente à celle d'une ville de 50 000 habitants, comme Laval ou La Roche-sur-Yon. :contentReference[oaicite:1]{index=1}
+Encore plus depuis l’explosion des projets "hyperscale"  pour l’IA, la question de la consommation d’eau est sortie des rapports techniques pour rejoindre les débats publics. 
+Parlons un peu chiffre. 
 
-![Consommation énergétique des data centers](https://opera-energie.com/wp-content/uploads/2021/06/consommation-energie-datacenter.jpg)
+- Un datacenter peut consommer jusqu'à 5 millions de litres d'eau par jour, soit l'équivalent de la consommation d'une ville de 30 000 habitants. 
+- "In 2023, Meta consumed 813 million gallons of water globally (3.1 billion liters) — 95% of which, 776 million gallons (2.9 billion liters), was used by data centers. [Source](https://insights.globalspec.com/article/24145/data-centers-consume-massive-amounts-of-water-companies-rarely-tell-the-public-exactly-how-much?utm_source=chatgpt.com)
+- En Europe, cet [autre rapport](https://www.scrd.eu/index.php/scrd/article/download/477/439/866) nous parle de 43,2 milliards de litres d’eau consommés annuellement.
+- Selon un [rapport du Berkeley Lab](https://escholarship.org/uc/item/32d6m0d1) sur l'utilisation de l'énergie aux états-unis cette tendance ne fait que grandir.
+![Utilisation de l'eau par type de datacenter](datacenter-water-consumption.png)
+- Avec 2,5 millions de litres par piscines olympiques, on pourrait en faire nager des champions et championnes !
 
+Certaines études ne sont pas aussi catégoriques dans les chiffres, les méthodes de comptage diffèrent parfois, 
+certaines prennent en compte la consommation directe (eau prélevée et évaporée ou rejetée par le datacenter lui-même) et indirecte
+(eau utilisée pour produire l’électricité qui alimente ces mêmes centres, par exemple eau évaporée dans des centrales thermiques ou hydroélectriques). 
+En tout cas les échelles sont là et on note surtout que la tendance est à la hausse.
 
-## La fabrication des appareils : une étape énergivore
-
-La phase de fabrication des appareils numériques représente une part importante de leur impact environnemental.
-Par exemple, la production d'un ordinateur personnel nécessite l'extraction d'environ 800 kg de minerais, l'émission de 240 kg de gaz à effet de serre et l'utilisation de plus de 20 kg de produits chimiques. :contentReference[oaicite:3]{index=3}
-De plus, 78 % de l'impact environnemental du numérique sur les émissions de gaz à effet de serre est lié à cette étape de fabrication. :contentReference[oaicite:4]{index=4}
-Il faut donc ajouter à celà la production d'énergie nécessaire çà sa fabrication et son transport.
-
-![Impact environnemental de la fabrication des appareils](https://www.energie-environnement.ch/sites/default/files/styles/large/public/2021-06/impact-energetique-du-numerique.jpg)
-
-## L'essor de l'intelligence artificielle : un nouveau défi énergétique
-
-L'intelligence artificielle (IA) est en plein essor, mais son développement s'accompagne d'une augmentation significative de la consommation énergétique.
-Par exemple, en 2023, les émissions de CO₂ de Google ont augmenté de 13 %, atteignant 14,3 millions de tonnes équivalent CO₂, principalement en raison de la croissance de l'IA et de la consommation électrique accrue de ses centres de données. :contentReference[oaicite:5]{index=5}
-
-## Des outils pour mesurer
-
-
-## Vers une informatique plus verte
-
-Face à ces constats, il est impératif de repenser notre utilisation des technologies numériques pour réduire leur impact énergétique.
-Cela passe par des pratiques telles que l'optimisation des logiciels pour qu'ils soient moins gourmands en ressources, l'utilisation de matériel plus durable, et une meilleure gestion des infrastructures informatiques.
-
-![Green IT](https://talks.freelancerepublik.com/wp-content/uploads/2018/05/green-it.jpg)
+Comme si ça ne suffisait pas, saviez-vous que 40 % de l’énergie consommée par certains datacenters vient de son système de refroidissement...
 
 
-## Une vignette pour témoigner de la longévité
-Vous vous souvenez des vignettes que vous ou vos parents collaient sur le pare brise pour chaque année civile écoulée. Et bien, une initiative a vu le jour sous la forme de ces étiquettes ![Les vignettes tech](https://vignette-tech.fr/produit/vignette-tech/)
+Source : 
+Le "greenwashing" à la sauce numérique
+Face à ces critiques, les géants du numérique déploient des trésors d'ingéniosité... en communication. On nous parle de "water positivity", de "compensation hydrique", de "WUE" (Water Usage Effectiveness). Des termes bien techniques pour noyer le poisson.
 
-Chez **zatsit** nous avons fait deux choix pour l'achat de nos laptops : le reconditionnés pour les machines Apple et Framework pour nos laptop sous Linux. Et nous souhaitons donc qu'ils aient la plus longue longévité ! C'est pourquoi nous arborons fièrement les années qui passent avec ces nouveaux stickers aux couleurs de l'entreprise. Le but : collectionner le max de vignette sur son laptop tout en garantissant une productivité au top. Un pari sur l'avenir !
+La réalité, c'est que l'explosion de l'intelligence artificielle et de nos usages numériques ne fait qu'aggraver la situation. Les promesses de "datacenters verts" qui réutilisent la chaleur fatale pour chauffer des piscines ou des logements ne sont que l'arbre qui cache la forêt.
 
-## Conclusion
+Quelques pistes pour un numérique moins assoiffé :
 
-La consommation énergétique de l'industrie informatique est un enjeu majeur pour l'environnement.
-Il est essentiel de prendre conscience de cet impact et d'adopter des pratiques plus responsables pour minimiser notre empreinte écologique.
-Dans le prochain épisode, nous explorerons des solutions concrètes pour un numérique plus durable.
+La sobriété numérique : avons-nous vraiment besoin de stocker des milliers de photos de chats dans le cloud ?
 
----
+Des technologies de refroidissement plus économes : le "free cooling" (refroidissement par l'air extérieur) ou le refroidissement liquide direct sont des alternatives intéressantes.
 
-*Crédit image en en-tête : [Hellio](https://www.hellio.com/actualites/conseils/consommation-energie-data-center)*
+Plus de transparence de la part des acteurs du numérique : il est temps que les GAFAM et consorts publient des chiffres clairs et vérifiables sur leur consommation d'eau.
+
+Mesurer pour mieux gérer : le rôle du WUE
+
+La filière utilise la métrique WUE (Water Usage Effectiveness) — développée par The Green Grid — pour comparer l’efficacité hydrique des datacenters (litres d’eau consommés par kWh IT ou par unité d’énergie IT). WUE aide à normaliser et à comparer, mais beaucoup d’opérateurs ne publient pas ces métriques et les définitions (direct vs indirect) varient. D’où la demande croissante pour des obligations de reporting plus strictes (réglementaires et de marché).
+thegreengrid.org
++1
+
+8) Solutions et leviers (ce qu’on voit en pratique)
+
+Réduire l’usage d’eau : privilégier le refroidissement par air, systèmes clos, refroidissement liquide interne (moins évaporatif), réutilisation des eaux grises et recyclage interne.
+Informatique News
+
+Compter et publier : rendre obligatoire la publication des WUE et des prélèvements d’eau (mesure et transparence). Plusieurs rapports d’ingénierie demandent plus de transparence dans les entreprises tech.
+The Guardian
++1
+
+Conception locale responsable : éviter les prélèvements dans les bassins à stress hydrique, négocier des mesures de remise en eau (objectifs « water-positive ») et utiliser des eaux alternatives (recyclées, pluviales).
+Informatique News
++1
+
+Plus les sources du bon pote.
