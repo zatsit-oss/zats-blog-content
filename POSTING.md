@@ -162,3 +162,6 @@ You can have a first preview like any markdown preview from your favorite IDE. T
 When you are ready to submit your post, you can create a pull request. A Github Actions workflow will generate
 a previous URL for you in order to visualize your post in an ephemeral blog instance.
 
+## Use mathematical representation  
+
+You can write mathematical expression with a specific syntax : KaTex. See the documentation of [https://docusaurus.io/docs/markdown-features/math-equations](https://docusaurus.io/docs/markdown-features/math-equations) for more information.official Docusaurus page.
