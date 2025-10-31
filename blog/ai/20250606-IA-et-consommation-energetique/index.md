@@ -2,7 +2,7 @@
 slug: ia-et-consommation-energetique
 title: IA et consommation énergétique
 authors: [eferrandi]
-date: 2025-06-20
+date: 2025-10-11
 tags: 
   - "ai"
   - "environnement"
@@ -14,7 +14,7 @@ Depuis plusieurs mois nous entendons parler dans les médias de la consommation 
 
 ## Contexte et introduction
 
-Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis de nombreuses années, comme le montre, par exemple, l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservée à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
+Avant de commencer à se pencher sur le sujet, il nous faut remettre un peu de contexte. Bien que l'IA existe depuis de nombreuses années, comme le montre, par exemple, l'ordinateur [Deep Blue](https://fr.wikipedia.org/wiki/Deep_Blue) qui a été le premier à vaincre le champion du monde d'échecs en 1997, ou encore [Deep Thought](https://fr.wikipedia.org/wiki/Deep_Thought_(ordinateur_d'%C3%A9checs)) qui est le premier ordinateur conçu pour jouer aux échecs, c'est avec l'apparition des chatbots se basant sur les LLM et ouverts au grand public, tel que ChatGPT, en 2022 que l'utilisation de l'IA a explosé. Si avant elle était réservée à des domaines précis et particuliers, aujourd'hui tout le monde peut l'utiliser en quelques clics, que cela soit sur son ordinateur ou son téléphone.
 
 C'est cette ouverture au monde qui a poussé une consommation énergétique importante de l'IA. Et cette consommation ne s'exprime pas uniquement par le nombre de prompts faits par jour, mais aussi par l'énergie utilisée par les datacenters, le réseau, les serveurs lors des entrainements et bien d'autres paramètres encore. Malheureusement, l'ensemble de ces données sont difficilement trouvables et calculables. Pourtant nous savons que l'impact est réel, comme l'admet Google dans son [rapport environnemental de 2024](https://blog.google/outreach-initiatives/sustainability/2024-environmental-report/) :
 > *In 2023, our total GHG emissions were 14.3 million tCO2e, representing a 13% year-over-year increase and a 48% increase compared to our 2019 target base year. <br/>
@@ -27,9 +27,9 @@ Il est compliqué de connaître exactement l'impact total de ces IA sur l'enviro
 
 ## Consommation énergétique d'un prompt
 
-La consommation énergétique exacte d'un prompt en IA n'est pas connue. Cependant, selon un [article de ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542435123003653?dgcid=author), une requête ChatGPT consomme environ 2,9 Wh d’électricité, soit presque dix fois plus qu’une simple recherche Google  estimée à 0,3 Wh. Nous pouvons aussi citer la [Délégation Régionale Académique au Numérique Educatif](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) qui nous informe qu'une requête d’environ 400 tokens sur ChatGPT / GPT-4o mini consomme environ 2 Wh d’électricité, soit plus de 6 fois la consommation d’une recherche Google classique.
+La consommation énergétique exacte d'un prompt en IA n'est pas connue. Cependant, selon un [article de ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542435123003653?dgcid=author), une requête ChatGPT consomme environ 2,9 Wh d’électricité, soit presque dix fois plus qu’une simple recherche Google  estimée à 0,3 Wh. Nous pouvons aussi citer la [Délégation Régionale Académique au Numérique Educatif](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) qui nous informe qu'une requête d’environ 400 [tokens](https://www.brume.ai/definition-token-ia) sur ChatGPT / GPT-4o mini consomme environ 2 Wh d’électricité, soit plus de 6 fois la consommation d’une recherche Google classique.
 
-Un prompt venant remplacer une simple recherche internet consomme donc 6 à 10 fois l'énergie qui aurait été utilisée si nous l'avions faite à la main sur notre moteur de recherche favori par exemple. 
+Un prompt effectuant une recherche internet consomme 6 à 10 fois plus d’énergie qu’une recherche manuelle sur notre moteur de recherche préféré.
 
 Mais alors, est-ce que la consommation énergétique de toutes nos actions est multipliée par 10 lorsque nous utilisons l'IA ? Existe-t-il d'autres comparatifs ?
 
@@ -38,13 +38,13 @@ Mais alors, est-ce que la consommation énergétique de toutes nos actions est m
 En prenant le temps de quelques recherches sur le web (à l'ancienne), il est possible de trouver de nombreuses comparaisons entre la consommation des prompts et d'autres outils ou objets fonctionnant à l'électricité, tout comme le montre l'infographie ci-dessous crée par le [média indépendant Basta!](https://basta.media/) à l'aide des informations regroupées par Hugging Face, l'Université de Carnegie Mallon et Futura sciences: 
 ![Infographie que l'usage massif de l'IA](./infographie-usage-massif-intelligence-artificielle.webp)
 
-Ces images sont très intéressantes, mais d'un point de vue personnel, cela ne me parle que peu. C'est pour cela que nous allons vous présenter plusieurs cas différents et les comparer à un plein d'essence ou encore au prix d'un abonnement Netflix.
+Ces images sont très intéressantes, mais d’un point de vue personnel, elles ne me parlent que peu. C’est pour cela nous allons vous présenter plusieurs cas différents et les comparer à l'énergie consommée par un plein d’essence ou au prix d’un abonnement Netflix.
 
 Pour l'ensemble de ces tests, nous nous baserons sur les informations suivantes :
 - Une recherche Google vaut 0,3 Wh
-- Nous nous baserons sur les informations fournies par [EcoLogits](https://huggingface.co/spaces/genai-impact/ecologits-calculator)
+- Les informations fournies par [EcoLogits](https://huggingface.co/spaces/genai-impact/ecologits-calculator) seront notre référence
 - Nous arrondirons toujours les résultats à l'entier supérieur
-- Notre voiture de tests a un réservoir de 50 litres
+- Notre voiture de tests, une familiale moyenne, a un réservoir de 50 litres
 - Un litre d’essence contient l’énergie équivalant à 8,9 kWh d’électricité
 - Notre abonnement Netflix est un abonnement Standard à 14,99€/mois
 - Nous baserons le prix du kWh à 0.2016€ TTC
@@ -78,7 +78,7 @@ Et voici combien de prompts il faudrait effectuer afin d'atteindre les objectifs
 | Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
-| Claude 3 7 Sonnet | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
+| Claude 3.7 Sonnet | 14,9 | 8,52 min | 50 | 598 | 29 866 | 4 991 |
 | Google Gemini 2.0 Flash | 1,52 | 52,3 s | 6 | 5 856 | 29 2764 | 48 918 |
 | Meta Llama 3.1 8B | 0,641 | 22,2 s | 3 | 13 885 | 694 228 | 115 999 |
 | Meta Llama 3.1 70B | 2,13 | 1,22 min | 8 | 4 179 | 208 921 | 34 909 |
@@ -127,7 +127,7 @@ Et ci-dessous les résultats de nos calculs :
 | Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Nombre de recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
-| Claude 3 7 Sonnet | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
+| Claude 3.7 Sonnet | 35,1 | 20,1 min | 117 | 254 | 12 679 | 2 119 |
 | Google Gemini 2.0 Flash | 3,58 | 2,05 min | 12 | 2 487 | 124 302 | 20 770 |
 | Meta Llama 3.1 8B | 1,51 | 52,2 s | 6 | 5 895 | 294 702 | 49 242 |
 | Meta Llama 3.1 70B | 5,02 | 2,87 min | 17 | 1 773 | 88 646 | 14 812 |
@@ -188,7 +188,7 @@ Mais il est tout de même possible de calculer des équivalences :
 | Modèle | Consommation estimée en Wh | Temps équivalent d'une vidéo en streaming | Recherches Google | Consommer un litre d'essence | Remplir un réservoir de voiture | Un mois d'abonnement à Netflix |
 |-----|-----|-----|-----|-----|-----|-----|
 | ChatGPT 4o | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
-| Claude 3 7 Sonnet | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
+| Claude 3.7 Sonnet | 1320 | 12,5 h | 4 400 | 7 | 338 | 57 |
 | Google Gemini 2.0 Flash | 134 | 1,28 h | 447 | 67 | 3 321 | 555 |
 | Meta Llama 3.1 8B | 56,6 | 32,6 min | 189 | 158 | 7 863 | 1 314 |
 | Meta Llama 3.1 70B | 188 | 1,79 h | 627 | 48 | 2 368 | 396 |
