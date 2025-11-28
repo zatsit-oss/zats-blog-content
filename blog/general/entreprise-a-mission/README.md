@@ -1,5 +1,6 @@
 ---
 slug: entreprise-a-mission
+date: 2025-07-10
 title: "Nous sommes Entreprise à Mission"
 authors: [fbailleul]
 tags: [general]
