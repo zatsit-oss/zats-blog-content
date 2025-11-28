@@ -2,7 +2,7 @@
 slug: ia-et-consommation-energetique
 title: IA et consommation énergétique
 authors: [eferrandi]
-date: 2025-10-11
+date: 2025-11-28
 tags: 
   - "ai"
   - "environnement"
@@ -29,7 +29,7 @@ Il est compliqué de connaître exactement l'impact total de ces IA sur l'enviro
 
 La consommation énergétique exacte d'un prompt en IA n'est pas connue. Cependant, selon un [article de ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2542435123003653?dgcid=author), une requête ChatGPT consomme environ 2,9 Wh d’électricité, soit presque dix fois plus qu’une simple recherche Google  estimée à 0,3 Wh. Nous pouvons aussi citer la [Délégation Régionale Académique au Numérique Educatif](https://drane-versailles.region-academique-idf.fr/spip.php?article1167) qui nous informe qu'une requête d’environ 400 [tokens](https://www.brume.ai/definition-token-ia) sur ChatGPT / GPT-4o mini consomme environ 2 Wh d’électricité, soit plus de 6 fois la consommation d’une recherche Google classique.
 
-Un prompt effectuant une recherche internet consomme 6 à 10 fois plus d’énergie qu’une recherche manuelle sur notre moteur de recherche préféré.
+Un prompt venant remplacer une simple recherche internet consomme donc 6 à 10 fois l'énergie qui aurait été utilisée si vous l'aviez faite à la main sur Google par exemple.
 
 Mais alors, est-ce que la consommation énergétique de toutes nos actions est multipliée par 10 lorsque nous utilisons l'IA ? Existe-t-il d'autres comparatifs ?
 
