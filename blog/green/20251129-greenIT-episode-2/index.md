@@ -2,7 +2,7 @@
 slug: green-consommation-energie
 title: "Le Green IT, épisode 2 : Pas coule !"
 authors: [eperu]
-date: 2025-10-21
+date: 2025-11-29
 tags: 
   - "green"
   - "tech"
