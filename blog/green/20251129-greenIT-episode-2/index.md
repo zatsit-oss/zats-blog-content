@@ -105,6 +105,7 @@ Il y a du positif localement, mais on est en droit de s'interroger sur la transp
 $$
 \text{WUE} = \frac{\text{Annual Site Water Usage (liters)}}{\text{IT Equipment Annual Energy Use (kWh)}}
 $$
+
 La filière tech utilise aussi la métrique WUE (Water Usage Effectiveness) — développée par The Green Grid — pour comparer l’efficacité hydrique des datacenters (litres d’eau consommés par kWh IT ou par unité d’énergie IT).
 WUE aide à normaliser et à comparer, mais beaucoup d’opérateurs ne publient pas ces métriques et les définitions (direct vs indirect) varient. 
 D’où une demande croissante pour des obligations de reporting plus strictes (réglementaires et de marché).
