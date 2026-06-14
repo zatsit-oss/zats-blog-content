@@ -5,7 +5,6 @@ eperu:
   url: https://github.com/emmanuelperu
   image_url: /img/authors/eperu.webp
   socials:
-    x: emmanuelperu
     github: emmanuelperu
     linkedin: emmanuel-peru-10111274
 
@@ -91,3 +90,13 @@ fbailleul:
   image_url: /img/authors/fbailleul.webp
   socials:
     linkedin: flavien-bailleul
+
+qburg:
+  name: Quentin Burg
+  title: Fullstack Developer
+  url: https://github.com/quentin-burg
+  image_url: /img/authors/qburg.webp
+  socials:
+    linkedin: quentin-burg
+    github: quentin-burg
+
