@@ -18,21 +18,21 @@ C'est chaque année le rendez-vous à ne pas manquer pour les passionnés de tec
 de découvrir ou redécouvrir des technos, parfois sous un angle surprenant, pourquoi pas déroutant même. Nous espérons que vous avez déjà vécu une édition,
 si ce n'est pas le cas, il faudra remédier à ça l'année prochaine.
 
-Par cet article, nous tenons à réitérer nos remerciements à l'équipe organisatrice. 
-Perte de sponsor, mouvement social (compréhensible, bien sûr, mais par nature imprévisible), inflation... autant d'obstacles à franchir pour 
+Par cet article, nous tenons à réitérer nos remerciements à l'équipe organisatrice.
+Perte de sponsor, mouvement social (compréhensible, bien sûr, mais par nature imprévisible), inflation... autant d'obstacles à franchir pour
 garantir une conférence sur deux jours sans accrocs. Comme mes meilleurs numéros d'acrobatie, si on ne ressent pas la difficulté, c'est que c'est bien maîtrisé !
 
 Plongez avec nous dans les conférences qui nous ont marqués, mais avant petit clin d'œil à notre participation.
 
 ## zatsit à DevLille
 Comme chaque année, tout le collectif se retrouve pour participer à DevLille. Comme chaque mois, nous profitons d'un **zatsday** pour apprendre ensemble et passer un bon moment.
-Cette année, plus que spectateur, nous étions aussi speaker ! 3 interventions au programme : 
-- **Le CDC pour ne pas DCD** par **Ludovic et Quentin** : un REX sur un produit legacy qui produisait de la donnée obsolète ou manquante, sauvé en adoptant le Change Data Capture. 
+Cette année, plus que spectateur, nous étions aussi speaker ! 3 interventions au programme :
+- **Le CDC pour ne pas DCD** par **Ludovic et Quentin** : un REX sur un produit legacy qui produisait de la donnée obsolète ou manquante, sauvé en adoptant le Change Data Capture.
 Avec démos, autour de Debezium, Kafka et l'architecture event-driven et même des cadeaux à gagner si vous aviez compté le nombre d'acronyme lors du talk.
-- **Contract-First : reprends le contrôle de tes API avec des outils qui changent la vie** par **Emmanuel** : un workflow Contract-First complet 
+- **Contract-First : reprends le contrôle de tes API avec des outils qui changent la vie** par **Emmanuel** : un workflow Contract-First complet
 où le contrat OpenAPI devient source de vérité (mock avec **Microcks**, lint avec **Vacuum**,
 rétrocompat avec **Openapi-diff**, tests...), le tout outillé par des agents IA (Claude Code, Gemini CLI) via des skills publiés sur skills.sh.
-- **EcoScore A ou E : où se situe vraiment votre API ?** par **Emmanuel** : comment mesurer l'éco-conception d'une API via deux référentiels open source complémentaires, API Green Score  
+- **EcoScore A ou E : où se situe vraiment votre API ?** par **Emmanuel** : comment mesurer l'éco-conception d'une API via deux référentiels open source complémentaires, API Green Score
 et EROOM de Boavizta (maturité globale), avec à la clé un outil lui-même éco-conçu.
 
 Ces 3 talks ne sont pas anodins, ils reflètent l'expertise et les moteurs des talents de **zatsit** : l'architecture technique et l'éco-conception.
@@ -46,7 +46,7 @@ Ces deux thématiques, entre autres, animent nos **zatsdays** et notre quotidien
 _Vu par Emmanuel_
 
 ![9-millions-handicap-invisible](9-millions-handicap-invisible.webp)
-Par [Anaïs Moulin](https://www.linkedin.com/in/anaismoulin/) 
+Par [Anaïs Moulin](https://www.linkedin.com/in/anaismoulin/)
 
 Anaïs nous le confie elle même, elle a un handicap invisible, elle est sourde de l'oreille droite.
 C'est donc plus facile de lui parler du côté gauche lors de la pause café, mais c'est une autre histoire lors des réunions physiques et à distance.
@@ -82,8 +82,8 @@ Alors, pour la prochaine que vous organisez, essayez de prendre le bon réflexe.
 _Vu par Emmanuel_
 
 ![Decathlon et Greenspector](decathlon-greenspector.webp)
-par [Nathalie Otte](https://www.linkedin.com/in/ottenathalie), 
-[Olivier Philippot](https://www.linkedin.com/in/olivier-philippot-06a7907/) 
+par [Nathalie Otte](https://www.linkedin.com/in/ottenathalie),
+[Olivier Philippot](https://www.linkedin.com/in/olivier-philippot-06a7907/)
 et [Ludovic Roland](https://www.linkedin.com/in/ludovic-roland/).
 
 Decathlon fait partie des enseignes préférées des Français, ils font beaucoup pour le sport et ont socialement une place importante.
@@ -91,8 +91,8 @@ C'est naturellement qu'ils ont donc enclenché une démarche responsable aussi d
 Dans le talk **zatsit** qui parlait d'Écoscore, nous avons fait référence au REX de Decathlon que nous vous conseillons donc aussi ici : https://youtu.be/3Xtvw8LdYWg?si=YF3m0gT9uNP9eXI9
 
 Dans ce talk du DevLille, nous apprenons comment l'application mobile ecommerce de Decathlon est maintenant auditée par Greenspector.
-[Greenspector](https://greenspector.com) est une solution SaaS française qui mesure la sobriété et la performance 
-des services numériques (applications mobiles, sites web, IoT...) via des sondes d'énergie réelles 
+[Greenspector](https://greenspector.com) est une solution SaaS française qui mesure la sobriété et la performance
+des services numériques (applications mobiles, sites web, IoT...) via des sondes d'énergie réelles
 sur banc de tests physiques. Elle convertit ces mesures en Écoscore et en impacts environnementaux, s'intègre dans une chaîne CI/CD : le **DevGreenOps**.
 
 Concrètement, l'équipe réalise des tests sur devices physiques pour les builds destinés aux stores d'app.
@@ -110,21 +110,21 @@ _Vu par Emmanuel_
 
 par [Sébastien Ferrer](https://github.com/sebferrer)
 
-Je ne savais pas trop à quoi m'attendre avec ce talk, et c'est précisément ce qui m'a plu : ça change radicalement 
+Je ne savais pas trop à quoi m'attendre avec ce talk, et c'est précisément ce qui m'a plu : ça change radicalement
 de la tech qu'on voit défiler toute la journée, mais pourtant c'est de la tech ! Pas de framework, pas de pipeline, pas de cloud, plutôt de l'analyse de signal et un peu de maths.
 Le point de départ : Sébastien vit avec un acouphène permanent. Plutôt que de le subir, il a cherché à comprendre comment
 le son pouvait masquer ou apaiser ces fréquences parasites. Et de fil en aiguille, il s'est retrouvé à coder ses propres bruits.
 
 Là où ça devient malin, c'est qu'on parle de quelques lignes de code, selon lui "l'algo le plus simple qu'il ait jamais écrit".
 Pas de deep learning, pas de modèle entraîné sur trois data centers. De la distribution aléatoire, des filtres, un peu de manipulation de signal,
-et l'algorithme pour générer du bruit rose proprement. Du chaos mathématique transformé en confort auditif, 
+et l'algorithme pour générer du bruit rose proprement. Du chaos mathématique transformé en confort auditif,
 et on voyait le son devenir image à l'écran, le spectre se dessiner sous nos yeux. On a même vu le logo DEVLILLE 2026 et ça c'était fun, effet démo garanti !
 Les pièces du puzzle se sont mises en place. Tous ces bruits "colorés" qu'on croise sans jamais y réfléchir :
-Le bruit blanc, agressif, sifflant, c'est exactement la neige sur les vieux téléviseurs cathodiques (pour les plus anciens dans la salle). 
+Le bruit blanc, agressif, sifflant, c'est exactement la neige sur les vieux téléviseurs cathodiques (pour les plus anciens dans la salle).
 
-Le bruit rose, plus doux, plus équilibré, c'est celui qui peuple les playlists "sommeil" et "concentration" 
-de Spotify et Deezer. Si tu t'es déjà demandé pourquoi ces playlists marchent mieux que le blanc pour dormir, 
-c'est une histoire de répartition d'énergie par octave : l'oreille humaine le perçoit comme plus naturel, 
+Le bruit rose, plus doux, plus équilibré, c'est celui qui peuple les playlists "sommeil" et "concentration"
+de Spotify et Deezer. Si tu t'es déjà demandé pourquoi ces playlists marchent mieux que le blanc pour dormir,
+c'est une histoire de répartition d'énergie par octave : l'oreille humaine le perçoit comme plus naturel,
 plus proche de la pluie que du sifflement.
 
 Le bruit brun (ou rouge, ou brownien, c'est le même), encore plus grave, ce grondement profond (comme un orage nous dit Sébastien) façon cascade ou ressac, une ambiance de plage, on sent le sable sous nos pieds.
@@ -132,10 +132,45 @@ Bref, un talk qui ne servira peut-être jamais directement dans mon job, et c'es
 
 Parfois il faut juste une conf qui te fait regarder ton vieux poste cathodique d'un autre œil, qui explique ta playlist de concentration...
 
+
+
+### Déployer souvent, stresser moins : feature flags en prod critique
+_Vu par Quentin_
+
+![Déployer souvent, stresser moins](deployer-souvent-stresser-moins.webp)
+
+par [Marion Chineaud](https://www.linkedin.com/in/marion-chineaud-98000b214/) et [Elise Souvannavong](https://www.linkedin.com/in/elise-souvannavong-insa/)
+
+Dans ce talk du DevLille, Marion et Elise nous embarquent dans leur méthodologie pour livrer plus vite, sans friction entre la tech' et le métier.
+Elles y détaillent quelques techniques pour mitiger les risques d'un déploiement et pour permettre aux équipes en charge du métier de tester leurs idées sans impacter le delivery et les utilisateurs.
+
+Tout le monde sera d'accord pour dire que pour déployer souvent, il faut d'abord découper et merger fréquemment son code. Et ce que suggèrent Marion et Elise, c'est de séparer l'action de merger et de déployer. C'est vrai que bien souvent, on attend que tout soit prêt à être déployé pour être mergé et l'on entre dans des tunnels. Et pour éviter d'impacter les utilisateurs avec des demi-features, elles suggèrent d'utiliser des release flags : des booléens, stockés de préférence séparément de la codebase, pour activer ou désactiver des features.
+
+Dans une seconde partie du talk, Elise et Marion évoquent la volonté de l'équipe métier de pouvoir piloter l'application avec des flags, afin de réaliser des tests. On parle alors d'A/B testing (tests de variants d'une feature afin de choisir celle qui correspond le mieux aux utilisateurs), shadow mode (déploiement d'un service critique en parallèle de l'application afin de tester son comportement en conditions réélles) ou de canary release (release différenciée suivant la typologie d'utilisateurs afin de recueillir des feedbacks des bêta-testeurs avant une mise en production généralisée). Des concepts intéressants, à mettre en pratique si le besoin se fait ressentir dans les équipes !
+
+Un warning tout de même : les flags c'est beau mais ne pas oublier le clean après les releases !
+
+Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce vers quoi tout développeur/toute développeuse veut aller
+
+
+### IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !
+_Vu par Quentin_
+
+![IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !](ia-bonnes-pratiques.webp)
+
+par [Nathan Castelain](https://github.com/nathancastelein)
+
+Dès le début du talk, nous sommes embarqué dans l'univers de Retour vers le Futur. Le  pitch ? Nathan arrive en 2026, au moment où l'IA est prédominante dans le quotidien des développeurs. Le Doc est lui même une IA qui dicte les bonnes pratiques en terme de prompting et d'utilisation de l'IA agentique. Mais, Nathan vient de 2024, une époque où l'IA pour les développeurs se limitait à poser des questions dans un chat et copier éventuellement le snippet de code, bien loin des pratiques actuelles donc !
+
+Le but de ce talk est de déconstruire les concepts du moment autour de l'IA agentique (Context Engineering, Prompt Enginerring, etc...) et de les recouper avec des concepts et pratiques de développement existants depuis quelques décennies, comme l'agilité et son manifeste, le Behavior Driven Design, le Domain Driven Design, ...
+
+Un talk qui invite à prendre du recul sur l'utilisation de l'IA et à se rappeler que, finalement, on n'a rien révolutionné en termes de concepts. Le Context Engineering n'est qu'un nouveau nom pour des réflexes qu'on connaît bien : découper, donner du contexte métier, structurer l'intention avant de produire. La vraie nouveauté, elle, est ailleurs : on écrit (ou plutôt on fait écrire) du code plus rapidement. Reste à savoir si nos pratiques craft suivront le rythme.
+
+
 ## Conclusion
 
-On repart avec deux sentiments : 
-- On a fait notre possible pour proposer des talks à notre image : de l'architecture technique, de la plomberie technique, pragmatique 
+On repart avec deux sentiments :
+- On a fait notre possible pour proposer des talks à notre image : de l'architecture technique, de la plomberie technique, pragmatique
 - et même de l'éco-conception, parce que c'est une urgence !
 - On a kiffé croiser nos collègues, avoir de l'inspiration et prendre le pouls de la tech lilloise.
 
