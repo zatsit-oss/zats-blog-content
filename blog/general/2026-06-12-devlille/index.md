@@ -20,15 +20,16 @@ si ce n'est pas le cas, il faudra remédier à ça l'année prochaine.
 
 Par cet article, nous tenons à réitérer nos remerciements à l'équipe organisatrice.
 Perte de sponsor, mouvement social (compréhensible, bien sûr, mais par nature imprévisible), inflation... autant d'obstacles à franchir pour
-garantir une conférence sur deux jours sans accrocs. Comme mes meilleurs numéros d'acrobatie, si on ne ressent pas la difficulté, c'est que c'est bien maîtrisé !
+garantir une conférence sur deux jours sans accrocs. Comme les meilleurs numéros d'acrobatie, si on ne ressent pas la difficulté, c'est que c'est bien maîtrisé !
 
 Plongez avec nous dans les conférences qui nous ont marqués, mais avant petit clin d'œil à notre participation.
 
 ## zatsit à DevLille
-Comme chaque année, tout le collectif se retrouve pour participer à DevLille. Comme chaque mois, nous profitons d'un **zatsday** pour apprendre ensemble et passer un bon moment.
+Tout les ans, notre collectif se retrouve pour participer à DevLille. 
+Comme chaque mois, nous profitons d'un **zatsday** pour apprendre ensemble et passer un bon moment.
 Cette année, plus que spectateur, nous étions aussi speaker ! 3 interventions au programme :
 - **Le CDC pour ne pas DCD** par **Ludovic et Quentin** : un REX sur un produit legacy qui produisait de la donnée obsolète ou manquante, sauvé en adoptant le Change Data Capture.
-Avec démos, autour de Debezium, Kafka et l'architecture event-driven et même des cadeaux à gagner si vous aviez compté le nombre d'acronyme lors du talk.
+Avec des démos autour de Debezium et Kafka, des échange sur base d'architecture event-driven et même des cadeaux à gagner, si vous aviez compté le nombre d'acronymes lors du talk.
 - **Contract-First : reprends le contrôle de tes API avec des outils qui changent la vie** par **Emmanuel** : un workflow Contract-First complet
 où le contrat OpenAPI devient source de vérité (mock avec **Microcks**, lint avec **Vacuum**,
 rétrocompat avec **Openapi-diff**, tests...), le tout outillé par des agents IA (Claude Code, Gemini CLI) via des skills publiés sur skills.sh.
@@ -48,10 +49,10 @@ _Vu par Emmanuel_
 ![9-millions-handicap-invisible](9-millions-handicap-invisible.webp)
 Par [Anaïs Moulin](https://www.linkedin.com/in/anaismoulin/)
 
-Anaïs nous le confie elle même, elle a un handicap invisible, elle est sourde de l'oreille droite.
+Anaïs nous le confie elle-même, elle a un handicap invisible, elle est sourde de l'oreille droite.
 C'est donc plus facile de lui parler du côté gauche lors de la pause café, mais c'est une autre histoire lors des réunions physiques et à distance.
 
-Le chiffre de la photo ci-dessus est énorme, 9 millions de Français ont un handicap invisible, parmis ces handicaps, les 6 grandes familles les plus représentées :
+Le chiffre de la photo ci-dessus est énorme, 9 millions de Français ont un handicap invisible, parmi ces handicaps, les 6 grandes familles les plus représentées :
 
 - **Maladies chroniques** invalidantes : sclérose en plaques, fibromyalgie, endométriose, diabète... La catégorie la plus large.
 - Troubles **sensoriels** : surdité, malentendance (le cas d'Anaïs Moulin), déficiences visuelles partielles.
@@ -73,7 +74,7 @@ L'exemple concret pour lequel il est facile d'avoir un impact positif sont les "
 - Prévoir un ordre du jour : handicap ou pas, c'est pénible d'avoir une réunion sans ordre du jour préalable.
 - Préparer sa réunion : produire des documents en amont dont tout le monde peut prendre connaissance et prévoir un livrable en fin de réunion.
 
-Honnêtement ça relève plus du bon sens et de l'organisation intelligente. Fini les "Point projet X" dans lequel on doit improviser sur des questions hasardeuses, ne rien produire et prévoir la "Suite du point projet X".
+Honnêtement ça relève plus du bon sens et de l'organisation intelligente. Fini les "Point projet X" dans lesquels on doit improviser sur des questions hasardeuses, ne rien produire et prévoir la "Suite du point projet X".
 C'est une liste que j'essaie d'exiger systématiquement dans mes expériences professionnelles, mais vraiment pas facile à imposer. À croire qu'on aime la réunionite exclusive et peu productive.
 
 Alors, pour la prochaine que vous organisez, essayez de prendre le bon réflexe.
@@ -132,10 +133,46 @@ Bref, un talk qui ne servira peut-être jamais directement dans mon job, et c'es
 
 Parfois il faut juste une conf qui te fait regarder ton vieux poste cathodique d'un autre œil, qui explique ta playlist de concentration...
 
+### Qui a marqué le plus de buts ? construire un agent IA qui interroge des données en langage naturel
+_Vu par Ludovic_
+
+![Mazlum sur scene](mazlum.webp)
+
+par [Mazlum Tosun](https://www.linkedin.com/in/mazlum-tosun-900b1812/)
+
+Mazlum, habitué du DevLille, présente un sujet concret, sur la mise en place d'un agent IA permettant d'interroger les données de la coupe du monde du Quatar.
+
+Contrairement à la majorité des talks, celui-ci présente les technologies, l'architecture et le workflow de CI utilisés pour en venir à une démonstration de l'intégration de la stack, d'abord en local, puis déployée sur GCP dans Cloud Run.
+
+![architecture](archi-mazlum.webp)
+
+L'application s'articule donc autour de 4 composants clés :
+
+- Le front en **Next** qui intègre [Copilot Kit Lit](https://github.com/copilotkit/copilotkit), pour l'intégration IA 
+- [Agent Development Kit (ADK)](https://adk.dev/) coté backend, pour le framework permettant d'orchestrer les agents
+- **Vertex AI** coté Google, permettant de fournir un LLM pour converser (Gemini 2.5 Flash) ici
+- **BigQuery** et son **MCP** pour la source de donnée (données de la CDM au Quatar)
+
+Coté CI, du classique sur GCP pour orchestrer le déploiement vers Cloud Run :
+
+![ci](cimazllum.webp)
+
+En 45 minutes, Mazlum a donc permis à l'auditoire de comprendre comment créer sa première plateforme conversationnelle, sur base d'exemples, de schémas et de démonstrations. C'est ce qu'on attend, quand on participe à une conférence : repartir avec des choses à actionner !
+
+Le clou du spectacle ? La possibilité de s'amuser avec cette stack exclusivement en local, sans consommer de tokens IA :
+
+![avec un llm local](localmazlum.webp)
+
+On adore !
+
+Si vous voulez aller plus loin : 
+
+- [Les slides](https://docs.google.com/presentation/d/19iBG2qq_2fFLu2J2NDfEkp0fsZD2Lzu9/edit?usp=sharing&ouid=106953247454474350663&rtpof=true&sd=true)
+- [Le code source du projet](https://github.com/tosun-si/football-agent-adk-copilotkit)
 
 
 ### Déployer souvent, stresser moins : feature flags en prod critique
-_Vu par Quentin_
+_Vu par Quentin et Ludovic_
 
 ![Déployer souvent, stresser moins](deployer-souvent-stresser-moins.webp)
 
@@ -154,15 +191,15 @@ Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce
 
 
 ### IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !
-_Vu par Quentin_
+_Vu par Quentin et Ludovic_
 
 ![IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !](ia-bonnes-pratiques.webp)
 
 par [Nathan Castelain](https://github.com/nathancastelein)
 
-Dès le début du talk, nous sommes embarqué dans l'univers de Retour vers le Futur. Le  pitch ? Nathan arrive en 2026, au moment où l'IA est prédominante dans le quotidien des développeurs. Le Doc est lui même une IA qui dicte les bonnes pratiques en terme de prompting et d'utilisation de l'IA agentique. Mais, Nathan vient de 2024, une époque où l'IA pour les développeurs se limitait à poser des questions dans un chat et copier éventuellement le snippet de code, bien loin des pratiques actuelles donc !
+Dès le début du talk, nous sommes embarqués dans l'univers de Retour vers le Futur. Le pitch ? Nathan arrive en 2026, au moment où l'IA est prédominante dans le quotidien des développeurs. Le Doc est lui même une IA qui dicte les bonnes pratiques en terme de prompting et d'utilisation de l'IA agentique. Mais, Nathan vient de 2024, une époque où l'IA pour les développeurs se limitait à poser des questions dans un chat et copier éventuellement le snippet de code, bien loin des pratiques actuelles donc !
 
-Le but de ce talk est de déconstruire les concepts du moment autour de l'IA agentique (Context Engineering, Prompt Enginerring, etc...) et de les recouper avec des concepts et pratiques de développement existants depuis quelques décennies, comme l'agilité et son manifeste, le Behavior Driven Design, le Domain Driven Design, ...
+Le but de ce talk est de déconstruire les concepts du moment autour de l'IA agentique (Context Engineering, Prompt Engineering, etc...) et de les croiser avec des concepts et pratiques de développement existants depuis quelques décennies, comme l'agilité et son manifeste, le Behavior Driven Design, le Domain Driven Design, ...
 
 Un talk qui invite à prendre du recul sur l'utilisation de l'IA et à se rappeler que, finalement, on n'a rien révolutionné en termes de concepts. Le Context Engineering n'est qu'un nouveau nom pour des réflexes qu'on connaît bien : découper, donner du contexte métier, structurer l'intention avant de produire. La vraie nouveauté, elle, est ailleurs : on écrit (ou plutôt on fait écrire) du code plus rapidement. Reste à savoir si nos pratiques craft suivront le rythme.
 
@@ -172,7 +209,7 @@ Un talk qui invite à prendre du recul sur l'utilisation de l'IA et à se rappel
 On repart avec deux sentiments :
 - On a fait notre possible pour proposer des talks à notre image : de l'architecture technique, de la plomberie technique, pragmatique
 - et même de l'éco-conception, parce que c'est une urgence !
-- On a kiffé croiser nos collègues, avoir de l'inspiration et prendre le pouls de la tech lilloise.
+- On a adoré croiser nos collègues, avoir de l'inspiration et prendre le pouls de la tech lilloise.
 
 Comme chaque année, ça nous semble naturel, chez **zatsit** d'emmener tout le collectif prendre une bonne bulle d'air tech et quand on voit que certains pairs ne sont jamais allés
 à une conférence, c'est triste. Chacun dans notre métier doit produire un travail de veille personnel, c'est sûr, mais l'entreprise a le devoir de former son collectif
