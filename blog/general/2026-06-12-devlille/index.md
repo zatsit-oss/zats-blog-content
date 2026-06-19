@@ -25,11 +25,11 @@ garantir une conférence sur deux jours sans accrocs. Comme les meilleurs numér
 Plongez avec nous dans les conférences qui nous ont marqués, mais avant petit clin d'œil à notre participation.
 
 ## zatsit à DevLille
-Tout les ans, notre collectif se retrouve pour participer à DevLille. 
+Tous les ans, notre collectif se retrouve pour participer à DevLille.
 Comme chaque mois, nous profitons d'un **zatsday** pour apprendre ensemble et passer un bon moment.
 Cette année, plus que spectateur, nous étions aussi speaker ! 3 interventions au programme :
 - **Le CDC pour ne pas DCD** par **Ludovic et Quentin** : un REX sur un produit legacy qui produisait de la donnée obsolète ou manquante, sauvé en adoptant le Change Data Capture.
-Avec des démos autour de Debezium et Kafka, des échange sur base d'architecture event-driven et même des cadeaux à gagner, si vous aviez compté le nombre d'acronymes lors du talk.
+Avec des démos autour de Debezium et Kafka, des échanges sur base d'architecture event-driven et même des cadeaux à gagner, si vous aviez compté le nombre d'acronymes lors du talk.
 - **Contract-First : reprends le contrôle de tes API avec des outils qui changent la vie** par **Emmanuel** : un workflow Contract-First complet
 où le contrat OpenAPI devient source de vérité (mock avec **Microcks**, lint avec **Vacuum**,
 rétrocompat avec **Openapi-diff**, tests...), le tout outillé par des agents IA (Claude Code, Gemini CLI) via des skills publiés sur skills.sh.
@@ -62,13 +62,13 @@ Le chiffre de la photo ci-dessus est énorme, 9 millions de Français ont un han
 - Troubles **cognitifs** : mémoire, attention, difficultés à planifier...
 
 Il y a donc une forte probabilité pour que vous ou l'une des personnes de votre équipe ait un handicap de cette liste.
-Ces personnes font déjà énormément d'efforts pour aménager comme ils peuvent leurs conditions de travail afin de limiter les difficultés qui en résultent.
+Ces personnes font déjà énormément d'efforts pour aménager comme elles peuvent leurs conditions de travail afin de limiter les difficultés qui en résultent.
 Elles vont, par exemple, s'équiper d'un casque à réduction de bruit, d'un écran spécifique, d'un siège ergonomique très cher, d'un bureau assis/debout onéreux aussi...
 
 Posons nous la question : "Que nous soyons concernés ou pas par un handicap, que pouvons-nous faire pour nos collègues ?"
 
 Déjà, Anaïs nous rappelle que ce n'est pas "écrit sur le front" et que bon nombre de personnes n'osent pas en parler, alors partons du principe que statistiquement dans vos meetings par exemple, au moins une personne va devoir faire plus d'efforts que les autres.
-L'exemple concret pour lequel il est facile d'avoir un impact positif sont les "réunions" :
+Les exemples concrets pour lesquels il est facile d'avoir un impact positif sont les "réunions" :
 - Allumer sa caméra : c'est plus facile de voir des réactions, détecter qui parle et même potentiellement lire sur les lèvres.
 - Promouvoir dans l'entreprise des solutions intégrées de génération de sous-titres.
 - Prévoir un ordre du jour : handicap ou pas, c'est pénible d'avoir une réunion sans ordre du jour préalable.
@@ -140,7 +140,7 @@ _Vu par Ludovic_
 
 par [Mazlum Tosun](https://www.linkedin.com/in/mazlum-tosun-900b1812/)
 
-Mazlum, habitué du DevLille, présente un sujet concret, sur la mise en place d'un agent IA permettant d'interroger les données de la coupe du monde du Quatar.
+Mazlum, habitué du DevLille, présente un sujet concret, sur la mise en place d'un agent IA permettant d'interroger les données de la coupe du monde du Qatar.
 
 Contrairement à la majorité des talks, celui-ci présente les technologies, l'architecture et le workflow de CI utilisés pour en venir à une démonstration de l'intégration de la stack, d'abord en local, puis déployée sur GCP dans Cloud Run.
 
@@ -148,12 +148,12 @@ Contrairement à la majorité des talks, celui-ci présente les technologies, l'
 
 L'application s'articule donc autour de 4 composants clés :
 
-- Le front en **Next** qui intègre [Copilot Kit Lit](https://github.com/copilotkit/copilotkit), pour l'intégration IA 
-- [Agent Development Kit (ADK)](https://adk.dev/) coté backend, pour le framework permettant d'orchestrer les agents
-- **Vertex AI** coté Google, permettant de fournir un LLM pour converser (Gemini 2.5 Flash) ici
-- **BigQuery** et son **MCP** pour la source de donnée (données de la CDM au Quatar)
+- Le front en **Next** qui intègre [CopilotKit](https://github.com/copilotkit/copilotkit), pour l'intégration IA
+- [Agent Development Kit (ADK)](https://adk.dev/) côté backend, pour le framework permettant d'orchestrer les agents
+- **Vertex AI** côté Google, permettant de fournir un LLM pour converser (Gemini 2.5 Flash) ici
+- **BigQuery** et son **MCP** pour la source de donnée (données de la CDM au Qatar)
 
-Coté CI, du classique sur GCP pour orchestrer le déploiement vers Cloud Run :
+Côté CI, du classique sur GCP pour orchestrer le déploiement vers Cloud Run :
 
 ![ci](cimazllum.webp)
 
@@ -183,11 +183,11 @@ Elles y détaillent quelques techniques pour mitiger les risques d'un déploieme
 
 Tout le monde sera d'accord pour dire que pour déployer souvent, il faut d'abord découper et merger fréquemment son code. Et ce que suggèrent Marion et Elise, c'est de séparer l'action de merger et de déployer. C'est vrai que bien souvent, on attend que tout soit prêt à être déployé pour être mergé et l'on entre dans des tunnels. Et pour éviter d'impacter les utilisateurs avec des demi-features, elles suggèrent d'utiliser des release flags : des booléens, stockés de préférence séparément de la codebase, pour activer ou désactiver des features.
 
-Dans une seconde partie du talk, Elise et Marion évoquent la volonté de l'équipe métier de pouvoir piloter l'application avec des flags, afin de réaliser des tests. On parle alors d'A/B testing (tests de variants d'une feature afin de choisir celle qui correspond le mieux aux utilisateurs), shadow mode (déploiement d'un service critique en parallèle de l'application afin de tester son comportement en conditions réélles) ou de canary release (release différenciée suivant la typologie d'utilisateurs afin de recueillir des feedbacks des bêta-testeurs avant une mise en production généralisée). Des concepts intéressants, à mettre en pratique si le besoin se fait ressentir dans les équipes !
+Dans une seconde partie du talk, Elise et Marion évoquent la volonté de l'équipe métier de pouvoir piloter l'application avec des flags, afin de réaliser des tests. On parle alors d'A/B testing (tests de variants d'une feature afin de choisir celle qui correspond le mieux aux utilisateurs), shadow mode (déploiement d'un service critique en parallèle de l'application afin de tester son comportement en conditions réelles) ou de canary release (release différenciée suivant la typologie d'utilisateurs afin de recueillir des feedbacks des bêta-testeurs avant une mise en production généralisée). Des concepts intéressants, à mettre en pratique si le besoin se fait ressentir dans les équipes !
 
 Un warning tout de même : les flags c'est beau mais ne pas oublier le clean après les releases !
 
-Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce vers quoi tout développeur/toute développeuse veut aller
+Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce vers quoi tout développeur/toute développeuse veut aller.
 
 
 ### IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !
@@ -197,9 +197,9 @@ _Vu par Quentin et Ludovic_
 
 par [Nathan Castelain](https://github.com/nathancastelein)
 
-Dès le début du talk, nous sommes embarqués dans l'univers de Retour vers le Futur. Le pitch ? Nathan arrive en 2026, au moment où l'IA est prédominante dans le quotidien des développeurs. Le Doc est lui même une IA qui dicte les bonnes pratiques en terme de prompting et d'utilisation de l'IA agentique. Mais, Nathan vient de 2024, une époque où l'IA pour les développeurs se limitait à poser des questions dans un chat et copier éventuellement le snippet de code, bien loin des pratiques actuelles donc !
+Dès le début du talk, nous sommes embarqués dans l'univers de Retour vers le Futur. Le pitch ? Nathan arrive en 2026, au moment où l'IA est prédominante dans le quotidien des développeurs. Le Doc est lui même une IA qui dicte les bonnes pratiques en termes de prompting et d'utilisation de l'IA agentique. Mais, Nathan vient de 2024, une époque où l'IA pour les développeurs se limitait à poser des questions dans un chat et copier éventuellement le snippet de code, bien loin des pratiques actuelles donc !
 
-Le but de ce talk est de déconstruire les concepts du moment autour de l'IA agentique (Context Engineering, Prompt Engineering, etc...) et de les croiser avec des concepts et pratiques de développement existants depuis quelques décennies, comme l'agilité et son manifeste, le Behavior Driven Design, le Domain Driven Design, ...
+Le but de ce talk est de déconstruire les concepts du moment autour de l'IA agentique (Context Engineering, Prompt Engineering, etc.) et de les croiser avec des concepts et pratiques de développement existants depuis quelques décennies, comme l'agilité et son manifeste, le Behavior Driven Design, le Domain Driven Design, ...
 
 Un talk qui invite à prendre du recul sur l'utilisation de l'IA et à se rappeler que, finalement, on n'a rien révolutionné en termes de concepts. Le Context Engineering n'est qu'un nouveau nom pour des réflexes qu'on connaît bien : découper, donner du contexte métier, structurer l'intention avant de produire. La vraie nouveauté, elle, est ailleurs : on écrit (ou plutôt on fait écrire) du code plus rapidement. Reste à savoir si nos pratiques craft suivront le rythme.
 
