@@ -30,14 +30,30 @@ Comme chaque mois, nous profitons d'un **zatsday** pour apprendre ensemble et pa
 Cette année, plus que spectateur, nous étions aussi speaker ! 3 interventions au programme :
 - **Le CDC pour ne pas DCD** par **Ludovic et Quentin** : un REX sur un produit legacy qui produisait de la donnée obsolète ou manquante, sauvé en adoptant le Change Data Capture.
 Avec des démos autour de Debezium et Kafka, des échanges sur base d'architecture event-driven et même des cadeaux à gagner, si vous aviez compté le nombre d'acronymes lors du talk.
+
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=So5kdY1A_HI)
+:::
+
+D'ailleurs, si vous voulez comprendre comment fonctionne le WAL sous Postgres, [il y a aussi eu un talk à DevLille à ce sujet :)](https://www.youtube.com/watch?v=rVsyw0BC9hQ&list=PLXbqr_rv1t4N3LXk2aP80NQjIbymwpA2S&index=12&pp=iAQB)
+
 - **Contract-First : reprends le contrôle de tes API avec des outils qui changent la vie** par **Emmanuel** : un workflow Contract-First complet
 où le contrat OpenAPI devient source de vérité (mock avec **Microcks**, lint avec **Vacuum**,
 rétrocompat avec **Openapi-diff**, tests...), le tout outillé par des agents IA (Claude Code, Gemini CLI) via des skills publiés sur skills.sh.
+
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=1H7Tr77pVdA)
+:::
+
 - **EcoScore A ou E : où se situe vraiment votre API ?** par **Emmanuel** : comment mesurer l'éco-conception d'une API via deux référentiels open source complémentaires, API Green Score
 et EROOM de Boavizta (maturité globale), avec à la clé un outil lui-même éco-conçu.
 
 Ces 3 talks ne sont pas anodins, ils reflètent l'expertise et les moteurs des talents de **zatsit** : l'architecture technique et l'éco-conception.
 Ces deux thématiques, entre autres, animent nos **zatsdays** et notre quotidien !
+
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=XDaJhPRvz6U)
+:::
 
 ## Les conférences qui nous ont marqués
 
@@ -79,6 +95,10 @@ C'est une liste que j'essaie d'exiger systématiquement dans mes expériences pr
 
 Alors, pour la prochaine que vous organisez, essayez de prendre le bon réflexe.
 
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=zKWgJ_4FLGo)
+:::
+
 ### DevGreenOps : Passer du sprint à l'endurance énergétique avec Decathlon x Greenspector
 _Vu par Emmanuel_
 
@@ -103,6 +123,9 @@ La prochaine étape est de pouvoir réaliser ces tests de bout en bout pour mesu
 
 Vivement qu'on puisse voir dans un prochain talk les résultats complets !
 
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=Sp77hYnCcMg)
+:::
 
 ### Sculpter le bruit : Retour d'expérience sur la génération de textures sonores
 _Vu par Emmanuel_
@@ -132,6 +155,10 @@ Le bruit brun (ou rouge, ou brownien, c'est le même), encore plus grave, ce gro
 Bref, un talk qui ne servira peut-être jamais directement dans mon job, et c'est très bien comme ça.
 
 Parfois il faut juste une conf qui te fait regarder ton vieux poste cathodique d'un autre œil, qui explique ta playlist de concentration...
+
+:::info[Le replay de ce talk]
+[C'est par ici !](https://youtu.be/zKWgJ_4FLGo?si=sRiYotsaMSPPYSJI)
+:::
 
 ### Qui a marqué le plus de buts ? construire un agent IA qui interroge des données en langage naturel
 _Vu par Ludovic_
@@ -170,6 +197,9 @@ Si vous voulez aller plus loin :
 - [Les slides](https://docs.google.com/presentation/d/19iBG2qq_2fFLu2J2NDfEkp0fsZD2Lzu9/edit?usp=sharing&ouid=106953247454474350663&rtpof=true&sd=true)
 - [Le code source du projet](https://github.com/tosun-si/football-agent-adk-copilotkit)
 
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=i2YQP0lUO2w)
+:::
 
 ### Déployer souvent, stresser moins : feature flags en prod critique
 _Vu par Quentin et Ludovic_
@@ -189,6 +219,9 @@ Un warning tout de même : les flags c'est beau mais ne pas oublier le clean apr
 
 Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce vers quoi tout développeur/toute développeuse veut aller.
 
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=yF_oAmSO5JQ)
+:::
 
 ### IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !
 _Vu par Quentin et Ludovic_
@@ -203,6 +236,9 @@ Le but de ce talk est de déconstruire les concepts du moment autour de l'IA age
 
 Un talk qui invite à prendre du recul sur l'utilisation de l'IA et à se rappeler que, finalement, on n'a rien révolutionné en termes de concepts. Le Context Engineering n'est qu'un nouveau nom pour des réflexes qu'on connaît bien : découper, donner du contexte métier, structurer l'intention avant de produire. La vraie nouveauté, elle, est ailleurs : on écrit (ou plutôt on fait écrire) du code plus rapidement. Reste à savoir si nos pratiques craft suivront le rythme.
 
+:::info[Le replay de ce talk]
+[C'est par ici !](https://www.youtube.com/watch?v=-A_tPrXDGMA)
+:::
 
 ## Conclusion
 
