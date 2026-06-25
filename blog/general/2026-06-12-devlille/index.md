@@ -223,6 +223,7 @@ Le mot de la fin : faire d'une release un non-évènement, je pense que c'est ce
 [C'est par ici !](https://www.youtube.com/watch?v=yF_oAmSO5JQ)
 :::
 
+
 ### IA et bonnes pratiques: Nom de Zeus, on savait déjà tout !
 _Vu par Quentin et Ludovic_
 
