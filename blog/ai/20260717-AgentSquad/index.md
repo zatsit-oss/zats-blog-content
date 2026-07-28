@@ -3,7 +3,7 @@ slug: agent-squad
 title: Monter une équipe d'agents avec Claude Code
 authors: [adaboussi]
 date: 2026-07-17
-tags: [ai]
+tags: [ai, architecture]
 ---
 Comment transformer Claude Code en véritable squad produit : un agent par rôle (PO, PM, Tech Lead, Devs, QA, UI/UX), connecté à Figma et Linear via MCP, pour livrer une fonctionnalité de l'idée jusqu'au code testé, sans copier-coller de specs entre outils.
 <!-- truncate -->
@@ -14,7 +14,9 @@ Comment transformer Claude Code en véritable squad produit : un agent par rôle
 
 Claude Code n'est plus seulement "un assistant qui code dans le terminal". Avec les **subagents**, les **skills**, les **hooks**, et les serveurs **MCP** (Model Context Protocol), on peut construire quelque chose qui ressemble à une vraie squad produit, sauf que chaque rôle est un agent spécialisé, avec son propre contexte, ses propres outils, et une mission bien définie.
 
-J'ai fini par structurer une "équipe" de six agents (PO, PM, Tech Lead, Devs, Testeurs, UI/UX Designer) autour de Claude Code, connectée à **Figma** pour le design et **Linear** pour le ticketing. Pas parce que c'était le plan de départ : au début je n'avais qu'un seul agent générique, et je passais mon temps à lui répéter le contexte du projet à chaque nouvelle tâche. Découper en rôles a réglé ça presque par accident. Voici comment le montage tient, et où il coince encore.
+J'ai fini par structurer une "équipe" de six agents (PO, PM, Tech Lead, Devs, Testeurs, UI/UX Designer) autour de Claude Code, connectée à **Figma** pour le design et **Linear** pour le ticketing. Pas parce que c'était le plan de départ : au début je n'avais qu'un seul agent générique, et je passais mon temps à lui répéter le contexte du projet à chaque nouvelle tâche. 
+Découper mes actions en rôles a réglé ça presque par hasard. 
+Je vous explique comment comment j'ai construit tout ça, et où ça coince encore.
 
 
 ## Subagents ou Agent Teams ?
@@ -24,6 +26,14 @@ Deux briques Claude Code rendent ça possible, et elles ne se valent pas pour to
 Les **subagents** sont des assistants spécialisés, définis en Markdown avec un frontmatter (nom, description, outils autorisés), stockés dans `.claude/agents/` (au niveau projet) ou `~/.claude/agents/` (au niveau utilisateur). Chaque subagent tourne dans sa propre fenêtre de contexte, avec un system prompt dédié et un accès aux outils restreint. Claude délègue automatiquement une tâche au subagent dont la description correspond, ou vous l'invoquez explicitement.
 
 Les **Agent Teams**, plus récentes et encore en évolution rapide, proposent un modèle où plusieurs agents collaborent activement, se répartissent le travail et se débloquent mutuellement, un peu comme un sprint Scrum plutôt qu'un simple MapReduce de workers indépendants. J'ai testé, et honnêtement ce n'est pas encore le confort auquel on s'attend : les reprises de session sont fragiles et la consommation de tokens grimpe vite dès que plusieurs agents discutent entre eux.
+
+:::tip
+
+https://code.claude.com/docs/fr/agent-teams
+
+:::
+
+![Subagents vs Agent Teams](subagents-vs-agent-teams-dark.webp)
 
 Pour une squad produit complète, l'analogie la plus juste reste : le PO/PM/Tech Lead orchestrent, les devs et testeurs exécutent en parallèle.
 
@@ -36,7 +46,17 @@ Commencez avec de simples subagents, c'est plus simple et plus stable. Ne migrez
 
 ## Définir les rôles
 
-Chaque rôle devient un fichier `.claude/agents/<role>.md` avec un frontmatter qui déclare `name` (l'identifiant de l'agent), `description` (ce qui déclenche sa délégation automatique) et `tools`/`disallowedTools` (ce qu'il a le droit de toucher). Un PO ne devrait pas avoir accès à `Write`/`Edit` sur le code, un dev n'a pas forcément besoin d'écrire dans Linear directement, etc.
+Chaque rôle devient un fichier `.claude/agents/<role>.md` avec un frontmatter qui déclare 
+* `name` : l'identifiant de l'agent
+* `description` : ce qui déclenche sa délégation automatique
+*  et `tools`/`disallowedTools` : les outils qu'il a le droit d'utiliser (Un PO ne devrait pas avoir accès à `Write`/`Edit` sur le code, un dev n'a pas forcément besoin d'écrire dans Linear directement, etc).
+:::tip
+
+https://code.claude.com/docs/fr/sub-agents
+
+:::
+
+Ce qui donne dans notre contexte : 
 
 **Product Owner** (`po.md`) : traduit un besoin métier en user stories priorisées, avec critères d'acceptation clairs. Accès Linear en lecture/écriture, pas d'accès au code.
 
@@ -48,7 +68,7 @@ Chaque rôle devient un fichier `.claude/agents/<role>.md` avec un frontmatter q
 
 **Testeurs** (`qa.md`) : écrivent et exécutent les tests (unitaires, e2e), valident les critères d'acceptation de la story, ouvrent des tickets de bug dans Linear si un écart est détecté. Accès code (lecture + tests), exécution de commandes (Bash), Linear.
 
-**UI/UX Designer** (`ui-ux.md`) : c'est le rôle le plus particulier, puisque Claude Code ne dessine pas dans Figma à votre place de façon autonome. Mais avec le serveur MCP Figma, il peut lire les maquettes, extraire les composants/variables/design tokens, et même écrire sur le canvas (créer/mettre à jour des frames, composants, styles) via la version distante du serveur. Ce rôle sert de pont entre l'intention design et le code : il vérifie la cohérence design system ↔ composants codés via Code Connect.
+**UI/UX Designer** (`ui-ux.md`) : c'est le rôle le plus particulier, puisque Claude Code ne dessine pas dans Figma à votre place de façon autonome. Mais avec le serveur MCP Figma, il peut lire les maquettes, extraire les composants/variables/design tokens, et même écrire sur le canvas (créer/mettre à jour des frames, composants, styles) via la version distante du serveur. Depuis l'arrivée de **Claude Design**, ce rôle peut aussi s'appuyer directement sur ce produit plutôt que de tout faire passer par Figma : Claude Design génère prototypes, wireframes et maquettes en langage naturel, en respectant le design system de l'équipe, puis package le tout dans un handoff directement exploitable par Claude Code. Le pont design ↔ code devient plus court, sans repasser systématiquement par un aller-retour Figma. Le rôle continue néanmoins de vérifier la cohérence design system ↔ composants codés via Code Connect quand Figma reste la source de vérité du design system.
 
 Exemple minimal de frontmatter pour le Tech Lead :
 
@@ -70,7 +90,13 @@ Avant toute implémentation, tu dois :
 
 ## Connecter les outils externes via MCP
 
-C'est la brique qui transforme cette équipe d'agents en véritable pipeline produit : sans MCP, vos agents "discutent" du produit ; avec MCP, ils lisent et écrivent dans vos vrais outils. Si le protocole vous semble encore flou, la [spec officielle MCP](https://modelcontextprotocol.io/introduction) vaut le détour, tout comme la [doc MCP de Claude Code](https://docs.claude.com/en/docs/claude-code/mcp) pour la partie configuration côté CLI.
+C'est la brique qui transforme cette équipe d'agents en véritable pipeline produit : sans MCP, vos agents "discutent" du produit ; avec MCP, ils lisent et écrivent dans vos vrais outils. 
+
+:::note
+
+Si le protocole vous semble encore flou, la [spec officielle MCP](https://modelcontextprotocol.io/introduction) vaut le détour, tout comme la [doc MCP de Claude Code](https://docs.claude.com/fr/docs/claude-code/mcp) pour la partie configuration côté CLI.
+
+:::
 
 ### Figma
 
@@ -94,7 +120,7 @@ Le mode de référence le plus fiable reste le lien Figma (clic droit sur un fra
 
 ### Linear
 
-Linear propose un serveur MCP officiel, hébergé, avec authentification OAuth, donc pas de token à gérer manuellement :
+Linear propose également un serveur MCP officiel, hébergé, avec authentification OAuth, donc pas de token à gérer manuellement :
 
 ```bash
 claude mcp add --transport http linear https://mcp.linear.app/mcp
@@ -108,18 +134,23 @@ Une fois connecté, vos agents PO/PM/Dev/QA peuvent chercher des tickets, en cr�
 "Lis le ticket ENG-142, implémente le correctif, puis passe le ticket en
 'In Review' et commente avec la liste des fichiers modifiés."
 ```
+:::tip
 
-### Ce que ça coûte vraiment
+Linear n'a rien d'obligatoire ici : le même workflow fonctionne avec n'importe quel outil de ticketing proposant un serveur MCP ou un CLI (Jira, GitHub Issues, Azure DevOps, etc.). Le principe reste identique, seul le serveur connecté change.
+
+:::
+
+### La facture qu'on ne voit pas venir
 
 C'est le point qu'on oublie facilement en montant ce genre de squad : chaque serveur MCP connecté injecte la définition de tous ses outils dans le contexte, à chaque tour de conversation, pour chaque agent qui y a accès. Avec Figma, Linear et éventuellement un troisième serveur branchés sur six agents, la facture en tokens grimpe vite, et le modèle met plus de temps à choisir le bon outil quand la liste s'allonge. Je l'ai découvert en connectant tous les serveurs à tous les agents "au cas où", avant de me rendre compte que ça ralentissait tout sans bénéfice réel.
 
 :::warning
 
-Plus vous connectez de serveurs MCP à plus d'agents, plus le coût en tokens et la latence de sélection d'outil augmentent, même sans qu'aucun outil ne soit jamais appelé. La simple présence d'un serveur dans le contexte d'un agent a un coût, connecté ou non à une tâche en cours.
+Plus vous connectez de serveurs MCP, plus le coût en tokens et la latence de sélection d'outil augmentent, même sans qu'aucun outil ne soit jamais appelé. La simple présence d'un serveur dans le contexte d'un agent a un coût, connecté ou non à une tâche en cours.
 
 :::
 
-Ce qui aide concrètement : ne connectez un serveur qu'aux agents qui en ont réellement besoin, un agent QA n'a par exemple aucune raison d'avoir accès au serveur Figma. Préférez les versions distantes aux versions locales quand elles existent, il y a moins de processus à maintenir et moins d'outils exposés par défaut. Et coupez les serveurs inutilisés en cours de session avec `/mcp` plutôt que de tout laisser actif en permanence.
+Concrètement : ne connectez un serveur qu'aux agents qui en ont vraiment besoin (un QA n'a rien à faire avec Figma), préférez les versions distantes aux versions locales, et coupez les serveurs inutilisés en cours de session avec /mcp plutôt que de tout laisser tourner en permanence.
 
 Sur le quand et le comment : connectez-vous au moment où l'agent a réellement besoin de lire ou d'écrire dans l'outil externe, pas par réflexe en début de session. Utilisez `claude mcp add` avec le scope le plus restreint possible (par projet plutôt que global), et privilégiez l'authentification OAuth quand le serveur la propose, plutôt qu'un token statique qui traînera dans une config quelque part.
 
@@ -130,20 +161,26 @@ Sur le quand et le comment : connectez-vous au moment où l'agent a réellement 
 
 Voici le déroulé typique pour livrer une fonctionnalité, de l'idée au code testé.
 
-Le PM décrit le besoin en langage naturel ; l'agent PM le formule en epic, vérifie qu'il rentre dans la roadmap, et crée le projet Linear correspondant. L'agent PO prend le relais pour transformer l'epic en user stories avec critères d'acceptation, les priorise, les pousse dans Linear.
+**Le PM** décrit le besoin en langage naturel ; l'agent PM le formule en epic, vérifie qu'il rentre dans la roadmap, et crée le projet Linear correspondant.
 
-Si un design existe déjà dans Figma, l'agent UI/UX extrait les composants et variables pertinents pour la story et les rattache au ticket. S'il faut prototyper, il peut générer un premier jet de composant codé puis l'envoyer vers Figma comme point de départ de discussion.
+**L'agent PO** prend le relais pour transformer l'epic en user stories avec critères d'acceptation, les priorise, et les pousse dans Linear.
 
-Le Tech Lead lit ensuite la story Linear et le contexte Figma, définit l'architecture des composants/endpoints, et découpe en tâches techniques assignées aux subagents devs. Chaque agent dev récupère sa tâche, lit le contexte Figma et Linear, implémente, ouvre une PR, met à jour le statut du ticket.
+**L'agent UI/UX** entre en jeu si un design existe déjà dans Figma : il extrait les composants et variables pertinents pour la story et les rattache au ticket. S'il faut prototyper, il peut générer un premier jet de composant codé puis l'envoyer vers Figma comme point de départ de discussion.
 
-L'agent QA écrit les tests correspondant aux critères d'acceptation, les exécute, et soit valide le ticket soit ouvre un ticket de bug avec repro détaillée. Le Tech Lead fait une dernière passe de review avant merge, en vérifiant la cohérence avec le design system via Code Connect.
+**Le Tech Lead** lit la story Linear et le contexte Figma, définit l'architecture des composants/endpoints, et découpe le tout en tâches techniques assignées aux subagents devs.
+
+Chaque **agent dev** récupère sa tâche, lit le contexte Figma et Linear, implémente, ouvre une PR, et met à jour le statut du ticket.
+
+**L'agent QA** écrit les tests correspondant aux critères d'acceptation, les exécute, et soit valide le ticket soit ouvre un ticket de bug avec repro détaillée.
+
+**Le Tech Lead** fait une dernière passe de review avant merge, en vérifiant la cohérence avec le design system via Code Connect.
 
 Ce découpage en rôles évite l'écueil classique du "un seul agent qui fait tout dans une seule conversation énorme" : chaque étape tourne dans un contexte propre, ce qui limite la pollution de contexte et améliore la qualité de chaque décision.
 
 
 ## CLAUDE.md : la colonne vertébrale partagée
 
-Tous les agents doivent partager un socle commun de règles projet, posé dans un fichier `CLAUDE.md` à la racine (la [doc officielle sur la mémoire de Claude Code](https://docs.claude.com/en/docs/claude-code/memory) détaille bien le mécanisme) :
+Tous les agents doivent partager un socle commun de règles projet, posé dans un fichier `CLAUDE.md` à la racine (la [doc officielle sur la mémoire de Claude Code](https://docs.claude.com/fr/docs/claude-code/memory) détaille bien le mécanisme). L'équivalent générique porté par [AGENTS.md](https://agents.md/) remplit le même rôle :
 
 ```markdown
 # Projet : [nom de l'app]
@@ -166,7 +203,7 @@ Ce fichier est lu par tous les agents en début de session : c'est ce qui garant
 
 ## Un agent chef d'orchestre pour lancer tout le workflow
 
-À un moment j'ai eu la flemme d'invoquer manuellement chaque rôle à la suite, alors j'ai ajouté un dernier subagent qui porte le workflow complet : il reçoit le besoin en langage naturel et enchaîne lui-même les étapes (PM → PO → UI/UX → Tech Lead → Devs → QA), en déléguant chaque tâche au bon agent.
+À un moment, invoquer manuellement chaque rôle à la suite est devenu fastidieux, alors j'ai crée un dernier subagent qui porte le workflow complet : il reçoit le besoin en langage naturel et enchaîne lui-même les étapes (PM → PO → UI/UX → Tech Lead → Devs → QA), en déléguant chaque tâche au bon agent.
 
 ```markdown
 ---
@@ -197,11 +234,11 @@ L'orchestrateur suit le script, il n'improvise pas quand une étape se passe mal
 
 ## Points de vigilance
 
-Commencez petit : trois ou quatre serveurs MCP (Figma, Linear, GitHub) suffisent largement au départ. Chaque serveur ajoute des outils que le modèle doit évaluer à chaque tour, et au-delà d'une dizaine de serveurs, le choix d'outil se dégrade nettement.
+**Commencez petit** : trois ou quatre serveurs MCP (Figma, Linear, GitHub) suffisent largement au départ. Chaque serveur ajoute des outils que le modèle doit évaluer à chaque tour, et au-delà d'une dizaine de serveurs, le choix d'outil se dégrade nettement.
 
-Les Agent Teams restent expérimentales, token-intensives, avec des limites connues sur la reprise de session. Validez d'abord votre workflow avec de simples subagents avant d'y migrer.
+**Les Agent Teams restent expérimentales**, token-intensives, avec des limites connues sur la reprise de session. Validez d'abord votre workflow avec de simples subagents avant d'y migrer.
 
-Restreignez les permissions par rôle : un agent PO n'a aucune raison d'avoir un accès en écriture au code, un agent QA n'a pas besoin d'écrire dans Figma. Le couple `tools`/`disallowedTools` dans le frontmatter de chaque subagent sert exactement à ça.
+**Restreignez les permissions par rôle** : un agent PO n'a aucune raison d'avoir un accès en écriture au code, un agent QA n'a pas besoin d'écrire dans Figma. Le couple `tools`/`disallowedTools` dans le frontmatter de chaque subagent sert exactement à ça.
 
 Le lien Figma reste la méthode la plus fiable pour donner du contexte design à un agent, la sélection active dans l'app desktop décroche trop souvent pour qu'on s'y fie.
 
@@ -211,5 +248,13 @@ Vérifiez toujours la provenance des serveurs MCP avant de les connecter. Un ser
 
 :::
 
+:::tip
 
-Au final, une "équipe" Claude Code n'a rien de la science-fiction. C'est une combinaison assez terre-à-terre de subagents bien scopés (un rôle, un fichier `.claude/agents/*.md`, des outils restreints, une mission claire), d'un `CLAUDE.md` qui fait office de contrat d'équipe, et de deux ou trois serveurs MCP qui relient vos agents à vos vrais outils de travail. Ce qui a changé pour moi, ce n'est pas la vitesse d'exécution mais la clarté : chaque agent sait précisément ce qu'il a le droit de faire, et je passe beaucoup moins de temps à réexpliquer le contexte à chaque nouvelle tâche.
+**CLI vs MCP :** À besoin équivalent, préférez un CLI officiel à un serveur MCP tiers (`gh` plutôt qu'un MCP GitHub communautaire) : commandes explicites et auditables, sans la couche d'indirection d'un serveur externe.
+
+:::
+
+
+Au final, monter une "équipe" Claude Code est une combinaison assez terre-à-terre de subagents bien scopés (un rôle, un fichier .claude/agents/*.md, des outils restreints, une mission claire), d'un CLAUDE.md qui fait office de contrat d'équipe, et de deux ou trois serveurs MCP qui relient vos agents à vos vrais outils de travail. Ce qui a changé pour moi, c'est autant la vitesse d'exécution que la clarté : chaque agent sait précisément ce qu'il a le droit de faire, et je passe beaucoup moins de temps à réexpliquer le contexte à chaque nouvelle tâche.
+
+Chez **Zatsit**, nous proposons d'ailleurs d'augmenter le SDLC de nos clients avec des méthodologies agentiques de ce type. Si vous souhaitez en apprendre davantage, [vous savez où nous trouver :)](https://www.zatsit.fr/)
