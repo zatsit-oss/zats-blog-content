@@ -23,7 +23,7 @@ Claude Code n'est plus seulement "un assistant qui code dans le terminal". Avec 
 
 J'ai fini par structurer une "équipe" de six agents (PO, PM, Tech Lead, Devs, Testeurs, UI/UX Designer) autour de Claude Code, connectée à **Figma** pour le design et **Linear** pour le ticketing. Pas parce que c'était le plan de départ : au début je n'avais qu'un seul agent générique, et je passais mon temps à lui répéter le contexte du projet à chaque nouvelle tâche. 
 Découper mes actions en rôles a réglé ça presque par hasard. 
-Je vous explique comment comment j'ai construit tout ça, et où ça coince encore.
+Je vous explique comment j'ai construit tout ça, et où ça coince encore.
 
 
 ## Subagents ou Agent Teams ?
