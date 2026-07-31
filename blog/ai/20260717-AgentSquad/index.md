@@ -10,6 +10,12 @@ Comment transformer Claude Code en véritable squad produit : un agent par rôle
 
 ![Claude Agent Squad](./agent-squad.webp)
 
+:::info
+
+Cet article s'appuie sur Claude Code, mais la logique s'applique à n'importe quel assistant IA, chaque chemin `.claude/agents`, peut être remplacé par la convention propre à votre outil.
+
+:::
+
 ## Monter une équipe d'agents avec Claude Code
 
 Claude Code n'est plus seulement "un assistant qui code dans le terminal". Avec les **subagents**, les **skills**, les **hooks**, et les serveurs **MCP** (Model Context Protocol), on peut construire quelque chose qui ressemble à une vraie squad produit, sauf que chaque rôle est un agent spécialisé, avec son propre contexte, ses propres outils, et une mission bien définie.
@@ -29,7 +35,7 @@ Les **Agent Teams**, plus récentes et encore en évolution rapide, proposent un
 
 :::tip
 
-https://code.claude.com/docs/fr/agent-teams
+[Documentation officielle des Agents Teams Claude](https://code.claude.com/docs/fr/agent-teams)
 
 :::
 
@@ -39,7 +45,7 @@ Pour une squad produit complète, l'analogie la plus juste reste : le PO/PM/Tech
 
 :::tip
 
-Commencez avec de simples subagents, c'est plus simple et plus stable. Ne migrez vers les Agent Teams que si le travail exige vraiment des échanges continus entre agents en cours de tâche.
+Commencez avec de simples **sous-agents**, c'est plus simple et plus stable. Ne migrez vers les Agent Teams que si le travail exige vraiment des échanges continus entre agents en cours de tâche.
 
 :::
 
@@ -58,34 +64,115 @@ https://code.claude.com/docs/fr/sub-agents
 
 Ce qui donne dans notre contexte : 
 
-**Product Owner** (`po.md`) : traduit un besoin métier en user stories priorisées, avec critères d'acceptation clairs. Accès Linear en lecture/écriture, pas d'accès au code.
-
 **Product Manager** (`pm.md`) : porte la vision produit, arbitre les priorités, découpe en épics/releases, garde la cohérence globale. Accès Linear (projets, roadmap), lecture Figma.
 
+```markdown
+---
+name: pm
+description: Porte la vision produit, arbitre les priorités, découpe un besoin en épics. À invoquer pour tout cadrage produit de haut niveau.
+tools: Read, Grep, Glob, mcp__linear
+---
+
+Tu es le Product Manager de l'équipe. Pour chaque besoin reçu :
+1. Vérifie qu'il s'inscrit dans la roadmap produit.
+2. Formalise le besoin en épic, avec son objectif métier.
+3. Cherche dans Linear un projet existant correspondant avant d'en créer un. Réutilise-le si trouvé, crée-le sinon.
+...
+```
+
+**Product Owner** (`po.md`) : traduit un besoin métier en user stories priorisées, avec critères d'acceptation clairs. Accès Linear en lecture/écriture, pas d'accès au code.
+
+```markdown
+---
+name: po
+description: Traduit un besoin métier en user stories priorisées avec critères d'acceptation. À invoquer pour tout découpage fonctionnel.
+tools: Read, Grep, Glob, mcp__linear
+---
+
+Tu es le Product Owner de l'équipe. Pour chaque besoin reçu :
+1. Rédige des user stories au format "En tant que... je veux... afin de...".
+2. Ajoute des critères d'acceptation clairs et testables pour chacune.
+3. Priorise les stories (must-have / should-have / nice-to-have).
+...
+```
+
 **Tech Lead** (`tech-lead.md`) : traduit les stories en tâches techniques, définit l'architecture, fait les choix techniques (Vue 3/TS, structure des composants, conventions), reviewe le travail des devs. Accès lecture/écriture code, Linear, Figma (design system, variables).
-
-**Devs** (`dev-frontend.md`, `dev-backend.md`) : implémentent les tâches assignées, en s'appuyant sur le contexte Figma (composants, tokens) et les specs Linear. Accès code complet, Figma en lecture, Linear pour mettre à jour le statut des tickets.
-
-**Testeurs** (`qa.md`) : écrivent et exécutent les tests (unitaires, e2e), valident les critères d'acceptation de la story, ouvrent des tickets de bug dans Linear si un écart est détecté. Accès code (lecture + tests), exécution de commandes (Bash), Linear.
-
-**UI/UX Designer** (`ui-ux.md`) : c'est le rôle le plus particulier, puisque Claude Code ne dessine pas dans Figma à votre place de façon autonome. Mais avec le serveur MCP Figma, il peut lire les maquettes, extraire les composants/variables/design tokens, et même écrire sur le canvas (créer/mettre à jour des frames, composants, styles) via la version distante du serveur. Depuis l'arrivée de **Claude Design**, ce rôle peut aussi s'appuyer directement sur ce produit plutôt que de tout faire passer par Figma : Claude Design génère prototypes, wireframes et maquettes en langage naturel, en respectant le design system de l'équipe, puis package le tout dans un handoff directement exploitable par Claude Code. Le pont design ↔ code devient plus court, sans repasser systématiquement par un aller-retour Figma. Le rôle continue néanmoins de vérifier la cohérence design system ↔ composants codés via Code Connect quand Figma reste la source de vérité du design system.
-
-Exemple minimal de frontmatter pour le Tech Lead :
 
 ```markdown
 ---
 name: tech-lead
 description: Traduit les user stories Linear en tâches techniques, définit l'architecture, review le code des devs. À invoquer pour toute décision d'architecture ou de découpage technique.
-tools: Read, Grep, Glob, Bash, Edit, Write
+tools: Read, Grep, Glob, Bash, Edit, Write, mcp__figma, mcp__linear
 ---
 
 Tu es le Tech Lead de l'équipe. Stack : Vue 3 + TypeScript (front), Node.js (back).
 Avant toute implémentation, tu dois :
 1. Lire le ticket Linear associé et ses critères d'acceptation.
-2. Vérifier le design Figma lié (composants, variables, contraintes responsive).
+2. Traiter les détails de design (couleurs, positions, composants) déjà écrits par l'agent UI/UX comme la source de vérité design, et n'ouvrir Figma toi-même que pour les contraintes techniques/responsive non couvertes.
 3. Découper la story en tâches techniques atomiques, une par composant/endpoint.
-4. Assigner chaque tâche au sous-agent dev concerné avec un contexte clair.
+4. Chercher dans Linear une sous-tâche existante correspondante avant d'en créer une.
 ```
+
+:::tip
+
+Pour pousser ce Tech Lead vers plus de spécialisation (conventions Vue 3/TypeScript, patterns Node.js, bonnes pratiques...), passez par des **skills** dédiés plutôt que par un prompt system toujours plus long. 
+Créez un skill par convention/stack, puis référencez-le dans le frontmatter de l'agent (champ `skills`). Le Tech Lead les charge à la demande, sans alourdir son contexte.
+
+:::
+
+**Devs** (`dev-frontend.md`, `dev-backend.md`) : implémentent les tâches assignées, en s'appuyant sur le contexte Figma (composants, tokens) et les specs Linear. Accès code complet, Figma en lecture, Linear pour mettre à jour le statut des tickets.
+
+```markdown
+---
+name: dev-frontend
+description: Implémente les tâches frontend assignées par le Tech Lead (Vue 3 + TypeScript). À invoquer pour toute tâche de composant UI.
+tools: Read, Grep, Glob, Bash, Edit, Write, mcp__linear
+---
+
+Tu es développeur frontend. Stack : Vue 3, TypeScript.
+Pour chaque tâche reçue :
+1. Passe le ticket Linear en "In Progress" avant de commencer.
+2. Lis le contexte Linear associé, y compris les détails de design propagés par le Tech Lead depuis l'agent UI/UX.
+3. Implémente le composant en respectant les design tokens (pas de couleur en dur).
+4. Une fois terminé, passe le ticket en "In Review".
+```
+
+**Testeurs** (`qa.md`) : écrivent et exécutent les tests (unitaires, e2e), valident les critères d'acceptation de la story, ouvrent des tickets de bug dans Linear si un écart est détecté. Accès code (lecture + tests), exécution de commandes (Bash), Linear.
+
+```markdown
+---
+name: qa
+description: Écrit et exécute les tests, valide les critères d'acceptation d'une story, ouvre des bugs Linear si besoin. À invoquer pour toute validation de story.
+tools: Read, Grep, Glob, Bash, Edit, mcp__linear
+---
+
+Tu es le QA de l'équipe. Pour chaque story à valider :
+1. Relis les critères d'acceptation du ticket Linear.
+2. Écris les tests correspondants (unitaires et/ou e2e).
+3. Exécute-les.
+4. En cas d'écart, ouvre un ticket de bug Linear avec une reproduction détaillée, taggé selon la zone concernée (`Frontend`, `Backend`, `Database`, ...).
+```
+
+**UI/UX Designer** (`ui-ux.md`) : c'est le rôle le plus particulier, puisque Claude Code ne dessine pas dans Figma à votre place de façon autonome. Mais avec le serveur MCP Figma, il peut lire les maquettes, extraire les composants/variables/design tokens, et même écrire sur le canvas (créer/mettre à jour des frames, composants, styles).
+
+```markdown
+---
+name: ui-ux
+description: Extrait le contexte design Figma (composants, couleurs, positions, variables) d'une story, et écrit les détails d'implémentation frontend dans les tickets Linear. À invoquer pour tout besoin de contexte design.
+tools: Read, Grep, Glob, Edit, Write, mcp__figma, mcp__linear
+---
+
+Tu es l'UI/UX Designer de l'équipe. Le design de référence est le fichier Figma fourni pour ce projet. Pour chaque story reçue :
+1. Extrais du design Figma les composants, couleurs, positions et variables pertinents pour la story.
+2. Écris ces détails dans le ticket Linear correspondant sous un format structuré fixe, un bloc par composant.
+3. Capture une image de la frame Figma concernée et attache-la au même ticket Linear.
+```
+
+:::tip
+
+Depuis l'arrivée de **Claude Design**, ce rôle peut aussi s'appuyer directement sur ce produit plutôt que de tout faire passer par Figma. Claude Design génère prototypes, wireframes et maquettes en langage naturel. Le pont design ↔ code devient plus court, sans repasser systématiquement par un aller-retour Figma.
+
+:::
 
 
 ## Connecter les outils externes via MCP
@@ -255,6 +342,12 @@ Vérifiez toujours la provenance des serveurs MCP avant de les connecter. Un ser
 :::
 
 
-Au final, monter une "équipe" Claude Code est une combinaison assez terre-à-terre de subagents bien scopés (un rôle, un fichier .claude/agents/*.md, des outils restreints, une mission claire), d'un CLAUDE.md qui fait office de contrat d'équipe, et de deux ou trois serveurs MCP qui relient vos agents à vos vrais outils de travail. Ce qui a changé pour moi, c'est autant la vitesse d'exécution que la clarté : chaque agent sait précisément ce qu'il a le droit de faire, et je passe beaucoup moins de temps à réexpliquer le contexte à chaque nouvelle tâche.
+Au final, monter une "équipe" d'agents est une combinaison assez terre-à-terre de **sous-agents** bien scopés (un rôle, un fichier .claude/agents/*.md, des outils restreints, une mission claire)
+d'un `CLAUDE.md` qui fait office de contrat d'équipe
+et de deux ou trois serveurs MCP qui relient vos agents à vos vrais outils de travail. 
 
+Ce qui a changé pour moi, c'est autant la vitesse d'exécution que la clarté : chaque agent sait précisément ce qu'il a le droit de faire, et je passe beaucoup moins de temps à réexpliquer le contexte à chaque nouvelle tâche.
+
+:::info[Pensez à nos formations et accompagnement !]
 Chez **Zatsit**, nous proposons d'ailleurs d'augmenter le SDLC de nos clients avec des méthodologies agentiques de ce type. Si vous souhaitez en apprendre davantage, [vous savez où nous trouver :)](https://www.zatsit.fr/)
+:::info
