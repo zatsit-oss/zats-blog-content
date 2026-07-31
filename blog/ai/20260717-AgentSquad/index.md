@@ -348,6 +348,6 @@ et de deux ou trois serveurs MCP qui relient vos agents à vos vrais outils de t
 
 Ce qui a changé pour moi, c'est autant la vitesse d'exécution que la clarté : chaque agent sait précisément ce qu'il a le droit de faire, et je passe beaucoup moins de temps à réexpliquer le contexte à chaque nouvelle tâche.
 
-:::info[Pensez à nos formations et accompagnement !]
-Chez **Zatsit**, nous proposons d'ailleurs d'augmenter le SDLC de nos clients avec des méthodologies agentiques de ce type. Si vous souhaitez en apprendre davantage, [vous savez où nous trouver :)](https://www.zatsit.fr/)
+:::info[Nous pouvons vous former !]
+Chez **zatsit**, nous proposons d'ailleurs d'augmenter le SDLC de nos clients avec des méthodologies agentiques de ce type. Si vous souhaitez en apprendre davantage, [vous savez où nous trouver :)](https://www.zatsit.fr/)
 :::
