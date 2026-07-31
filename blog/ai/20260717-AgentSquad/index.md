@@ -58,7 +58,7 @@ Chaque rôle devient un fichier `.claude/agents/<role>.md` avec un frontmatter q
 *  et `tools`/`disallowedTools` : les outils qu'il a le droit d'utiliser (Un PO ne devrait pas avoir accès à `Write`/`Edit` sur le code, un dev n'a pas forcément besoin d'écrire dans Linear directement, etc).
 :::tip
 
-https://code.claude.com/docs/fr/sub-agents
+[Documentation officielle des sous-agents](https://code.claude.com/docs/fr/sub-agents)
 
 :::
 
@@ -350,4 +350,4 @@ Ce qui a changé pour moi, c'est autant la vitesse d'exécution que la clarté :
 
 :::info[Pensez à nos formations et accompagnement !]
 Chez **Zatsit**, nous proposons d'ailleurs d'augmenter le SDLC de nos clients avec des méthodologies agentiques de ce type. Si vous souhaitez en apprendre davantage, [vous savez où nous trouver :)](https://www.zatsit.fr/)
-:::info
+:::
