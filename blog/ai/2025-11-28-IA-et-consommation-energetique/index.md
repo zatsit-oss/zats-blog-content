@@ -10,6 +10,8 @@ tags:
 
 Depuis plusieurs mois nous entendons parler dans les médias de la consommation énergétique inquiétante de l'Intelligence Artificielle (IA). Cette alerte fait désormais partie de notre quotidien, et j'en suis venu à me poser plusieurs questions : quelle est la consommation d'un prompt ChatGPT ? Combien faut-il de prompts pour obtenir l'équivalent d'un plein d'essence ? Ou encore, combien de prompts faut-il pour consommer l'équivalent en euro d'un abonnement Netflix ? 
 
+<!-- truncate -->
+
 # IA et consommation énergétique
 
 ## Contexte et introduction
