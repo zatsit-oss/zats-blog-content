@@ -11,6 +11,8 @@ tags: [general]
 
 La FOSDEM (Free and Open Source Software Developers' European Meeting) est un événement annuel qui rassemble les acteurs et actrices de l'open source du monde entier. Pour la 3e année consécutive, votre serviteur a pris sur son temps libre pour se rendre à Bruxelles et assister à une douzaine de conférences sur les plus de 1000 qui se tenaient ce week-end du 1er et 2 février 2026. Voici un condensé de ce qui a retenu son attention.
 
+<!-- truncate -->
+
 ## La FOSDEM : du plus utilitaire au plus expérimental
 
 La FOSDEM est à l'image de l'open source : c'est un événement gratuit qui tient grâce à l'engagement de certains acteurs privés (comme Google), de fondations liées à l'open source (comme Red Hat), de partenaires publics (comme l'Université Libre de Bruxelles) et surtout de centaines de bénévoles qui organisent l'événement, accueillent les participants, et surtout créent le contenu des plus de 1000 conférences qui se tiennent pendant ces deux jours.
