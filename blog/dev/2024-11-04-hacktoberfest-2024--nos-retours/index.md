@@ -111,8 +111,3 @@ Ensemble, continuons à construire de meilleurs outils, plus justes et plus acce
 ![team zatsit](zatsit.avif)
 
 <!-- blog post end -->
-
-Vous avez aimé ce post ? Partagez le !
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https://blog.zatsit.fr/blog/hacktoberfest-2024-zatsit-engage-open-source)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=https://blog.zatsit.fr/blog/hacktoberfest-2024-zatsit-engage-open-source)

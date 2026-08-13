@@ -72,6 +72,3 @@ Nous sommes convaincus qu’il peut exister un modèle d’entreprise hybride en
 Et aujourd’hui, nous avançons avec cette vision forte !
 
 “Nous sommes des semeurs de graines !”
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fentreprise-a-mission)
-
