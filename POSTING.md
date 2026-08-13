@@ -129,15 +129,24 @@ To use this feature in your article, please read the [related docusaurus documen
 
 ### Add social media link
 
-In this version, the minimalist solution found to add link to share on `X` and `LinkedIn` is to copy/paste this two lines, customizing the query attribute, for example : 
-```
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fredpanda-introduction%2F)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Pr%C3%A9sentation%20de%20RedPanda%2C%20au%20travers%20du%20premier%20cours%20d%C3%A9di%C3%A9%20aux%20d%C3%A9veloppeurs%20de%20la%20%22RedPanda%20University%22%20que%20j%27ai%20suivi%2C%0Aje%20vous%20pr%C3%A9sente%20les%20grands%20principes%20et%20les%20premiers%20pas%20dans%20cet%20%C3%A9cosyst%C3%A8me&url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fredpanda-introduction%2F)
+Nothing to do: the share links to `LinkedIn` and `X` are added automatically at
+the bottom of every article by the `ShareLinks` component of the site shell. The
+URL is derived from your `slug`, so it can no longer drift from the article it
+points at.
 
+The share text defaults to the article title. To write your own, add an optional
+`shareText` to the frontmatter:
+
+```yml
+---
+slug: redpanda-introduction
+title: Premier cours de RedPanda
+shareText: "Présentation de RedPanda, au travers du premier cours dédié aux développeurs de la RedPanda University"
+---
 ```
-Take care of the relative path of the two social icons, regarding the folders in the category.
-- For `LinkedIn` and `X` : the url of your post use the root of the blog and your slug. You have to encode your url (you can use [URL Encoder](https://www.urlencoder.org/)
-- For `X` only : encode the description of your post too.
+
+Do not paste the old two-line snippet: its relative paths pointed into the
+shell's `static/` folder, which the content repository no longer sits inside.
 
 ### Add a video link in your post
 
