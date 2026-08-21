@@ -10,7 +10,7 @@ La communauté open source a besoin d'aide (d'idées, de compétences, de temps)
 
 Il était donc évident pour nous de participer activement à cet événement, en contribuant sur des projets qui nous tiennent à cœur, ou que nous utilisons au quotidien.
 
-![hacktoberfest banner](hbf.avif)
+![hacktoberfest banner](hbf.webp)
 <!-- truncate -->
 
 ## Faut-il rappeler ce qu'est l'open source ?
@@ -108,6 +108,6 @@ Chaque contribution, même minime, aide à faire avancer la technologie.
 
 Ensemble, continuons à construire de meilleurs outils, plus justes et plus accessibles.
 
-![team zatsit](zatsit.avif)
+![team zatsit](zatsit.jpeg)
 
 <!-- blog post end -->
