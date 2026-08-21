@@ -20,7 +20,7 @@ je vous présente les grands principes et les premiers pas dans cet écosystème
 
 ## Oh il est trop mignon
 
-![the redpanda flying like Superman](https://images.ctfassets.net/paqvtpyf8rwu/GeLUVavqqxhFZolzU9jM3/3b8dddc74a632e63f17e0a5e40b971bb/super-panda-update.svg "the redpanda flying like Superman")
+![the redpanda flying like Superman](./super-panda-update.svg "the redpanda flying like Superman")
 
 RedPanda n’est pas qu’une jolie mascotte, c’est aussi un sacré challenger dans le monde du streaming et surtout un challenger d’Apache Kafka. 
 C’est en tout cas son angle d’attaque clairement exposé quand vous lisez le README du projet : 
