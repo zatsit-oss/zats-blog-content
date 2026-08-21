@@ -6,6 +6,7 @@ date: 2024-06-21
 tags: 
   - "green"
   - "tech"
+  - "environnement"
 shareText: "Quels sont les impacts de l'exploitation minière pour la production de nos appareils numériques et autres"
 ---
 

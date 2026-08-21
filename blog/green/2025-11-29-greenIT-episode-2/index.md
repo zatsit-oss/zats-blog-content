@@ -6,6 +6,7 @@ date: 2025-11-29
 tags: 
   - "green"
   - "tech"
+  - "environnement"
 ---
 Nous aimerions tous que ce ne soit qu'une goutte d'eau dans l'océan, malheureusement la réalité se mesure en centaines de milliards
 de litres. Je veux bien sûr parler ici de la consommation d'eau des datacenters, ceux qui calculent pour vous des itinéraires, vous permettent de chiller
