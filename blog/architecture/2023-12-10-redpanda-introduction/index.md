@@ -36,7 +36,7 @@ Pour cela, RedPanda a créé la [RedPanda University](https://university.redpand
 
 ## Ouvrez votre livre au chapitre 1 : Streaming Basics
 
-![redpanda chevauchant un missile](./redpanda-missile.png)
+![redpanda chevauchant un missile](./redpanda-missile.webp)
 
 La première partie du cours vous fournira un récapitulatif de ce qu’est un évènement dans les [EDA](https://en.wikipedia.org/wiki/Event-driven_architecture),
 dans quels cas d’usage nous les utilisons... 
@@ -214,7 +214,7 @@ Toutes ces commandes, vous me direz que c’est bien sympa, mais au quotidien vo
 et ne pas taper toutes ces commandes. Certes, mais connaître la base c’est aussi sympa et ça peut dépanner quand on ne peut pas brancher d’UI justement,
 pour la console ce sera sur cette [page](https://github.com/redpanda-data/console).
 
-![screenshot de la console redpanda montrant une overview du cluster](./redpanda-console.png)
+![screenshot de la console redpanda montrant une overview du cluster](./redpanda-console.webp)
 
 ## Un peu de code Java
 
@@ -263,13 +263,13 @@ de l’arbre qui coule le long de la rivière, il les dévore dès qu’il peut 
 
 > La donnée c’est pareil, on doit la consommer fraiche et rapidement.
 
-![redpanda on a tree watching fruit in a river](./redpanda-river-watching-fruit.png)
+![redpanda on a tree watching fruit in a river](./redpanda-river-watching-fruit.webp)
 
 Avant de parler des transformations plus spécifiques à Redpanda, on découvre ou redécouvre les streams stateless ou stateful dans ce cours,
 le premier n’a pas besoin de retenir ce qu’il voit et est donc moins gourmand en mémoire tandis que le second aura besoin 
 de retenir des informations pour garder la cohérence (application State, comme avec KStream et sa base [RocksDB](https://rocksdb.org) embedded).
 
-![redpanda sitting on a planet with other planets around him](./redpanda-on-planet.png)
+![redpanda sitting on a planet with other planets around him](./redpanda-on-planet.webp)
 
 La promesse des **Redpanda Data Transform** : co-localiser les transformations stateless directement dans le broker. 
 Comment ? En écrivant un peu de NodeJS et en utilisant la CLI pour déployer ces transformations 
@@ -428,7 +428,7 @@ Un simple groupBy associé à un Count, qui donnera une opération dites “stat
 Ce qui va nécessiter de créer un [state store](https://docs.confluent.io/platform/current/streams/architecture.html#streams-architecture-state) 
 pour conserver l’état des données qu’on agrège et compte. Je vous conseille de lire et relire la documentation associée pour bien comprendre le concept (lié à la compaction) et les mécanisme de chargement en mémoire (RocksDB), de haute disponibilité et de tolérance associé.
 
-![Untitled](./Untitled%204.png)
+![Untitled](./Untitled%204.webp)
 
 Ainsi dans notre exemple, la production de ces évènements : 
 
