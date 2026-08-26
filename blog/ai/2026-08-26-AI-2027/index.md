@@ -59,21 +59,25 @@ Les deux scénarios posent les questions suivantes :
 
 La question peut se poser à plus petite échelle : en tant que développeur, est-ce que je déploie un modèle sans réellement comprendre le vrai comportement qu'il y a derrière ? Réflexion encore plus présent à différentes échelles comme un laboratoire de recherche, un pays, etc...
 
-## La course avec la Chine
+### La course avec la Chine
 
 Dans le rapport, les États-Unis et la Chine ne coopèrent jamais. C'est la guerre/course à l'IA. Une grande rivalité entre les deux pays s'intensifie.
 
 Cette course amène au développement massif de datacenters, les choix ne semblent pas toujours les bons, et personne ne pense se diriger vers le pire scénario. Tout cela par crainte que l'autre avance plus vite que soi-même.
 
-## L'angle mort : l'écologie
+C'est vrai le coeur du piège, chaque pays veut être le premier à développer l'IA la plus avancée, mais est-ce que cette course à l'IA est vraiment la priorité ? Est-ce que l'urgence écologique n'est pas plus importante ?
 
-Ce sujet n'est absolument pas traité dans le rapport, ou très peu...
+Les scénarios laisse la question ouverte, mais il est clair que la course à l'IA est une priorité pour les pays, et que l'urgence écologique n'est pas au centre des préoccupations.
+
+### L'angle mort : l'écologie
+
+Comme je disais précédemment, ce sujet n'est absolument pas traité dans le rapport, ou très peu...
 
 La course aux datacenters est présente mais aucun problème énergétique ou climatique n'est mentionné.
 
 On sait que la consommation électrique des datacenters devrait doubler d'ici fin 2030 sous l'effet du boom de l'IA. Quant à la consommation en eau pour refroidir tout ça, elle devrait dépasser celle d'un pays comme le Danemark.
 
-Dans le scénario **Race**, tout est mentionné comme de l'urgence géopolitique, mais est-ce que l'urgence écologique n'est pas plus notre priorité ?
+Ce silence dans le rapport montre bien que ce n'est pas une priorité. Peux-t-on avancer autant sur une technologie sans se demander ce qu'elle nous couterait ?
 
 ## Conclusion
 
