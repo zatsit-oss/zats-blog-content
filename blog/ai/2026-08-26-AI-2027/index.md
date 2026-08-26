@@ -1,11 +1,11 @@
 ---
 slug: ai-2027
-title: AI 2027 - et si le code qu'on écrit aujourd'hui écrivait bientôt le sien ?
+title: AI 2027 - et si on ne s'en rendait pas compte ?
 authors: [mslimani]
 tags: [ai]
 ---
 
-# AI 2027 - et si le code qu'on écrit aujourd'hui écrivait bientôt le sien ?
+# AI 2027 - et si on ne s'en rendait pas compte ?
 
 [Daniel Kokotajlo](https://fr.wikipedia.org/wiki/Daniel_Kokotajlo_(chercheur)) publie [AI 2027]((https://ai-2027.com), un an après avoir quitté l'entreprise OpenAI en 2024. Ce rapport déroule ce que pourrait devenir l'IA d'ici fin 2027.
 
