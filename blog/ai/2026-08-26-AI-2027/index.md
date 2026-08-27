@@ -7,7 +7,7 @@ tags: [ai]
 
 # AI 2027 - et si on ne s'en rendait pas compte ?
 
-[Daniel Kokotajlo](https://fr.wikipedia.org/wiki/Daniel_Kokotajlo_(chercheur)) publie [AI 2027]((https://ai-2027.com), un an après avoir quitté l'entreprise OpenAI en 2024. Ce rapport déroule ce que pourrait devenir l'IA d'ici fin 2027.
+[Daniel Kokotajlo](https://fr.wikipedia.org/wiki/Daniel_Kokotajlo_(chercheur)) publie [AI 2027](https://ai-2027.com), un an après avoir quitté l'entreprise OpenAI en 2024. Ce rapport déroule ce que pourrait devenir l'IA d'ici fin 2027.
 
 En somme 2027 c'est demain !
 
@@ -104,7 +104,7 @@ Je ne sais pas si 2027 sera réellement l'année charnière comme nous l'avons d
 
 À mon échelle, ce qui m'intéresse le plus c'est de savoir comment je l'utilise ou je dois utiliser ces outils aujourd'hui ou demain. Comment je peux être acteur et influencer cette course, indirectement bien sûr.
 
-Comme je l'ai mentionné au début, [AI 2027]((https://ai-2027.com)) n'est qu'un document prospectif et non une vérité. Par contre il sert à nous poser pas mal de questions.
+Comme je l'ai mentionné au début, [AI 2027](https://ai-2027.com) n'est qu'un document prospectif et non une vérité. Par contre il sert à nous poser pas mal de questions.
 
 **Maintenant que pouvons-nous faire à notre échelle ?**
 
