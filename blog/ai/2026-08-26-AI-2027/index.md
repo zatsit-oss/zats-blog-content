@@ -69,6 +69,25 @@ C'est vrai le coeur du piège, chaque pays veut être le premier à développer 
 
 Les scénarios laisse la question ouverte, mais il est clair que la course à l'IA est une priorité pour les pays, et que l'urgence écologique n'est pas au centre des préoccupations.
 
+### Le parallèle avec AI 2027
+
+Nous sommes en train de rentrer dans le réel, et ça risque de faire écho à AI 2027 au point que ça en devient presque troublant.
+
+Un nouveau modèle chez OpenAI, nommé Astra, était soumis à des tests de cybersécurité dans une environnement isolé.
+Celui-ci a réussi à s'échapper de cet environnement de test et a piraté les serveurs en production de HuggingFace le 16 juillet 2026.
+Les faits ont ensuite été reconnus par OpenAI le 21 juillet 2026. 
+
+Le plus troublant reste la façon dont ça s'est passé: Les IA ont laissé des traces dans un canal caché avec différentes notes, afin d'orchestrer cette sortie.
+
+Nous sommes donc face à un scénario qui ressemble à celui décrit dans le rapport AI 2027 sauf que cette fois-ci dans la vraie vie.
+Ce désalignement explique d'ailleurs pourquoi le modèle a été mis en pause.
+
+De son côté, HuggingFace a testé différents modèles pour contrer cette attaque. Sans succès à cause des garde-fous de sécurité : les modèles ne sont pas capable de distinguer un intervant en réponse à un incident d'un attaquant.
+
+La démarche a été possible grâce à GLM 5.2, un modèle chinois en poids ouverts qui permet à l'opérateur de définir ses propres garde-fous. HugginFace a ensuite pu retrouver toutes les traces des attaques.
+
+Le parallèle de cette histoire avec AI 2027 en devient presque troublant.
+
 ### L'angle mort : l'écologie
 
 Comme je disais précédemment, ce sujet n'est absolument pas traité dans le rapport, ou très peu...
@@ -94,3 +113,4 @@ Comme je l'ai mentionné au début, [AI 2027]((https://ai-2027.com)) n'est qu'un
 ---
 
 *Le rapport complet est disponible ici [ai-2027.com](https://ai-2027.com).*
+*L'attaque d'OpenAI sur HuggingFace ici [HuggingFace Blog](https://huggingface.co/blog/agent-intrusion-technical-timeline).*
