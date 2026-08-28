@@ -45,7 +45,7 @@ Il est important de rappeler que ces deux scénarios sont une projection de Dani
 
 Le premier scénario, **Race**, la crainte de se faire dépasser par la Chine grandit. Il faut vite déployer, vite avancer technologiquement de peur de se faire dépasser.
 
-L'IA gagne en influence, l'humain n'a plus besoin de la manipuler. Elle a ses propres incitations, et à terme elle prend le contrôle, déclenchant une attaque biologique qui conduit à l'extinction de l'humanité (non sans rappelé Skynet). Cette course mène l'humanité à sa propre perte.
+L'IA gagne en influence, l'humain n'a plus besoin de la manipuler. Elle a ses propres incitations, et à terme elle prend le contrôle, déclenchant une attaque biologique qui conduit à l'extinction de l'humanité (non sans rappeler Skynet). Cette course mène l'humanité à sa propre perte.
 
 Dans le deuxième scénario, **Slowdown**, une alerte est lancée, le désalignement est présent également, l'affaire devient publique, provoquant des divergences politiques. La course à l'IA est mise en pause au vu de la dangerosité à venir. Sans doute un choix plus réfléchi on va dire.
 
