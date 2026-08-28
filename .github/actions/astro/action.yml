@@ -1,0 +1,96 @@
+---
+name: Fetch and build the Astro blog
+description: >
+  Checks out the blog shell and this content repository as sibling directories,
+  then builds the site. Replaces the docusaurus action, which copied the content
+  into the shell: the Astro loader reads it in place and nothing is copied.
+
+  The build lands in zats-blog/dist, which is what a caller must publish. It is
+  not build/ any more.
+
+inputs:
+  token:
+    description: 'Token used to check out the blog shell.'
+    required: true
+  branch:
+    description: 'Branch of this content repository to build.'
+    required: false
+    default: 'main'
+  shell-ref:
+    description: 'Branch of the zats-blog shell to build with.'
+    required: false
+    default: 'main'
+
+runs:
+  using: 'composite'
+  steps:
+    # Two checkouts, side by side under the workspace, and the second name is
+    # not a preference: the shell resolves the content through
+    # CONTENT_REPO = '../zats-blog-content' in src/consts.ts, and the avatars
+    # through a literal glob '../../../zats-blog-content/authors/img/*' that
+    # Vite only analyses because it is a literal. Rename this directory and the
+    # build fails on missing content, not on a warning.
+    - name: Checkout the blog shell
+      uses: actions/checkout@v4
+      with:
+        repository: 'zatsit-oss/zats-blog'
+        ref: ${{ inputs.shell-ref }}
+        token: ${{ inputs.token }}
+        path: zats-blog
+
+    - name: Checkout this content repository beside it
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ inputs.branch }}
+        token: ${{ inputs.token }}
+        # Depth 1 is enough: publication dates come from the article folder
+        # names, never from git history, which is what the loader asserts.
+        fetch-depth: 1
+        path: zats-blog-content
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        # From the shell's .node-version rather than pinned here: Astro 7 needs
+        # >= 22.12, and this action asked for 20 while it built Docusaurus.
+        node-version-file: zats-blog/.node-version
+        cache: 'npm'
+        cache-dependency-path: zats-blog/package-lock.json
+
+    - name: Install dependencies
+      shell: bash
+      working-directory: zats-blog
+      run: npm ci
+
+    - name: Type-check
+      shell: bash
+      working-directory: zats-blog
+      run: npm run check
+
+    - name: Build
+      shell: bash
+      working-directory: zats-blog
+      # Also runs Pagefind and prunes its unused interfaces, see package.json.
+      run: npm run build
+
+    - name: Quality gates
+      shell: bash
+      working-directory: zats-blog
+      # Both exit non-zero on failure, so a contrast regression or a page over
+      # budget stops the publication instead of reaching the reader.
+      run: |
+        npm run check:a11y
+        npm run check:eco
+
+    - name: Check the output before anyone publishes it
+      shell: bash
+      # The production workflow empties the bucket before uploading. A build
+      # that produced nothing usable would therefore blank the site, so the
+      # output is asserted here, while failing still costs nothing.
+      run: |
+        set -euo pipefail
+        test -f zats-blog/dist/index.html || {
+          echo "::error::zats-blog/dist/index.html absent, rien à publier"
+          exit 1
+        }
+        echo "Pages construites : $(find zats-blog/dist -name '*.html' | wc -l)"
