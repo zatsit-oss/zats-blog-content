@@ -57,7 +57,7 @@ Les deux scénarios posent les questions suivantes :
 - Est-ce qu'on accepte de déployer sans réellement en comprendre plus ?
 - Avons-nous la maitrise de cette révolution ?
 
-La question peut se poser à plus petite échelle : en tant que développeur, est-ce que je déploie un modèle sans réellement comprendre le vrai comportement qu'il y a derrière ? Réflexion encore plus présent à différentes échelles comme un laboratoire de recherche, un pays, etc...
+La question peut se poser à plus petite échelle : en tant que développeur, est-ce que je déploie un modèle sans réellement comprendre le vrai comportement qu'il y a derrière ? Réflexion encore plus présente à différentes échelles comme un laboratoire de recherche, un pays, etc...
 
 ### La course avec la Chine
 
