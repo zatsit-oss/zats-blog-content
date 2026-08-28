@@ -65,7 +65,7 @@ Dans le rapport, les États-Unis et la Chine ne coopèrent jamais. C'est la guer
 
 Cette course amène au développement massif de datacenters, les choix ne semblent pas toujours les bons, et personne ne pense se diriger vers le pire scénario. Tout cela par crainte que l'autre avance plus vite que soi-même.
 
-C'est vrai le coeur du piège, chaque pays veut être le premier à développer l'IA la plus avancée, mais est-ce que cette course à l'IA est vraiment la priorité ? Est-ce que l'urgence écologique n'est pas plus importante ?
+C'est vrai le cœur du piège, chaque pays veut être le premier à développer l'IA la plus avancée, mais est-ce que cette course à l'IA est vraiment la priorité ? Est-ce que l'urgence écologique n'est pas plus importante ?
 
 Les scénarios laisse la question ouverte, mais il est clair que la course à l'IA est une priorité pour les pays, et que l'urgence écologique n'est pas au centre des préoccupations.
 
