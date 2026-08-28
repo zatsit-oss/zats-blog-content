@@ -17,7 +17,7 @@ En tant que développeur, je ne l'ai pas lu comme un énième article annonçant
 
 **À quel moment un outil cesse d'en être un ?**
 
-Il se peut que la réponse ne soit pas si facile, ça peut se faire de façon progressive, avec plusieurspetits choix techniques presque anodins mais qui, mis bout à bout, finissent par changer complètement la relation entre l'humain et l'IA.
+Il se peut que la réponse ne soit pas si facile, ça peut se faire de façon progressive, avec plusieurs petits choix techniques presque anodins mais qui, mis bout à bout, finissent par changer complètement la relation entre l'humain et l'IA.
 
 ## 5 générations, 5 bascules
 
