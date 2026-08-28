@@ -84,7 +84,7 @@ Ce désalignement explique d'ailleurs pourquoi le modèle a été mis en pause.
 
 De son côté, HuggingFace a testé différents modèles pour contrer cette attaque. Sans succès à cause des garde-fous de sécurité : les modèles ne sont pas capable de distinguer un intervant en réponse à un incident d'un attaquant.
 
-La démarche a été possible grâce à GLM 5.2, un modèle chinois en poids ouverts qui permet à l'opérateur de définir ses propres garde-fous. HugginFace a ensuite pu retrouver toutes les traces des attaques.
+La démarche a été possible grâce à GLM 5.2, un modèle chinois en poids ouverts qui permet à l'opérateur de définir ses propres garde-fous. HuggingFace a ensuite pu retrouver toutes les traces des attaques.
 
 Le parallèle de cette histoire avec AI 2027 en devient presque troublant.
 
