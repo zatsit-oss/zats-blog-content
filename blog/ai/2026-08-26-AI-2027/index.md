@@ -95,6 +95,7 @@ Comme je disais précédemment, ce sujet n'est absolument pas traité dans le ra
 La course aux datacenters est présente mais aucun problème énergétique ou climatique n'est mentionné.
 
 On sait que la consommation électrique des datacenters devrait doubler d'ici fin 2030 sous l'effet du boom de l'IA. Quant à la consommation en eau pour refroidir tout ça, elle devrait dépasser celle d'un pays comme le Danemark.
+**zatsit** vous en parlait d'ailleurs dans ces deux articles : [Consommation IA et datacenters](https://blog.zatsit.fr/ia-et-consommation-energetique) et [Refroidissement des datacenters](https://blog.zatsit.fr/green-consommation-energie)
 
 Ce silence dans le rapport montre bien que ce n'est pas une priorité. Peux-t-on avancer autant sur une technologie sans se demander ce qu'elle nous couterait ?
 
