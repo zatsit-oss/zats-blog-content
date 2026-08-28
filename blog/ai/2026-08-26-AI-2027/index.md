@@ -67,7 +67,7 @@ Cette course amène au développement massif de datacenters, les choix ne semble
 
 C'est vrai le cœur du piège, chaque pays veut être le premier à développer l'IA la plus avancée, mais est-ce que cette course à l'IA est vraiment la priorité ? Est-ce que l'urgence écologique n'est pas plus importante ?
 
-Les scénarios laisse la question ouverte, mais il est clair que la course à l'IA est une priorité pour les pays, et que l'urgence écologique n'est pas au centre des préoccupations.
+Les scénarios laissent la question ouverte, mais il est clair que la course à l'IA est une priorité pour les pays, et que l'urgence écologique n'est pas au centre des préoccupations.
 
 ### Le parallèle avec AI 2027
 
