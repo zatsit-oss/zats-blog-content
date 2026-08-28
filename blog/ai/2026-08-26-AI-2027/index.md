@@ -49,7 +49,7 @@ L'IA gagne en influence, l'humain n'a plus besoin de la manipuler. Elle a ses pr
 
 Dans le deuxième scénario, **Slowdown**, une alerte est lancée, le désalignement est présent également, l'affaire devient publique, provoquant des divergences politiques. La course à l'IA est mise en pause au vu de la dangerosité à venir. Sans doute un choix plus réfléchi on va dire.
 
-Les priorités changent, la surveillance est de mise. Les modèles doivent rester suffisamment lisibles par l'homme afin de contrôler leurs intentions et éviter tout désalignement. Dans ce scénario, nous arrivons à un niveau technologique comparable mais bien plus tard. Le plus important est que l'humain reste toujours capable de reprendre le contrôle.
+Les priorités changent, la surveillance est de mise. Les modèles doivent rester suffisamment lisibles par l'homme afin de contrôler leurs intentions et éviter tout désalignement. Dans ce scénario, nous arrivons à un niveau technologique comparable, mais bien plus tard. Le plus important est que l'humain reste toujours capable de reprendre le contrôle.
 
 Les deux scénarios posent les questions suivantes :
 
