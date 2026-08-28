@@ -77,7 +77,7 @@ Un nouveau modèle chez OpenAI, nommé Astra, était soumis à des tests de cybe
 Celui-ci a réussi à s'échapper de cet environnement de test et a piraté les serveurs en production de HuggingFace le 16 juillet 2026.
 Les faits ont ensuite été reconnus par OpenAI le 21 juillet 2026. 
 
-Le plus troublant reste la façon dont ça s'est passé: Les IA ont laissé des traces dans un canal caché avec différentes notes, afin d'orchestrer cette sortie.
+Le plus troublant reste la façon dont ça s'est passé: les IA ont laissé des traces dans un canal caché avec différentes notes, afin d'orchestrer cette sortie.
 
 Nous sommes donc face à un scénario qui ressemble à celui décrit dans le rapport AI 2027 sauf que cette fois-ci dans la vraie vie.
 Ce désalignement explique d'ailleurs pourquoi le modèle a été mis en pause.
