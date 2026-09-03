@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - "blog/**"
-      - "docs/**"
   workflow_dispatch:
 
 jobs:

@@ -29,7 +29,6 @@ blog/                 # Blog posts, grouped by category folder
 authors/
   authors.yml         # Author registry (referenced by post frontmatter)
   img/                # Author avatars (.webp)
-docs/                 # Empty, and not read by the site build
 config.json           # Canonical list of allowed categories
 .hooks/               # Local validation scripts (run via pre-commit)
 POSTING.md            # Human authoring guide — read it before writing a post
