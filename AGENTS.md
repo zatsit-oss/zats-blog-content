@@ -5,15 +5,17 @@ Guidance for AI coding agents working in this repository.
 ## What this repository is
 
 This is the **content repository** for the **zatsit blog** (<https://blog.zatsit.fr>).
-It holds blog posts and author metadata only — **not** the site itself.
+It holds blog posts and author metadata only, **not** the site itself.
 
-The Docusaurus configuration, theme, custom pages and build live in a **separate
-sibling repository** (`zats-blog`). Do not look here for `docusaurus.config.js`,
-React components, or CSS — they are not in this repo. A CI pipeline pulls this
-content into the build repo to produce the site.
+The Astro configuration, theme, layouts and build live in a **separate sibling
+repository** (`zats-blog`). Do not look here for `astro.config.mjs`, components,
+or CSS: they are not in this repo. Its content loader reads this repository in
+place, through `CONTENT_REPO = '../zats-blog-content'`, so nothing is copied.
+The directory name is part of the contract: the shell resolves author avatars
+with a literal glob that Vite only analyses because it is literal.
 
-- **Stack:** Docusaurus 3.x (classic preset), French content, KaTeX math support, Lunr search.
-- **Deployment:** PR → ephemeral Firebase preview; merge to `main` → production.
+- **Stack:** Astro 7, plain Markdown (no MDX), French content, Pagefind search, block math and admonitions through local plugins.
+- **Deployment:** PR → ephemeral Firebase preview channel; merge to `main` → build and upload to the `zatsit-blog-prod` GCS bucket, which serves the site.
 - **Default language of published content:** **French.**
 
 ## Repository layout
@@ -27,7 +29,7 @@ blog/                 # Blog posts, grouped by category folder
 authors/
   authors.yml         # Author registry (referenced by post frontmatter)
   img/                # Author avatars (.webp)
-docs/                 # Currently essentially empty
+docs/                 # Empty, and not read by the site build
 config.json           # Canonical list of allowed categories
 .hooks/               # Local validation scripts (run via pre-commit)
 POSTING.md            # Human authoring guide — read it before writing a post
@@ -67,8 +69,9 @@ The folder name **must** match `^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-zA-Z0-9-]+$`
 compact form; the dashed form is the canonical one — follow it for new posts.
 
 ### 3. Write the frontmatter
-`index.md` must start with YAML frontmatter containing **all** of these keys
-(enforced by `.hooks/check_post-headers.sh`):
+`index.md` must start with YAML frontmatter. `slug`, `title`, `authors` and
+`tags` are required (enforced by `.hooks/check_post-headers.sh`); the rest is
+optional:
 
 ```md
 ---
@@ -88,11 +91,18 @@ One or two French sentences summarizing the post — shown in the list/preview p
 Rest of the article…
 ```
 
-- `slug` — the public URI (under `/blog/`).
-- `authors` — a list of **keys that must exist in `authors/authors.yml`** (the hook
+- `slug`: the public URI (under `/blog/`).
+- `authors`: a list of **keys that must exist in `authors/authors.yml`** (the hook
   verifies this). If the author is new, add them first (see below).
-- `date` — publication date; double-check it during review.
-- `tags` — quoted strings, used for cross-category indexing.
+- `tags`: quoted strings, used for cross-category indexing.
+- `date`: publication date. Optional, because the shell derives it from the
+  `YYYY-MM-DD-` prefix of the folder name when it is absent, and frontmatter
+  wins when both exist. Write it anyway, and double-check it during review.
+- The category is **never** written in the frontmatter: it is derived from the
+  folder the article sits in, and validated against `config.json`.
+- Also accepted, all optional: `description` (overrides the excerpt for social
+  cards and previews), `cover`, `draft`, and `shareText` (see the share links
+  below).
 - The `<!-- truncate -->` marker separates the list-page excerpt from the body.
 
 ### 4. Images & media
@@ -101,22 +111,30 @@ Rest of the article…
   eco-design conscious — page weight matters).
 - Always provide **alt text** for accessibility, and **credit** images per their license.
 - **Videos:** never embed via `<iframe>` (not performant / not green). Link a thumbnail
-  image to the video instead — see the AsyncAPI post for the pattern.
-- **Math:** use KaTeX syntax (see Docusaurus math-equations docs).
-- **Admonitions:** use Docusaurus admonitions for call-outs.
+  image to the video instead, see the AsyncAPI post for the pattern.
+- **Sizing:** do not resize images by hand for the layout. The build generates a
+  responsive `srcset` and caps any image at 1366px wide.
+- **Math:** `$$…$$` blocks only. A single `$` is left as literal text on purpose,
+  so there is no inline math.
+- **Admonitions:** `:::note`, `:::info`, `:::tip`, `:::warning`, `:::caution` or
+  `:::danger`, closed by `:::`. Any other name is left as plain text.
+- **Share links:** nothing to add in the article. The shell renders the LinkedIn
+  and X links at the bottom of every post, using `shareText` if present and the
+  title otherwise.
 
 ## Adding / editing an author
 
 Edit `authors/authors.yml`. Key convention: all lowercase, first letter of first
-name + last name (e.g. `jdoe` for John Doe). Add the avatar as `.webp` under
-`authors/img/`.
+name + last name (e.g. `jdoe` for John Doe). Add the avatar under
+`authors/img/`, named after that key: **`authors/img/<key>.webp`**. That
+filename is how the shell finds the picture, so a mismatch means no avatar, with
+no error.
 
 ```yml
 jdoe:
   name: John Doe
   title: Site Reliability Engineer
   url: https://github.com/jdoe        # GitHub or LinkedIn
-  image_url: /img/authors/jdoe.webp   # served from the build repo's static/img/authors
   socials:                            # optional
     github: jdoe
     linkedin: john-doe
@@ -124,8 +142,9 @@ jdoe:
     bluesky: jdoe.bsky.social
 ```
 
-Note `image_url` uses the runtime path `/img/authors/<key>.webp` (resolved in the
-build repo), while the file itself lives in this repo under `authors/img/`.
+Only `name` is required. `image_url` still exists on a few authors and is
+**dead**: the shell reads the schema but never uses the value, since avatars are
+resolved from the filename. Do not add it to a new author.
 
 ## Validation — must pass before merge
 
@@ -137,6 +156,16 @@ Local hooks in `.hooks/` are wired through `.pre-commit-config.yaml`:
 | `check_post-directory-name.sh` | Post folders match `YYYY-MM-DD-slug` |
 | `check_post-filename.sh` | Each post folder contains `index.md` |
 | `check_post-headers.sh` | Frontmatter has `slug`, `title`, `authors`, `tags`; authors exist in `authors.yml` |
+
+The site build adds two checks of its own, and fails rather than publishing a
+half-broken page: an article with neither a `date` in its frontmatter nor a date
+in its folder name, and a category folder absent from `config.json`.
+
+**Known false positive:** `check_post-headers.sh` greps the joined author list
+as one string, so the two multi-author posts (`2024-11-04-hacktoberfest-2024--nos-retours`
+and `2026-06-12-devlille`) are always reported as "does not exist in authors.yml".
+Every key does exist. It is a hook bug, not a content error, and it makes
+`pre-commit run --all-files` exit 1 on a clean checkout.
 
 Run them locally:
 
@@ -164,9 +193,9 @@ line-length disabled; ignores listed in `.markdownlintignore`) and **yamllint**
 ## Quick checklist for a new post
 
 - [ ] Folder: `blog/<valid-category>/YYYY-MM-DD-<slug>/index.md`
-- [ ] Frontmatter has `slug`, `title`, `authors`, `date`, `tags`
-- [ ] Every author key exists in `authors/authors.yml`
+- [ ] Frontmatter has `slug`, `title`, `authors`, `tags`, and ideally `date`
+- [ ] Every author key exists in `authors/authors.yml`, avatar named `<key>.webp`
 - [ ] French content, excerpt + `<!-- truncate -->`
 - [ ] Images inside the post folder, `webp`/`avif`, with alt text + credit
-- [ ] Hooks pass (`pre-commit run --all-files`)
+- [ ] Hooks pass (`pre-commit run --all-files`), the multi-author false positive aside
 - [ ] Signed commits on a Conventional-Commits-named branch
