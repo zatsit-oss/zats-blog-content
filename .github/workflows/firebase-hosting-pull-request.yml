@@ -6,7 +6,6 @@ on:
   pull_request:
     paths:
       - "blog/**"
-      - "docs/**"
 
 permissions:
   checks: write
