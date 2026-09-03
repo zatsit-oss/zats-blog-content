@@ -161,12 +161,6 @@ The site build adds two checks of its own, and fails rather than publishing a
 half-broken page: an article with neither a `date` in its frontmatter nor a date
 in its folder name, and a category folder absent from `config.json`.
 
-**Known false positive:** `check_post-headers.sh` greps the joined author list
-as one string, so the two multi-author posts (`2024-11-04-hacktoberfest-2024--nos-retours`
-and `2026-06-12-devlille`) are always reported as "does not exist in authors.yml".
-Every key does exist. It is a hook bug, not a content error, and it makes
-`pre-commit run --all-files` exit 1 on a clean checkout.
-
 Run them locally:
 
 ```sh
@@ -197,5 +191,5 @@ line-length disabled; ignores listed in `.markdownlintignore`) and **yamllint**
 - [ ] Every author key exists in `authors/authors.yml`, avatar named `<key>.webp`
 - [ ] French content, excerpt + `<!-- truncate -->`
 - [ ] Images inside the post folder, `webp`/`avif`, with alt text + credit
-- [ ] Hooks pass (`pre-commit run --all-files`), the multi-author false positive aside
+- [ ] Hooks pass (`pre-commit run --all-files`)
 - [ ] Signed commits on a Conventional-Commits-named branch
