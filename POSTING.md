@@ -1,9 +1,11 @@
 # Posting in **zatsit** Blog
 
-> Remember that the official documentation of docusaurus is the reference.
+> The site is built with [Astro](https://astro.build/), in the
+> [zats-blog](https://github.com/zatsit-oss/zats-blog) repository. Articles are
+> plain Markdown: no MDX, no components, nothing to import.
 
-Docusaurus proposes file conventions to make blog posts, but we added a top level folder hierarchy to categorize posts
-(and change the way we name file blog post) :
+Posts sit in a top level folder hierarchy that categorizes them, and the folder
+they are in **is** their category:
 
 - [ai](blog%2Fai)
 - [architecture](blog%2Farchitecture)
@@ -19,7 +21,7 @@ Docusaurus proposes file conventions to make blog posts, but we added a top leve
 > If you think you need a new category, please contact [DT](mailto:dirtech@zatsit.fr).
 
 > If you think your post belongs to more than one category, choose the main one to create it. 
-> Don't worry, tags in your post will help Docusaurus to index it. 
+> Don't worry, the tags of your post index it across the other categories.
 
 ## Create a post for the first time
 
@@ -35,7 +37,7 @@ git branch -c feat/category-YYYYMMDD-MyTitle
 
 You are ready to write !
 
-> For further information about the available Markdown functionalities, please read the [official documentation](https://docusaurus.io/fr/docs/next/markdown-features).
+> For further information about the available Markdown functionalities, please read the [Markdown guide](https://www.markdownguide.org/basic-syntax/).
 
 ### Add your author information
 
@@ -45,7 +47,9 @@ The first entry follow the same convention in all other **zatsit** software usag
 - everything in lowercase
 - first letter of your first name
 - your name
-- add your profil picture (in the `.webp` format) into the `authors/img` folder
+- add your profil picture (in the `.webp` format) into the `authors/img` folder,
+  **named after your key**: `authors/img/jdoe.webp`. That filename is how the
+  site finds your picture.
 
 This value will be used in your post metadata.
 
@@ -54,18 +58,26 @@ jdoe:
   name: John Doe
   title: Site Reliability Engineer  @ **zatsit**
   url: Github account or Linkedin account
-  image_url: /img/authors/your_picture.webp
+  socials:            # optional
+    linkedin: john-doe
+    github: jdoe
 ```
 
+> Only `name` is required. Do not add an `image_url`: the picture is found by
+> its filename, and the field is ignored.
+
 Then in your category folder (under [the blog folder](./blog)) create a folder like : `YYYY-MM-DD-SLUG`, where SLUG 
-will be used by the Docusaurus router (in fact, it the 'slug' property in your post that router will use, 
+will be used to build the URL (in fact, it is the 'slug' property in your post that is used, 
 but by convention we use it in the folder naming).
+
+> The date in the folder name is not decorative: it is what dates your post when
+> the frontmatter carries no `date`.
 
 
 ```sh
 cd blog
 cd category
-mkdir YYYYMMDD-SLUG
+mkdir YYYY-MM-DD-SLUG
 touch index.md
 vim index.md (it is a joke)
 ```
@@ -90,8 +102,13 @@ The attributes definition :
 | slug       | Your future uri                  |
 | title      | Title of the post |
 | authors    | All your posts will be indexed with your author name, refers to the key in the authors.yml file |
-| date       | The publication date (take care of the value during PR reviewing) |
+| date       | The publication date (take care of the value during PR reviewing). Optional: falls back to the date in the folder name |
 | tags       | To be categorized              |
+
+Optional keys, none of them needed for a plain article: `description` (replaces
+the summary below on social cards and previews), `shareText` (see the share
+links), `cover` and `draft`. Do **not** write a `category` key, it comes from
+the folder.
 
 
 After this section you have few lines to sum up your post, it will be used in list page.
@@ -123,7 +140,16 @@ All your pictures for your post have to be stored in your post folder, feel free
 
 Using abmonitions provide a way to set visual take-away for the readers that is pretty cool !
 
-To use this feature in your article, please read the [related docusaurus documentation](https://docusaurus.io/fr/docs/markdown-features/admonitions)
+Open with `:::` and the kind of aside you want, close with `:::` alone:
+
+```md
+:::tip
+Le contenu de l'encart, en Markdown.
+:::
+```
+
+Six kinds are supported: `note`, `info`, `tip`, `warning`, `caution` and
+`danger`. Any other name is printed as plain text, so mind the typos.
 
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/256db15d-5bd1-466d-bd40-b2afeda5b37b" />
 
@@ -171,6 +197,19 @@ You can have a first preview like any markdown preview from your favorite IDE. T
 When you are ready to submit your post, you can create a pull request. A Github Actions workflow will generate
 a previous URL for you in order to visualize your post in an ephemeral blog instance.
 
+To see the real thing before that, run the site locally: see
+[Preview locally](./README.md#preview-locally).
+
 ## Use mathematical representation  
 
-You can write mathematical expression with a specific syntax : KaTex. See the documentation of [https://docusaurus.io/docs/markdown-features/math-equations](https://docusaurus.io/docs/markdown-features/math-equations) for more information.official Docusaurus page.
+You can write mathematical expressions in LaTeX syntax, between a pair of `$$`
+on their own lines:
+
+```md
+$$
+WUE = \frac{\text{eau consommée}}{\text{énergie consommée}}
+$$
+```
+
+Block formulas only. A single `$` stays a literal dollar sign, so there is no
+inline math.
