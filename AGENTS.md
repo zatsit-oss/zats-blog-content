@@ -90,7 +90,8 @@ One or two French sentences summarizing the post — shown in the list/preview p
 Rest of the article…
 ```
 
-- `slug`: the public URI (under `/blog/`).
+- `slug`: the public URI, served at the root of the site (`/my-post-uri/`).
+  There is no `/blog/` prefix, and there never was one publicly.
 - `authors`: a list of **keys that must exist in `authors/authors.yml`** (the hook
   verifies this). If the author is new, add them first (see below).
 - `tags`: quoted strings, used for cross-category indexing.
