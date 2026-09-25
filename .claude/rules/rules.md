@@ -2,7 +2,7 @@
 
 ## Language
 - **Articles: French.** Match the tone of the existing posts.
-- **Repository files: English.** README, AGENTS, CLAUDE, hooks, CI, commit messages.
+- **Repository files: English.** README, AGENTS, hooks, CI, commit messages.
 - Author titles and share texts are reader-facing, so they are written in French or kept as in `authors.yml`.
 
 ## Git Commits (Angular / Conventional Commits)

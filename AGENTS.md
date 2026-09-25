@@ -31,6 +31,7 @@ authors/
   img/                # Author avatars (.webp)
 config.json           # Canonical list of allowed categories
 .hooks/               # Local validation scripts (run via pre-commit)
+.claude/              # Agent rules and skills (see below)
 POSTING.md            # Human authoring guide — read it before writing a post
 CONTRIBUTING.md       # Contribution process
 ```
@@ -184,6 +185,35 @@ line-length disabled; ignores listed in `.markdownlintignore`) and **yamllint**
 - Workflows live in `.github/workflows/`:
   `firebase-hosting-pull-request.yml`, `publish-on-merge.yml`,
   `update-content-training-on-merge.yml`.
+
+## Training mirror
+
+[zats-blog-content-training](https://github.com/zatsit-oss/zats-blog-content-training)
+is the practice repository for newcomers. `update-content-training-on-merge.yml`
+**force-pushes** this repository's `main` onto its `main_training` branch: the whole
+branch is replaced, not only `blog/`. Anything committed directly to `main_training`
+is lost at the next sync, so changes to this guide, the rules, the skills or the docs
+belong **here**. The publish and mirror jobs are guarded on the repository name, so
+the mirror never deploys to production.
+
+## Agent rules and skills
+
+Detailed rules, read them before editing:
+
+| File | Topic |
+|------|-------|
+| `.claude/rules/rules.md` | Language, commits, posts, authors |
+| `.claude/rules/quality.md` | Eco-design, media, accessibility, content |
+| `.claude/rules/security.md` | Secrets, third-party content, repository |
+
+Skills (Claude Code slash commands, plain Markdown procedures for other agents):
+
+| Skill | Purpose |
+|-------|---------|
+| `.claude/skills/new-post` | `/new-post <category> <slug>`: scaffold a post folder and its frontmatter |
+| `.claude/skills/dev` | `/dev`: start the shell's dev server on this content |
+| `.claude/skills/build` | `/build`: production build of the shell with its quality gates |
+| `.claude/skills/review` | `/review`: review content changes before a PR |
 
 ## Quick checklist for a new post
 
