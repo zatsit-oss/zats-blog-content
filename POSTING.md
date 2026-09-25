@@ -25,13 +25,17 @@ they are in **is** their category:
 
 ## Create a post for the first time
 
-First of all, pull the project repository and create a branch like "feat/category-YYYYMMDD-SLUG"
-> SLUG will be your future URI
+First of all, clone the project repository and create a branch like `feat/<category>-YYYY-MM-DD-slug`
+> slug will be your future URI
 
 ```sh
-git clone xxxxx
-git branch -c feat/category-YYYYMMDD-MyTitle
+git clone git@github.com:zatsit-oss/zats-blog-content.git
+cd zats-blog-content
+git switch -c feat/dev-2026-09-25-my-post
 ```
+
+> Newcomers at **zatsit** practise on [zats-blog-content-training](https://github.com/zatsit-oss/zats-blog-content-training)
+> first: same steps, but clone that repository and open your PR against its `main_training` branch.
 
 > We are using the conventional commits way, so you have to follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to name your branch.
 
@@ -149,7 +153,8 @@ Le contenu de l'encart, en Markdown.
 ```
 
 Six kinds are supported: `note`, `info`, `tip`, `warning`, `caution` and
-`danger`. Any other name is printed as plain text, so mind the typos.
+`danger`. Any other name is not rendered as an aside and the build only prints a
+warning, so mind the typos.
 
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/256db15d-5bd1-466d-bd40-b2afeda5b37b" />
 

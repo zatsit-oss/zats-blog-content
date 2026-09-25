@@ -6,6 +6,8 @@ on:
   pull_request:
     paths:
       - "blog/**"
+      - "authors/**"
+      - "config.json"
 
 permissions:
   checks: write

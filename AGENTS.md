@@ -117,7 +117,8 @@ Rest of the article…
 - **Math:** `$$…$$` blocks only. A single `$` is left as literal text on purpose,
   so there is no inline math.
 - **Admonitions:** `:::note`, `:::info`, `:::tip`, `:::warning`, `:::caution` or
-  `:::danger`, closed by `:::`. Any other name is left as plain text.
+  `:::danger`, closed by `:::`. Any other name is not rendered as an
+  admonition; the build only prints a warning (`[admonitions] type inconnu`).
 - **Share links:** nothing to add in the article. The shell renders the LinkedIn
   and X links at the bottom of every post, using `shareText` if present and the
   title otherwise.

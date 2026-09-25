@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "blog/**"
+      - "authors/**"
+      - "config.json"
   workflow_dispatch:
     inputs:
       env:
@@ -27,6 +29,8 @@ env:
 
 jobs:
   build_and_publish:
+    # The training mirror receives this file too: it must never publish.
+    if: github.repository == 'zatsit-oss/zats-blog-content'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

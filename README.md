@@ -60,5 +60,9 @@ npm install
 npm run dev
 ```
 
+> **Training repository:** clone `zats-blog-content-training` under the name
+> `zats-blog-content`, otherwise the site renders another checkout, or nothing:
+> `git clone git@github.com:zatsit-oss/zats-blog-content-training.git zats-blog-content`
+
 Editing an article here shows up immediately. Search is the exception: its index
 is produced by the build, so it needs `npm run build && npm run preview`.

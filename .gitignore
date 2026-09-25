@@ -3,4 +3,4 @@
 **/.DS_Store
 .env
 /.firebase
-.claude/
+.claude/settings.local.json
