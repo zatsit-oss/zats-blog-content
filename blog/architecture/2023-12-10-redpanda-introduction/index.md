@@ -5,6 +5,7 @@ authors: [eperu]
 tags: 
   - "architecture"
   - "data"
+shareText: "Présentation de RedPanda, au travers du premier cours dédié aux développeurs de la \"RedPanda University\" que j'ai suivi, je vous présente les grands principes et les premiers pas dans cet écosystème"
 
 ---
 
@@ -19,7 +20,7 @@ je vous présente les grands principes et les premiers pas dans cet écosystème
 
 ## Oh il est trop mignon
 
-![the redpanda flying like Superman](https://images.ctfassets.net/paqvtpyf8rwu/GeLUVavqqxhFZolzU9jM3/3b8dddc74a632e63f17e0a5e40b971bb/super-panda-update.svg "the redpanda flying like Superman")
+![the redpanda flying like Superman](./super-panda-update.svg "the redpanda flying like Superman")
 
 RedPanda n’est pas qu’une jolie mascotte, c’est aussi un sacré challenger dans le monde du streaming et surtout un challenger d’Apache Kafka. 
 C’est en tout cas son angle d’attaque clairement exposé quand vous lisez le README du projet : 
@@ -35,7 +36,7 @@ Pour cela, RedPanda a créé la [RedPanda University](https://university.redpand
 
 ## Ouvrez votre livre au chapitre 1 : Streaming Basics
 
-![redpanda chevauchant un missile](./redpanda-missile.png)
+![redpanda chevauchant un missile](./redpanda-missile.webp)
 
 La première partie du cours vous fournira un récapitulatif de ce qu’est un évènement dans les [EDA](https://en.wikipedia.org/wiki/Event-driven_architecture),
 dans quels cas d’usage nous les utilisons... 
@@ -213,7 +214,7 @@ Toutes ces commandes, vous me direz que c’est bien sympa, mais au quotidien vo
 et ne pas taper toutes ces commandes. Certes, mais connaître la base c’est aussi sympa et ça peut dépanner quand on ne peut pas brancher d’UI justement,
 pour la console ce sera sur cette [page](https://github.com/redpanda-data/console).
 
-![screenshot de la console redpanda montrant une overview du cluster](./redpanda-console.png)
+![screenshot de la console redpanda montrant une overview du cluster](./redpanda-console.webp)
 
 ## Un peu de code Java
 
@@ -262,13 +263,13 @@ de l’arbre qui coule le long de la rivière, il les dévore dès qu’il peut 
 
 > La donnée c’est pareil, on doit la consommer fraiche et rapidement.
 
-![redpanda on a tree watching fruit in a river](./redpanda-river-watching-fruit.png)
+![redpanda on a tree watching fruit in a river](./redpanda-river-watching-fruit.webp)
 
 Avant de parler des transformations plus spécifiques à Redpanda, on découvre ou redécouvre les streams stateless ou stateful dans ce cours,
 le premier n’a pas besoin de retenir ce qu’il voit et est donc moins gourmand en mémoire tandis que le second aura besoin 
 de retenir des informations pour garder la cohérence (application State, comme avec KStream et sa base [RocksDB](https://rocksdb.org) embedded).
 
-![redpanda sitting on a planet with other planets around him](./redpanda-on-planet.png)
+![redpanda sitting on a planet with other planets around him](./redpanda-on-planet.webp)
 
 La promesse des **Redpanda Data Transform** : co-localiser les transformations stateless directement dans le broker. 
 Comment ? En écrivant un peu de NodeJS et en utilisant la CLI pour déployer ces transformations 
@@ -427,7 +428,7 @@ Un simple groupBy associé à un Count, qui donnera une opération dites “stat
 Ce qui va nécessiter de créer un [state store](https://docs.confluent.io/platform/current/streams/architecture.html#streams-architecture-state) 
 pour conserver l’état des données qu’on agrège et compte. Je vous conseille de lire et relire la documentation associée pour bien comprendre le concept (lié à la compaction) et les mécanisme de chargement en mémoire (RocksDB), de haute disponibilité et de tolérance associé.
 
-![Untitled](./Untitled%204.png)
+![Untitled](./Untitled%204.webp)
 
 Ainsi dans notre exemple, la production de ces évènements : 
 
@@ -566,6 +567,3 @@ rpk topic consume -n 1 alerts-avro
 ```
 
 Voilà pour un premier tour de Redpanda si vous n'aviez pas encore creusé cette solution, n'hésitez plus !
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fredpanda-introduction%2F)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Pr%C3%A9sentation%20de%20RedPanda%2C%20au%20travers%20du%20premier%20cours%20d%C3%A9di%C3%A9%20aux%20d%C3%A9veloppeurs%20de%20la%20%22RedPanda%20University%22%20que%20j%27ai%20suivi%2C%0Aje%20vous%20pr%C3%A9sente%20les%20grands%20principes%20et%20les%20premiers%20pas%20dans%20cet%20%C3%A9cosyst%C3%A8me&url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Fredpanda-introduction%2F)

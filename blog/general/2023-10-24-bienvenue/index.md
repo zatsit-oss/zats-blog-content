@@ -11,7 +11,7 @@ Bienvenue sur le blog, on se présente !
 
 ## Bienvenue sur le blog de **zatsit** !
 
-![Zatsit banner](./objectives.png)
+![Zatsit banner](./objectives.webp)
 
 ## Là où compétences techniques et engagement écologique et sociétal se rencontrent
 

@@ -4,14 +4,17 @@ eperu:
   title: CTO & DSI zatsit
   url: https://github.com/emmanuelperu
   image_url: /img/authors/eperu.webp
+  socials:
+    github: emmanuelperu
+    linkedin: emmanuel-peru-10111274
 
 ldussart:
   name: Ludovic Dussart
-  title: Deputy CTO & Developer Advocate
+  title: Co-CTO & Developer Advocate
   url: https://github.com/M3lkior
   image_url: /img/authors/ldussart.webp
   socials:
-    x: ldussart
+    bluesky: ldussart.bsky.social
     github: m3lkior
     linkedin: ludovic-dussart-846a8063
 
@@ -49,7 +52,7 @@ jvasseur:
 
 ggayot:
   name: Guillaume Gayot
-  title: Software Engineer
+  title: Developer
   url: https://github.com/sergejomon
   image_url: /img/authors/ggayot.webp
 
@@ -57,7 +60,7 @@ lperreau:
   name: Lucas Perreau
   title: Developer
   url: https://github.com/mcfloy
-  image_url: https://avatars.githubusercontent.com/u/10086193
+  image_url: /img/authors/lperreau.webp
   socials:
     github: mcfloy
     linkedin: lucas-perreau
@@ -71,16 +74,42 @@ nlefebvre:
     github: lef-nicolas
     linkedin: nicolas-lefebvre-82965419
 
+eferrandi:
+  name: Emilien Ferrandi
+  title: Developer
+  url: https://github.com/EFerrandi
+  image_url: /img/authors/eferrandi.webp
+  socials:
+    github: EFerrandi
+    linkedin: emilien-ferrandi
+
 fbailleul:
   name: Flavien Bailleul
   title: Co-fondateur engagé
+  image_url: /img/authors/fbailleul.webp
   socials:
     linkedin: flavien-bailleul
 
+qburg:
+  name: Quentin Burg
+  title: Fullstack Developer
+  url: https://github.com/quentin-burg
+  image_url: /img/authors/qburg.webp
+  socials:
+    linkedin: quentin-burg
+    github: quentin-burg
+
+adaboussi:
+  name: Ahmed Daboussi
+  title: Tech Lead Fullstack
+  url: https://github.com/AhmedDABOUSSI
+  image_url: /img/authors/adaboussi.webp
+  socials:
+    linkedin: ahmed-daboussi-48a768395
+    github: AhmedDABOUSSI
+
 odeloux:
-    name: Océane Deloux
-    title: Dénicheuse de talents
-    socials:
-        linkedin: océane-deloux
-
-
+  name: Océane Deloux
+  title: Dénicheuse de talents
+  socials:
+    linkedin: océane-deloux

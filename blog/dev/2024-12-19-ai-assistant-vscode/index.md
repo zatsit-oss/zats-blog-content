@@ -113,6 +113,3 @@ Maintenant, c'est à vous de faire le reste :
 
 
 **Aidez nous à avoir un impact en partageant cet article sur vos réseaux sociaux :**
-
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.zatsit.fr%2Fblog%2Flocal-ai-assistant-in-vscode%2F)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=https://blog.zatsit.fr/blog/local-ai-assistant-in-vscode)

@@ -27,12 +27,18 @@ do
 
   # Check if authors exist in authors.yml
   post_header_authors=$(sed '/---/,/---/!d' $post | grep "^authors:" | cut -d ':' -f2 | tr -d ' []')
-  authors_list=$(cat ./authors/authors.yml | grep -e '^[a-z]*:' | cut -d ':' -f1)
-  echo $authors_list | tr " " '\n' | grep -F -q -x $post_header_authors
-  if [[ $? -eq 1 ]]; then
-    flag_exit=1
-    echo "Blog post $post authors ($post_header_authors) does not exist in authors.yml"
-  fi
+  authors_list=$(grep -oE '^[a-z0-9_-]+:' ./authors/authors.yml | tr -d ':')
+
+  # A post can carry several authors, e.g. "authors: [ldussart, qburg, eperu]".
+  # Each key is looked up on its own: matching the joined string never succeeds.
+  for author in $(echo "$post_header_authors" | tr ',' ' ')
+  do
+    echo "$authors_list" | grep -F -q -x "$author"
+    if [[ $? -eq 1 ]]; then
+      flag_exit=1
+      echo "Blog post $post author ($author) does not exist in authors.yml"
+    fi
+  done
 
   # Check tags field
   post_header_tags=$(sed '/---/,/---/!d' $post | grep "^tags:")

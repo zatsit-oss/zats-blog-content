@@ -6,16 +6,17 @@ on:
       - main
     paths:
       - "blog/**"
-      - "docs/**"
+      - "authors/**"
+      - "config.json"
+      # The mirror also serves as a tutorial: keep its guides and skills in step.
+      - "*.md"
+      - ".claude/**"
+      - ".hooks/**"
   workflow_dispatch:
-
-
-concurrency:
-  group: ${{ github.ref || github.run_id }}
-  cancel-in-progress: true
 
 jobs:
   update-training-repo:
+    if: github.repository == 'zatsit-oss/zats-blog-content'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

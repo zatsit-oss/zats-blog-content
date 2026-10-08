@@ -1,9 +1,11 @@
 # Posting in **zatsit** Blog
 
-> Remember that the official documentation of docusaurus is the reference.
+> The site is built with [Astro](https://astro.build/), in the
+> [zats-blog](https://github.com/zatsit-oss/zats-blog) repository. Articles are
+> plain Markdown: no MDX, no components, nothing to import.
 
-Docusaurus proposes file conventions to make blog posts, but we added a top level folder hierarchy to categorize posts
-(and change the way we name file blog post) :
+Posts sit in a top level folder hierarchy that categorizes them, and the folder
+they are in **is** their category:
 
 - [ai](blog%2Fai)
 - [architecture](blog%2Farchitecture)
@@ -19,23 +21,27 @@ Docusaurus proposes file conventions to make blog posts, but we added a top leve
 > If you think you need a new category, please contact [DT](mailto:dirtech@zatsit.fr).
 
 > If you think your post belongs to more than one category, choose the main one to create it. 
-> Don't worry, tags in your post will help Docusaurus to index it. 
+> Don't worry, the tags of your post index it across the other categories.
 
 ## Create a post for the first time
 
-First of all, pull the project repository and create a branch like "feat/category-YYYYMMDD-SLUG"
-> SLUG will be your future URI
+First of all, clone the project repository and create a branch like `feat/<category>-YYYY-MM-DD-slug`
+> slug will be your future URI
 
 ```sh
-git clone xxxxx
-git branch -c feat/category-YYYYMMDD-MyTitle
+git clone git@github.com:zatsit-oss/zats-blog-content.git
+cd zats-blog-content
+git switch -c feat/dev-2026-09-25-my-post
 ```
+
+> Newcomers at **zatsit** practise on [zats-blog-content-training](https://github.com/zatsit-oss/zats-blog-content-training)
+> first: same steps, but clone that repository and open your PR against its `main_training` branch.
 
 > We are using the conventional commits way, so you have to follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to name your branch.
 
 You are ready to write !
 
-> For further information about the available Markdown functionalities, please read the [official documentation](https://docusaurus.io/fr/docs/next/markdown-features).
+> For further information about the available Markdown functionalities, please read the [Markdown guide](https://www.markdownguide.org/basic-syntax/).
 
 ### Add your author information
 
@@ -45,7 +51,9 @@ The first entry follow the same convention in all other **zatsit** software usag
 - everything in lowercase
 - first letter of your first name
 - your name
-- add your profil picture (in the `.webp` format) into the `authors/img` folder
+- add your profil picture (in the `.webp` format) into the `authors/img` folder,
+  **named after your key**: `authors/img/jdoe.webp`. That filename is how the
+  site finds your picture.
 
 This value will be used in your post metadata.
 
@@ -54,18 +62,26 @@ jdoe:
   name: John Doe
   title: Site Reliability Engineer  @ **zatsit**
   url: Github account or Linkedin account
-  image_url: /img/authors/your_picture.webp
+  socials:            # optional
+    linkedin: john-doe
+    github: jdoe
 ```
 
+> Only `name` is required. Do not add an `image_url`: the picture is found by
+> its filename, and the field is ignored.
+
 Then in your category folder (under [the blog folder](./blog)) create a folder like : `YYYY-MM-DD-SLUG`, where SLUG 
-will be used by the Docusaurus router (in fact, it the 'slug' property in your post that router will use, 
+will be used to build the URL (in fact, it is the 'slug' property in your post that is used, 
 but by convention we use it in the folder naming).
+
+> The date in the folder name is not decorative: it is what dates your post when
+> the frontmatter carries no `date`.
 
 
 ```sh
 cd blog
 cd category
-mkdir YYYYMMDD-SLUG
+mkdir YYYY-MM-DD-SLUG
 touch index.md
 vim index.md (it is a joke)
 ```
@@ -90,8 +106,13 @@ The attributes definition :
 | slug       | Your future uri                  |
 | title      | Title of the post |
 | authors    | All your posts will be indexed with your author name, refers to the key in the authors.yml file |
-| date       | The publication date (take care of the value during PR reviewing) |
+| date       | The publication date (take care of the value during PR reviewing). Optional: falls back to the date in the folder name |
 | tags       | To be categorized              |
+
+Optional keys, none of them needed for a plain article: `description` (replaces
+the summary below on social cards and previews), `shareText` (see the share
+links), `cover` and `draft`. Do **not** write a `category` key, it comes from
+the folder.
 
 
 After this section you have few lines to sum up your post, it will be used in list page.
@@ -119,17 +140,44 @@ All your pictures for your post have to be stored in your post folder, feel free
 
 > Ideally, you should use the `webp` or `avif` format for your pictures, but if you have to use another format, please use the smallest size possible.
 
+### Using admonitions 
+
+Using abmonitions provide a way to set visual take-away for the readers that is pretty cool !
+
+Open with `:::` and the kind of aside you want, close with `:::` alone:
+
+```md
+:::tip
+Le contenu de l'encart, en Markdown.
+:::
+```
+
+Six kinds are supported: `note`, `info`, `tip`, `warning`, `caution` and
+`danger`. Any other name is not rendered as an aside and the build only prints a
+warning, so mind the typos.
+
+<img width="760" alt="image" src="https://github.com/user-attachments/assets/256db15d-5bd1-466d-bd40-b2afeda5b37b" />
+
 ### Add social media link
 
-In this version, the minimalist solution found to add link to share on `X` and `LinkedIn` is to copy/paste this two lines, customizing the query attribute, for example : 
-```
-[![Partage Linkedin](../../../static/img/icon-linkedin.webp)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fredpanda-introduction%2F)
-[![Partage X](../../../static/img/icon-x.webp)](https://twitter.com/intent/tweet?text=Pr%C3%A9sentation%20de%20RedPanda%2C%20au%20travers%20du%20premier%20cours%20d%C3%A9di%C3%A9%20aux%20d%C3%A9veloppeurs%20de%20la%20%22RedPanda%20University%22%20que%20j%27ai%20suivi%2C%0Aje%20vous%20pr%C3%A9sente%20les%20grands%20principes%20et%20les%20premiers%20pas%20dans%20cet%20%C3%A9cosyst%C3%A8me&url=https%3A%2F%2Fzatsit-blog.web.app%2Fblog%2Fredpanda-introduction%2F)
+Nothing to do: the share links to `LinkedIn` and `X` are added automatically at
+the bottom of every article by the `ShareLinks` component of the site shell. The
+URL is derived from your `slug`, so it can no longer drift from the article it
+points at.
 
+The share text defaults to the article title. To write your own, add an optional
+`shareText` to the frontmatter:
+
+```yml
+---
+slug: redpanda-introduction
+title: Premier cours de RedPanda
+shareText: "Présentation de RedPanda, au travers du premier cours dédié aux développeurs de la RedPanda University"
+---
 ```
-Take care of the relative path of the two social icons, regarding the folders in the category.
-- For `LinkedIn` and `X` : the url of your post use the root of the blog and your slug. You have to encode your url (you can use [URL Encoder](https://www.urlencoder.org/)
-- For `X` only : encode the description of your post too.
+
+Do not paste the old two-line snippet: its relative paths pointed into the
+shell's `static/` folder, which the content repository no longer sits inside.
 
 ### Add a video link in your post
 
@@ -154,3 +202,19 @@ You can have a first preview like any markdown preview from your favorite IDE. T
 When you are ready to submit your post, you can create a pull request. A Github Actions workflow will generate
 a previous URL for you in order to visualize your post in an ephemeral blog instance.
 
+To see the real thing before that, run the site locally: see
+[Preview locally](./README.md#preview-locally).
+
+## Use mathematical representation  
+
+You can write mathematical expressions in LaTeX syntax, between a pair of `$$`
+on their own lines:
+
+```md
+$$
+WUE = \frac{\text{eau consommée}}{\text{énergie consommée}}
+$$
+```
+
+Block formulas only. A single `$` stays a literal dollar sign, so there is no
+inline math.
