@@ -1,5 +1,12 @@
 # **zatsit** blog contents repository
 
+[![Publish](https://github.com/zatsit-oss/zats-blog-content/actions/workflows/publish-on-merge.yml/badge.svg)](https://github.com/zatsit-oss/zats-blog-content/actions/workflows/publish-on-merge.yml)
+[![Site blog.zatsit.fr](https://img.shields.io/badge/site-blog.zatsit.fr-0f15fd)](https://blog.zatsit.fr/blog/)
+[![Rendered by zats-blog](https://img.shields.io/badge/rendered%20by-zats--blog-bc52ee?logo=astro&logoColor=white)](https://github.com/zatsit-oss/zats-blog)
+[![Markdown](https://img.shields.io/badge/content-Markdown-1c1e21?logo=markdown&logoColor=white)](POSTING.md)
+[![Signed commits](https://img.shields.io/badge/commits-signed-2ea44f?logo=gnuprivacyguard&logoColor=white)](#pre-requisites)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+
 This repository holds the contents of the **zatsit** blog: articles, authors and
 their pictures. Nothing else.
 
