@@ -21,8 +21,8 @@ Arazzo comble ce vide, et **arazzo-maestro** le rend utile au reste de l'équipe
 Prenez un parcours d'achat tout simple : on liste le catalogue, on récupère le détail d'un produit, on l'ajoute au panier, on paie.
 Quatre appels. Si le paiement échoue sur une erreur 5xx de la banque, on retente deux fois, puis on abandonne.
 
-Où vit ce parcours aujourd'hui ? Un peu dans la tête d'un dev, un peu dans un wiki qui date de la dernière refonte, un peu dans une collection Postman,
-et un peu dans trois tests e2e qui ne racontent pas tout à fait la même histoire.
+Où vit ce parcours aujourd'hui ? Un peu dans la tête d'un dev, un peu dans un wiki qui date de la dernière "réorg", un peu dans une collection Postman,  
+et un peu dans trois tests e2e qui se battent en duel et qui ne racontent pas tout à fait la même histoire.
 
 Chaque endpoint, lui, a son contrat OpenAPI, validé, linté, versionné. On a des contrats pour les mots, mais pas pour les phrases.
 
@@ -79,16 +79,15 @@ C'est lisible, c'est déclaratif, et c'est du YAML. Le jour où quelqu'un renomm
 Il existe déjà des plugins Arazzo pour VS Code par exemple et un validateur Node chez Jentic. Ils aident à **écrire** un workflow : autocomplétion, aperçu, validation à la frappe.
 Ce qui manquait, c'est **l'après** : bloquer une PR quand le workflow ne tient plus, montrer le parcours à quelqu'un qui n'ouvre jamais d'IDE, et transformer tout ça en tests.
 
-Et puis maintenant, il y a l'éléphant dans la pièce : l'IA. 
+Et puis maintenant, il y a l'éléphant dans la pièce : l'IA.
 
 Assistants de code et agents lisent désormais nos contrats pour générer des clients, écrire des tests ou appeler directement nos APIs.  
 Avec un contrat OpenAPI seul, ils voient des endpoints isolés : dans quel ordre les appeler, quelle valeur de la réponse réinjecter dans l'appel suivant, quoi faire quand le paiement échoue ? Ils devinent. Souvent juste, parfois faux, et toujours avec le même aplomb.
 
-  
 Un workflow Arazzo leur donne l'enchaînement noir sur blanc, dans un format qu'ils lisent aussi bien que nous. À condition qu'il soit juste : un fichier Arazzo écrit (ou généré) de travers, c'est une erreur transmise avec autorité.  
 D'où l'intérêt d'un garde-fou déterministe, qui ne devine rien : laissez le modèle proposer, laissez le contrat trancher.
 
-arazzo-maestro est né d'un besoin beaucoup plus modeste : *voir* un workflow.
+**arazzo-maestro** est né d'un besoin beaucoup plus modeste : *voir* un workflow.
 Un premier POC Python, `arazzo-visualiser`, puis une réécriture en Go, quand le besoin a dépassé le dessin. Je voulais un dessin, j'ai fini avec un linter, deux générateurs de tests et un badge OpenSSF en cours. Ça arrive.
 
 Le principe : un fichier en entrée, trois verbes en sortie.
@@ -142,7 +141,7 @@ Trois thèmes sont fournis (`light`, `dark` et `pb33f`), et on peut définir le 
 
 :::tip[Pourquoi un thème « pb33f » ?]
 C'est un clin d'œil néon à [pb33f.io](https://pb33f.io), alias Princess Beef Heavy Industries, l'atelier de Dave Shanley. Si vous faites de l'OpenAPI sérieusement, vous utilisez peut-être déjà son travail sans le savoir.
-arazzo-maestro lui doit beaucoup : [libopenapi](https://github.com/pb33f/libopenapi) lit les contrats pour la passe cross-file, et [vacuum](https://quobix.com/vacuum/) a servi à valider les contrats d'exemple (100/100, on ne s'en lasse pas).
+**arazzo-maestro** lui doit beaucoup : [libopenapi](https://github.com/pb33f/libopenapi) lit les contrats pour la passe cross-file, et [vacuum](https://quobix.com/vacuum/) a servi à valider les contrats d'exemple (100/100, on ne s'en lasse pas).
 Moi, perso, j'adore son design system : d'où ce thème, né le premier jour du projet. Disons que c'était une dette de reconnaissance contractée d'avance.
 :::
 
@@ -173,7 +172,7 @@ flowchart TD
 
 `test gen e2e` transforme chaque workflow en fichier [Hurl](https://hurl.dev), `test run e2e` l'exécute contre l'environnement de votre choix (avec un rapport HTML en option), et `test gen perf` produit un script [k6](https://k6.io).
 
-Petite dédicace au passage : c'est mon collègue Abdoul Boubacar qui m'a parlé de Hurl en premier. Des tests HTTP en texte brut, versionnables et lisibles sans IDE : il avait raison, c'était exactement la cible qu'il fallait.
+Petite dédicace au passage : c'est mon collègue Abdoul Boubacar qui m'a parlé de Hurl en premier. Des tests HTTP en texte brut, versionnables et lisibles sans IDE : lui s'en servait pour valider ses modifications de WAF, c'était exactement la cible qu'il me fallait.
 
 ```bash
 arazzo-maestro test gen e2e examples/shop.arazzo.yaml -o dist/
@@ -221,7 +220,7 @@ check(add_to_cartRes, {
 const add_to_cart_cartTotal = add_to_cartRes.json("totalPrice");
 ```
 
-Pour écrire cet article, j'ai lancé ce script contre le mock [Microcks](https://microcks.io) livré dans le repo, histoire d'avoir une jolie capture. Voilà ce que k6 m'a répondu :
+Pour écrire cet article, j'ai lancé ce script contre le mock [Microcks](https://microcks.io) livré dans le repo, après y avoir glissé une erreur pour l'exemple : l'étape de paiement répond 404. Voilà ce que k6 m'a répondu :
 
 ```text
 ✓ list-catalog: $statusCode == 200
@@ -233,10 +232,10 @@ Pour écrire cet article, j'ai lancé ce script contre le mock [Microcks](https:
 level=error msg="thresholds on metrics 'http_req_failed' have been crossed"
 ```
 
-Zéro paiement réussi sur 120 936. Le coupable n'était ni l'outil, ni le script généré : c'était mon propre mock, qui répondait 404 sur l'étape de paiement. Le premier test de charge généré par arazzo-maestro a donc trouvé un bug... chez son auteur.
+Zéro paiement réussi sur 120 936 : l'erreur introduite est repérée, et sans ambiguïté.
 C'est exactement l'intérêt d'un test qui suit le parcours décrit dans le contrat : il ne vérifie pas seulement que "ça répond vite", il vérifie que le parcours aboutit. Et quand il n'aboutit pas, il le dit 120 936 fois.
 
-Le mock corrigé (oui, il y a une PR pour ça), même script, même charge :
+L'erreur retirée, même script, même charge :
 
 ```bash
 k6 run -e BASE_URL='http://localhost:8082/rest/Shop+API/1.0.0' \
@@ -259,8 +258,9 @@ Et avec `K6_WEB_DASHBOARD=true`, k6 exporte un rapport HTML de la session :
 
 ![Rapport k6 du test de charge sur le mock Microcks : un débit stable d'environ 7 000 requêtes par seconde pendant une minute, et un p95 de la durée des requêtes qui oscille entre 1,8 et 2,2 ms](rapport-k6-microcks.webp)
 
-:::warning[Ne retenez pas ces chiffres]
-Environ 7 000 requêtes par seconde avec un p95 sous les 2 ms : c'est un mock Microcks qui tourne sur mon poste, pas une API. Ces chiffres mesurent ma machine, pas votre production.
+:::warning\[Ne retenez pas ces chiffres\]  
+Environ 7 000 requêtes par seconde avec un p95 sous les 2 ms : c'est un mock Microcks qui tourne sur mon poste, pas une API. Ces chiffres mesurent ma machine, pas une réelle implémentation.  
+
 Ce qu'il faut retenir, c'est le reste : un test de charge qui suit le parcours métier décrit dans le contrat, généré en une commande, avec des seuils qui font échouer la CI. Pointez `BASE_URL` sur votre recette, et là, les chiffres voudront dire quelque chose.
 :::
 
@@ -289,10 +289,11 @@ La spec dit de retomber sur le content-type de l'opération ciblée, et l'outil 
 Dans `SPEC_COMPLIANCE.md`, un verdict mérite qu'on s'y arrête : 😶 *« accepté sans erreur, puis ignoré en silence »*. C'est le bug le plus sournois qui soit : le lint passe, rien ne crie, et la sortie ment par omission.
 Lui donner un nom et un emoji, c'est l'empêcher de se cacher. Dire ce qu'on ne fait pas, c'est rare dans un README. C'est pourtant ce qui permet de faire confiance au reste.
 
-### Un schéma 1.1 qui n'existe pas encore
+### Un schéma 1.1 arrivé en cours de route
 
-Les documents Arazzo 1.1 sont déjà là, le JSON Schema officiel correspondant pas encore. L'outil charge donc le schéma 1.0 officiel et y greffe les ajouts structurels de la 1.1 au chargement.
-Résultat : un document 1.1 passe le lint. Sa sémantique, en revanche, n'est pas encore implémentée, et c'est écrit noir sur blanc.
+Quand l'outil est né, Arazzo 1.1 était publié mais pas son JSON Schema. **arazzo-maestro** chargeait donc le schéma 1.0 officiel et y greffait les ajouts structurels de la 1.1 au chargement.
+Le [schéma officiel 1.1](https://spec.openapis.org/arazzo/1.1/schema/2026-04-15) est sorti depuis (avril 2026) et son intégration est en cours : il contient encore quelques écarts avec le texte de la spec, suivis dans les issues de l'OpenAPI Initiative, qu'il faut contourner sans rejeter des documents valides.
+La sémantique propre à la 1.1, elle, reste à implémenter, et c'est écrit noir sur blanc.
 
 ## Les contraintes qu'on s'est imposées
 
@@ -310,7 +311,7 @@ Enfin, presque. Vous avez tiqué sur les 20 Mo ? Moi aussi.
 :::note[Pourquoi 20 Mo pour un outil qui se dit sobre ?]
 Une image `FROM scratch` ne contient rien d'autre que le binaire : ses 20 Mo, c'est le binaire Go lui-même, runtime compris.
 Avant l'arrivée de [libopenapi](https://github.com/pb33f/libopenapi), la bibliothèque qui lit les contrats OpenAPI pour la passe cross-file, il pesait environ 5 Mo.
-Le surpoids vient de son package `index` : pour savoir suivre des `$ref` distants, il embarque toute la pile `net/http` et TLS de Go. Ironie du sort, arazzo-maestro a longtemps refusé tout chargement distant.
+Le surpoids vient de son package `index` : pour savoir suivre des `$ref` distants, il embarque toute la pile `net/http` et TLS de Go. Ironie du sort, **arazzo-maestro** a longtemps refusé tout chargement distant.
 Pendant des mois, on a payé 15 Mo pour une porte condamnée. Avec `--allow-remote`, elle s'ouvre enfin, sur demande et en HTTPS seulement : ces 15 Mo ont trouvé leur utilité.
 :::
 
@@ -334,6 +335,12 @@ arazzo-maestro view examples/shop.arazzo.yaml --theme dark
 ```
 
 Le projet est open source sous licence Apache 2.0 : [emmanuelperu/arazzo-maestro sur GitHub](https://github.com/emmanuelperu/arazzo-maestro).
-Les issues sont ouvertes, les retours d'usage aussi, surtout si vous avez un vrai fichier Arazzo qui fait tomber l'outil : c'est exactement comme ça qu'il progresse.
+
+## Pendant ce temps, dans l'atelier d'à côté
+
+Je ne suis pas le seul à tisser, et ça s'accélère. Rien que cet automne : [OpenLint](https://github.com/openlint/openlint) a ajouté Arazzo à son linter, [arazzo-cli](https://github.com/strefethen/arazzo-cli) exécute les workflows et les expose en serveur MCP, Jentic a publié ses [outils TypeScript](https://github.com/jentic/jentic-arazzo-tools) et un éditeur en ligne, connEthics un [playground](https://arazzo.connethics.com/) avec export Mermaid, et un [canvas Arazzo pour GitHub Copilot](https://github.com/SebastienDegodez/github-copilot-arazzo) valide vos workflows pendant que l'agent les écrit.
+La spec a deux ans et l'outillage pousse de partout : plutôt bon signe, on ne se bouscule pas pour un format que personne n'utilise.
+
+Alors oui, je prêche pour ma paroisse : aidez-moi à faire vivre **arazzo-maestro**. Une étoile sur le repo, c'est gentil. Un vrai fichier Arazzo qui fait tomber l'outil, c'est mieux. Une issue, une PR, un « chez nous, ça ne se passe pas comme ça », c'est ce qui transforme un projet du dimanche en outil qu'on installe dans sa CI sans trembler.
 
 Le contrat OpenAPI a rendu nos endpoints fiables. Il est temps que nos parcours le deviennent aussi.
