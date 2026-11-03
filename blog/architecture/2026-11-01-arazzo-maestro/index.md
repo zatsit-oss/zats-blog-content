@@ -12,7 +12,7 @@ Arazzo comble ce vide, et **arazzo-maestro** le rend utile au reste de l'équipe
 
 ![Bannière d'arazzo-maestro : un workflow Arazzo brodé sur une tapisserie, entouré des sorties HTML, du validateur et des tests](arazzo-maestro-banniere.webp)
 
-> Petite confession avant de commencer : je ne supporte plus d'entendre « le swagger de l'API ». Swagger, c'est le nom qu'avait la spec jusqu'en version 2.0 ! Depuis 2016, elle s'appelle OpenAPI, et Swagger désigne une famille d'outils.  
+> Petite confession avant de commencer : ça me fatigue d'entendre « le swagger de l'API » 🤪. Swagger, c'est le nom qu'avait la spec jusqu'en version 2.0 ! Depuis 2016, elle s'appelle OpenAPI, et Swagger désigne une famille d'outils.  
 > Mais au-delà du mot, c'est l'intention qui me gêne : « le swagger », c'est une page de doc générée qu'on consulte. Moi, je parle d'un **contrat** : un document qu'on écrit d'abord, qu'on valide, qu'on versionne, et sur lequel on s'engage.
 > Et justement, cet article parle d'étendre ce contrat là où il n'existe pas encore.
 
@@ -340,6 +340,7 @@ Le projet est open source sous licence Apache 2.0 : [emmanuelperu/arazzo-maestro
 
 Je ne suis pas le seul à tisser, et ça s'accélère. Rien que cet automne : [OpenLint](https://github.com/openlint/openlint) a ajouté Arazzo à son linter, [arazzo-cli](https://github.com/strefethen/arazzo-cli) exécute les workflows et les expose en serveur MCP, Jentic a publié ses [outils TypeScript](https://github.com/jentic/jentic-arazzo-tools) et un éditeur en ligne, connEthics un [playground](https://arazzo.connethics.com/) avec export Mermaid, et un [canvas Arazzo pour GitHub Copilot](https://github.com/SebastienDegodez/github-copilot-arazzo) valide vos workflows pendant que l'agent les écrit.
 La spec a deux ans et l'outillage pousse de partout : plutôt bon signe, on ne se bouscule pas pour un format que personne n'utilise.
+Pour s'y retrouver, la communauté tient un annuaire : [usearazzo.com](https://usearazzo.com/ecosystem/) recense la spec, les outils, les articles et les exemples. **arazzo-maestro** y figure dans la rubrique « Lint & validate », entre le validateur de Jentic et une action GitHub. Bonne compagnie.
 
 Alors oui, je prêche pour ma paroisse : aidez-moi à faire vivre **arazzo-maestro**. Une étoile sur le repo, c'est gentil. Un vrai fichier Arazzo qui fait tomber l'outil, c'est mieux. Une issue, une PR, un « chez nous, ça ne se passe pas comme ça », c'est ce qui transforme un projet du dimanche en outil qu'on installe dans sa CI sans trembler.
 
