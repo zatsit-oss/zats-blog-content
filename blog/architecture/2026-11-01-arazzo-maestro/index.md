@@ -98,11 +98,11 @@ Le principe : un fichier en entrée, trois verbes en sortie.
                                                       └─► test  → Hurl (e2e) ou k6 (perf)
 ```
 
-En ce mois d'octobre, j'ai donné un talk sur les biais qu'expérimentent les techs, et je suis peut-être, et même probablement, en plein effet IKEA, mais c'est mon produit :-) donc il est forcément bien !
+En ce mois d'octobre, j'ai donné [un talk sur les biais qu'expérimentent les techs](https://www.youtube.com/watch?v=2XOeQsp8nuc), et je suis peut-être, et même probablement, en plein effet IKEA, mais c'est mon produit :-) donc il est forcément bien !
 
-## `lint` : le contrat qui sait dire non
+## `lint` : une triple vérification
 
-Le linter fait trois passes :
+Le linter fait donc trois passes :
 
 1. le **JSON Schema officiel** d'Arazzo (types, champs requis, formats)
 2. des **règles sémantiques** : identifiants uniques, références `$steps` résolues, pas de référence vers une étape qui n'a pas encore eu lieu
@@ -202,7 +202,7 @@ GET {{baseUrl}}/products/{{list-catalog_firstProductId}}
 Vous avez remarqué le `# $statusCode == 200` en commentaire ? Ce n'est pas un oubli : aujourd'hui, les `successCriteria` sont recopiés en commentaires dans le bloc `[Asserts]`, pas encore traduits en vraies assertions Hurl.
 C'est le parti pris de l'outil : ce qu'il ne sait pas traduire fidèlement devient un commentaire explicite, jamais une supposition. Un test qui passe "au hasard" est pire qu'un test absent.
 
-Côté performance, `test gen perf` produit un script k6 qui suit exactement le même parcours, avec la charge et les seuils passés en ligne de commande :
+Côté performance, `test gen perf` produit un script [k6](https://k6.io) qui suit exactement le même parcours, avec la charge et les seuils passés en ligne de commande :
 
 ```bash
 arazzo-maestro test gen perf examples/shop.arazzo.yaml --vus 10 --duration 60s \
@@ -220,22 +220,7 @@ check(add_to_cartRes, {
 const add_to_cart_cartTotal = add_to_cartRes.json("totalPrice");
 ```
 
-Pour écrire cet article, j'ai lancé ce script contre le mock [Microcks](https://microcks.io) livré dans le repo, après y avoir glissé une erreur pour l'exemple : l'étape de paiement répond 404. Voilà ce que k6 m'a répondu :
-
-```text
-✓ list-catalog: $statusCode == 200
-✓ get-product: $statusCode == 200
-✓ add-to-cart: $statusCode == 201
-✗ pay: $statusCode == 200
-
-✗ http_req_failed................: 25.00% 120936 out of 483744
-level=error msg="thresholds on metrics 'http_req_failed' have been crossed"
-```
-
-Zéro paiement réussi sur 120 936 : l'erreur introduite est repérée, et sans ambiguïté.
-C'est exactement l'intérêt d'un test qui suit le parcours décrit dans le contrat : il ne vérifie pas seulement que "ça répond vite", il vérifie que le parcours aboutit. Et quand il n'aboutit pas, il le dit 120 936 fois.
-
-L'erreur retirée, même script, même charge :
+Pour écrire cet article, j'ai lancé ce script contre le mock [Microcks](https://microcks.io) livré dans le repo.
 
 ```bash
 k6 run -e BASE_URL='http://localhost:8082/rest/Shop+API/1.0.0' \
@@ -258,7 +243,7 @@ Et avec `K6_WEB_DASHBOARD=true`, k6 exporte un rapport HTML de la session :
 
 ![Rapport k6 du test de charge sur le mock Microcks : un débit stable d'environ 7 000 requêtes par seconde pendant une minute, et un p95 de la durée des requêtes qui oscille entre 1,8 et 2,2 ms](rapport-k6-microcks.webp)
 
-:::warning\[Ne retenez pas ces chiffres\]  
+:::warning[Ne retenez pas ces chiffres]  
 Environ 7 000 requêtes par seconde avec un p95 sous les 2 ms : c'est un mock Microcks qui tourne sur mon poste, pas une API. Ces chiffres mesurent ma machine, pas une réelle implémentation.  
 
 Ce qu'il faut retenir, c'est le reste : un test de charge qui suit le parcours métier décrit dans le contrat, généré en une commande, avec des seuils qui font échouer la CI. Pointez `BASE_URL` sur votre recette, et là, les chiffres voudront dire quelque chose.
@@ -338,10 +323,8 @@ Le projet est open source sous licence Apache 2.0 : [emmanuelperu/arazzo-maestro
 
 ## Pendant ce temps, dans l'atelier d'à côté
 
-Je ne suis pas le seul à tisser, et ça s'accélère. Rien que cet automne : [OpenLint](https://github.com/openlint/openlint) a ajouté Arazzo à son linter, [arazzo-cli](https://github.com/strefethen/arazzo-cli) exécute les workflows et les expose en serveur MCP, Jentic a publié ses [outils TypeScript](https://github.com/jentic/jentic-arazzo-tools) et un éditeur en ligne, connEthics un [playground](https://arazzo.connethics.com/) avec export Mermaid, et un [canvas Arazzo pour GitHub Copilot](https://github.com/SebastienDegodez/github-copilot-arazzo) valide vos workflows pendant que l'agent les écrit.
-La spec a deux ans et l'outillage pousse de partout : plutôt bon signe, on ne se bouscule pas pour un format que personne n'utilise.
-Pour s'y retrouver, la communauté tient un annuaire : [usearazzo.com](https://usearazzo.com/ecosystem/) recense la spec, les outils, les articles et les exemples. **arazzo-maestro** y figure dans la rubrique « Lint & validate », entre le validateur de Jentic et une action GitHub. Bonne compagnie.
+Je ne suis pas le seul à tisser, et ça s'accélère. Pour s'y retrouver, la communauté tient un annuaire : [usearazzo.com](https://usearazzo.com/ecosystem/) recense la spec, les outils, les articles et les exemples. **arazzo-maestro** y figure dans la rubrique « Lint &amp; validate », entre le validateur de Jentic et une action GitHub.
 
-Alors oui, je prêche pour ma paroisse : aidez-moi à faire vivre **arazzo-maestro**. Une étoile sur le repo, c'est gentil. Un vrai fichier Arazzo qui fait tomber l'outil, c'est mieux. Une issue, une PR, un « chez nous, ça ne se passe pas comme ça », c'est ce qui transforme un projet du dimanche en outil qu'on installe dans sa CI sans trembler.
+Alors oui, je prêche pour ma paroisse : aidez-moi à faire vivre **arazzo-maestro**. Une étoile sur le repo, c'est gentil. Un vrai fichier Arazzo qui fait tomber l'outil, c'est mieux. Une issue, une PR, un « chez nous, ça marche trop bien », c'est ce qui transforme un projet du dimanche en outil qu'on installe dans sa CI sans trembler.
 
 Le contrat OpenAPI a rendu nos endpoints fiables. Il est temps que nos parcours le deviennent aussi.
