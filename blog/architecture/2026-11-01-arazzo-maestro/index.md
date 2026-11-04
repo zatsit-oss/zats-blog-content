@@ -98,7 +98,7 @@ Le principe : un fichier en entrée, trois verbes en sortie.
                                                       └─► test  → Hurl (e2e) ou k6 (perf)
 ```
 
-En ce mois d'octobre, j'ai donné [un talk sur les biais qu'expérimentent les techs](https://www.youtube.com/watch?v=2XOeQsp8nuc), et je suis peut-être, et même probablement, en plein effet IKEA, mais c'est mon produit :-) donc il est forcément bien !
+Le mois dernier, j'ai donné [un talk sur les biais qu'expérimentent les techs](https://www.youtube.com/watch?v=2XOeQsp8nuc), et je suis peut-être, et même probablement, en plein effet IKEA, mais c'est mon produit :-) donc il est forcément bien !
 
 ## `lint` : une triple vérification
 
