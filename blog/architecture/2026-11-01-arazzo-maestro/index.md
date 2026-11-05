@@ -6,7 +6,7 @@ date: 2026-11-01
 tags: [architecture, api, openapi, arazzo, contract-first, open-source]
 ---
 OpenAPI décrit chaque appel de votre API de manière isolée. Cependant, l'enchaînement de ces appels, le vrai parcours métier, n'a souvent aucun contrat.  
-Arazzo comble ce vide, et **arazzo-maestro** le rend utile au reste de l'équipe : un linter pour la CI, un rendu lisible par tout le monde, et des tests générés.
+Arazzo comble ce vide, et [**arazzo-maestro**](https://emmanuelperu.github.io/arazzo-maestro/) le rend utile au reste de l'équipe : un linter pour la CI, un rendu lisible par tout le monde, et des tests générés.
 
 <!-- truncate -->
 
