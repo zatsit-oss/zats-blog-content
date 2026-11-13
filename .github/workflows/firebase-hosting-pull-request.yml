@@ -8,6 +8,8 @@ on:
       - "blog/**"
       - "authors/**"
       - "config.json"
+      - ".github/workflows/firebase-hosting-pull-request.yml"
+      - ".github/scripts/**"
 
 permissions:
   checks: write
@@ -31,13 +33,50 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           branch: ${{ github.head_ref || github.ref_name }}
 
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - id: deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ZATSIT_BLOG_STAGING }}
           projectId: zatsit-dsi-externalsites-dev
           target: zatsit-blog-b5294
           expires: 30d
+          # Its comment links to the home page of the channel: ours, below,
+          # links to the articles the PR changes.
+          disableComment: "true"
+
+      # Before the final checkout: it would reset the workspace, dist included.
+      - name: Build the preview comment
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          URL: ${{ steps.deploy.outputs.details_url }}
+          EXPIRES: ${{ steps.deploy.outputs.expire_time_formatted }}
+        # The files API rather than `gh pr diff`, which fails on large diffs.
+        run: |
+          gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR/files" --jq '.[].filename' \
+            | .github/scripts/preview-comment.sh "$URL" zats-blog/dist "$EXPIRES" \
+            > "$RUNNER_TEMP/preview-comment.md"
+          cat "$RUNNER_TEMP/preview-comment.md"
+
+      - name: Comment the preview links
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync(`${process.env.RUNNER_TEMP}/preview-comment.md`, 'utf8');
+            const marker = '<!-- zats-blog-preview -->';
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number });
+            const previous = comments.find((c) => c.body?.startsWith(marker));
+            if (previous) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: previous.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
 
       # needed to avoid the post action error
       - name: Checkout repository
