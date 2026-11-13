@@ -62,6 +62,14 @@ test_quoted_slug_and_crlf() {
   has "(https://x.web.app/openrewrite/)" && lacks $'\r' && lacks '"'
 }
 
+test_slug_inline_comment() {
+  fixture
+  post dev/2026-01-01-c "slug: c # SEO"
+  publish c
+  run blog/dev/2026-01-01-c/index.md
+  has "[/c/](https://x.web.app/c/)" && lacks "brouillon"
+}
+
 test_trailing_slash_url() {
   fixture
   post dev/2024-01-01-a "slug: a"
@@ -111,7 +119,7 @@ test_missing_args() {
   [ $? -eq 2 ]
 }
 
-for t in test_new_post test_quoted_slug_and_crlf test_trailing_slash_url test_draft \
+for t in test_new_post test_quoted_slug_and_crlf test_slug_inline_comment test_trailing_slash_url test_draft \
   test_dedup_and_images test_deleted_post test_no_post test_marker_and_expiry test_missing_args; do
   OUT=""
   check "$t" "$t"

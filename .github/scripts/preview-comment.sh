@@ -22,13 +22,14 @@ url="${1%/}"
 dist="$2"
 expires="$3"
 
-# First `slug:` line of the frontmatter, without CR, spaces or one pair of quotes.
+# First `slug:` line of the frontmatter, without CR, a trailing `# comment`,
+# spaces or one pair of quotes.
 read_slug() {
   awk 'NR == 1 && /^---/ { inside = 1; next }
        inside && /^---/ { exit }
        inside && /^slug:/ { sub(/^slug:/, ""); print; exit }' "$1" |
     tr -d '\r' |
-    sed -E "s/^[[:space:]]+//; s/[[:space:]]+\$//; s/^\"(.*)\"\$/\\1/; s/^'(.*)'\$/\\1/"
+    sed -E "s/[[:space:]]+#.*\$//; s/^[[:space:]]+//; s/[[:space:]]+\$//; s/^\"(.*)\"\$/\\1/; s/^'(.*)'\$/\\1/"
 }
 
 lines=()
