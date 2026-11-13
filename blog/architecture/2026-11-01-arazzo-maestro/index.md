@@ -328,3 +328,4 @@ Je ne suis pas le seul à tisser, et ça s'accélère. Pour s'y retrouver, la co
 Alors oui, je prêche pour ma paroisse : aidez-moi à faire vivre **arazzo-maestro**. Une étoile sur le repo, c'est gentil. Un vrai fichier Arazzo qui fait tomber l'outil, c'est mieux. Une issue, une PR, un « chez nous, ça marche trop bien », c'est ce qui transforme un projet du dimanche en outil qu'on installe dans sa CI sans trembler.
 
 Le contrat OpenAPI a rendu nos endpoints fiables. Il est temps que nos parcours le deviennent aussi.
+
